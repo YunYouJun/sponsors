@@ -1,0 +1,21 @@
+{
+  "name": "sponsors",
+  "description": "YunYouJun's Sponsors",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YunYouJun/sponsors.git"
+  },
+  "author": "YunYouJun <me@yunyoujun.cn>",
+  "bugs": {
+    "url": "https://github.com/YunYouJun/sponsors/issues"
+  },
+  "homepage": "https://www.yunyoujun.cn/sponsors/",
+  "dependencies": {
+    "js-yaml": "^3.13.1"
+  }
+}
