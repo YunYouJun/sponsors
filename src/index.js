@@ -33,9 +33,13 @@ for (let i = 0; i < data.length; i++) {
   const boss = sponsor.url
     ? `[${sponsor.name}](${sponsor.url})`
     : `${sponsor.name}`;
-  const sponsor_md = `|${boss}|${sponsor.method}|${sponsor.amount.toFixed(
-    2
-  )}|${sponsor.date.toLocaleDateString("zh-CN")}|${
+  const amount =
+    sponsor.amount >= 50
+      ? `**${sponsor.amount.toFixed(2)}**`
+      : `${sponsor.amount.toFixed(2)}`;
+  const sponsor_md = `|${boss}|${
+    sponsor.method
+  }|${amount}|${sponsor.date.toLocaleDateString("zh-CN")}|${
     sponsor.memo || "冰阔落"
   }|\n`;
   sponsors_md += sponsor_md;
