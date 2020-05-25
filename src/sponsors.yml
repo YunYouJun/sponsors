@@ -50,3 +50,8 @@
   date: 2020-05-24
   method: 支付宝
   amount: 10.00
+- name: 六桑
+  url: http://adachi.club
+  date: 2020-05-25
+  method: 支付宝
+  amount: 88.88
