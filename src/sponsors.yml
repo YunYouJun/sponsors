@@ -51,7 +51,13 @@
   method: 支付宝
   amount: 10.00
 - name: 六桑
-  url: http://adachi.club
+  url: https://adachi.club/
   date: 2020-05-25
   method: 支付宝
   amount: 88.88
+- name: 绅士兔
+  url: https://gentrabbit.moe/
+  date: 2020-06-07
+  method: 微信
+  amount: 5.00
+  memo: 冰可乐
