@@ -32,7 +32,7 @@ for (let i = 0; i < data.length; i++) {
   const sponsor = data[i];
   const boss = sponsor.url
     ? `[${sponsor.name}](${sponsor.url})`
-    : `${sponsor.name}`;
+    : `${sponsor.name || "好心人"}`;
   const amount =
     sponsor.amount >= 50
       ? `**${sponsor.amount.toFixed(2)}**`

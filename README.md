@@ -18,6 +18,8 @@
 
 ## Donate
 
+> 如果能留下你的称呼和备注就再好不过了，我将会将其添加至 [赞助者列表](https://sponsors.yunyoujun.cn/list) 中。
+
 | 支付宝                                                                                                      | 微信支付                                                                                                     | QQ 支付                                                                                                         |
 | ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------- |
 | <img width="250" src="https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/alipay-qrcode.jpg" alt="支付宝"> | <img width="250" src="https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/qqpay-qrcode.png" alt="微信支付"> | <img width="250" src="https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/wechatpay-qrcode.jpg" alt="QQ 支付"> |
