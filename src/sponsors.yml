@@ -62,5 +62,9 @@
   amount: 5.00
   memo: 冰可乐
 - date: 2020-06-19
-  method: 微信
+  method: 微信支付
   amount: 10.00
+- name: 大力水手！
+  date: 2020-06-20
+  method: 支付宝
+  amount: 2.00
