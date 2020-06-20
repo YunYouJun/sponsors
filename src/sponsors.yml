@@ -65,6 +65,7 @@
   method: 微信支付
   amount: 10.00
 - name: 大力水手！
+  url: https://myperfect.work
   date: 2020-06-20
   method: 支付宝
   amount: 2.00
