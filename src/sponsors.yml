@@ -81,3 +81,8 @@
   date: 2020-07-01
   amount: 5.20
   memo: 来自红魔馆地下室的关爱
+- name: 云狐
+  url: https://cf1.me/
+  method: 支付宝
+  date: 2020-07-01
+  amount: 256.00
