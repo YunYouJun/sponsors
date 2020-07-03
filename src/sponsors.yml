@@ -86,3 +86,9 @@
   method: 支付宝
   date: 2020-07-01
   amount: 256.00
+- name: 偕臧
+  url: https://xmuli.tech/
+  method: 支付宝
+  date: 2020-07-03
+  amount: 13.6
+  memo: 瑕不掩瑜（日后再捐）
