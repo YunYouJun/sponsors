@@ -90,5 +90,11 @@
   url: https://xmuli.tech/
   method: 支付宝
   date: 2020-07-03
-  amount: 13.6
+  amount: 13.60
   memo: 0.1 瑕（日）2.3 不（后）4.5 掩（再）6.7 瑜（捐）
+- name: SKNP
+  url: https://sknplz.xyz/
+  method: 微信支付
+  date: 2020-07-14
+  amount: 16.00
+  memo: 支持一波Hi~ o(*￣▽￣*)ブ
