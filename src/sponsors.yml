@@ -98,7 +98,9 @@
   date: 2020-07-14
   amount: 16.00
   memo: 支持一波Hi~ o(*￣▽￣*)ブ
-- method: 微信支付
+- name: 烧烤牛排
+  url: https://sknplz.xyz/
+  method: 微信支付
   date: 2020-08-05
   amount: 30.00
   memo: yy, yyds
