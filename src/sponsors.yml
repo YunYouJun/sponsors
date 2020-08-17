@@ -110,3 +110,19 @@
   date: 2020-08-05
   amount: 35.00
   memo: 哈哈哈 请你喝一杯
+- name: 染川 曈
+  url: https://asuhe.jp
+  method: QQ 红包
+  date: 2020-08-13
+  amount: 3.00
+  memo: 快发 1.0
+- name: 紫奈
+  url: https://qingzinai.github.io/
+  method: QQ 红包
+  date: 2020-08-13
+  amount: 4.58
+- name: 北漂的候鸟
+  method: QQ 转账
+  date: 2020-08-17
+  amount: 1.06
+  memo: 嘿嘿嘿
