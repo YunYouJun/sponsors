@@ -1,8 +1,6 @@
-# Sponsors
+# [Sponsors 支持者们](<(https://sponsors.yunyoujun.cn/)>)
 
 [![YunYouJun's Sponsors](https://github.com/YunYouJun/sponsors/workflows/Sponsors/badge.svg)](https://sponsors.yunyoujun.cn)
-
-- [云游君的支持者们](https://sponsors.yunyoujun.cn/)
 
 ![打工是不可能打工的](https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/meme/no-work.jpg)
 
@@ -18,7 +16,7 @@
 
 ## Donate
 
-> 如果能留下你的称呼就再好不过了，大于 6 元的我将会将其添加至 [赞助者列表](https://sponsors.yunyoujun.cn/) 中，并使用邮箱作为头像。（没留的话，就默认叫 `好心人` 了～）
+> 如果能留下你的称呼和备注就再好不过了，大于 6 元的我将会将其添加至 [赞助者列表](https://sponsors.yunyoujun.cn/) 中。（没留的话，就默认叫 `好心人` 了～）
 
 | 支付宝                                                                                                      | 微信支付                                                                                                     | QQ 支付                                                                                                         |
 | ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------- |
