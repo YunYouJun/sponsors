@@ -1,4 +1,4 @@
-# [Sponsors 支持者们](<(https://sponsors.yunyoujun.cn/)>)
+# [Sponsors 支持者们](https://sponsors.yunyoujun.cn/)
 
 [![YunYouJun's Sponsors](https://github.com/YunYouJun/sponsors/workflows/Sponsors/badge.svg)](https://sponsors.yunyoujun.cn)
 
