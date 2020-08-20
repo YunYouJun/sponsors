@@ -126,3 +126,8 @@
   date: 2020-08-17
   amount: 1.06
   memo: 嘿嘿嘿
+- name: mcwindy
+  url: https://github.com/mcwindy
+  method: 支付宝
+  date: 2020-08-21
+  amount: 20
