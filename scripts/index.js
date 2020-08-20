@@ -32,14 +32,14 @@ try {
 function generateRank(sponsors) {
   const json = [
     {
-      name: "anonymous",
+      name: "",
       avatar: "https://vercel.com/api/www/avatar/?u=evilrabbit&s=240",
       total: 0,
       children: [],
     },
   ];
   sponsors.forEach((sponsor) => {
-    if (!sponsor.name) sponsor.name = "anonymous";
+    if (!sponsor.name) sponsor.name = "";
     const contain = json.some((data) => {
       if (data.name === sponsor.name) {
         data.total += sponsor.amount;

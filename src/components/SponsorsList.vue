@@ -4,6 +4,10 @@
   </a>
   <p>
     Thank you for your appreciation.
+    <br />
+    <a href="https://github.com/YunYouJun/sponsors/blob/gh-pages/list.md"
+      >详细列表</a
+    >
   </p>
   <table
     class="zi-table"
@@ -81,12 +85,17 @@ export default {
   data() {
     return {
       sponsors: [],
+      total: 0,
     };
   },
   async beforeCreate() {
     const url = "https://sponsors.yunyoujun.cn/rank.json";
     this.sponsors = await fetch(url).then((res) => {
       return res.json();
+    });
+
+    this.sponsors.forEach((sponsor) => {
+      this.total += sponsor.total;
     });
   },
   methods: {
