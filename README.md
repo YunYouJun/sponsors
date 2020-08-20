@@ -2,7 +2,7 @@
 
 [![YunYouJun's Sponsors](https://github.com/YunYouJun/sponsors/workflows/Sponsors/badge.svg)](https://sponsors.yunyoujun.cn)
 
-- [云游君的支持者们](https://sponsors.yunyoujun.cn/list)
+- [云游君的支持者们](https://sponsors.yunyoujun.cn/)
 
 ![打工是不可能打工的](https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/meme/no-work.jpg)
 
@@ -18,8 +18,19 @@
 
 ## Donate
 
-> 如果能留下你的称呼和备注就再好不过了，我将会将其添加至 [赞助者列表](https://sponsors.yunyoujun.cn/list) 中。（没留的话，就默认叫 `好心人` 了～）
+> 如果能留下你的称呼就再好不过了，大于 6 元的我将会将其添加至 [赞助者列表](https://sponsors.yunyoujun.cn/) 中，并使用邮箱作为头像。（没留的话，就默认叫 `好心人` 了～）
 
 | 支付宝                                                                                                      | 微信支付                                                                                                     | QQ 支付                                                                                                         |
 | ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------- |
 | <img width="250" src="https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/alipay-qrcode.jpg" alt="支付宝"> | <img width="250" src="https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/qqpay-qrcode.png" alt="微信支付"> | <img width="250" src="https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/wechatpay-qrcode.jpg" alt="QQ 支付"> |
+
+- 爱发电：[@yunyoujun](https://afdian.net/@yunyoujun)
+- Patreon: [YunYouJun](https://www.patreon.com/yunyoujun)
+
+## Contact
+
+如果您有什么建议或希望我帮忙的事情，可以直接在 [issues](https://github.com/YunYouJun/sponsors/issues) 中提出。
+
+- Telegram: [@YunYouJun](https://t.me/YunYouJun)
+- QQ: 因为有些烦扰，所以临时会话被我关掉了。你可以在群 389401003 中找到我的 QQ，希望可以说明来意。
+- 微信号：因为微信用的比较少，并且比较私人，所以如果你希望通过微信联系我，可以在打赏备注中说明，我将回复我的微信号。

@@ -1,10 +1,12 @@
 {
   "name": "sponsors",
-  "description": "YunYouJun's Sponsors",
+  "description": "YunYouJun's Sponsors | 云游君的赞助者们",
   "version": "1.0.0",
-  "main": "src/index.js",
+  "main": "src/main.js",
   "scripts": {
-    "build": "node src/index.js"
+    "dev": "vite",
+    "build": "vite build",
+    "build:json": "node scripts/index.js && cp *.md ./dist/"
   },
   "repository": {
     "type": "git",
@@ -16,6 +18,12 @@
   },
   "homepage": "https://www.yunyoujun.cn/sponsors/",
   "dependencies": {
-    "js-yaml": "^3.13.1"
-  }
+    "js-yaml": "^3.13.1",
+    "vue": "3.0.0-rc.6"
+  },
+  "devDependencies": {
+    "@vue/compiler-sfc": "^3.0.0-rc.6",
+    "vite": "^1.0.0-rc.1"
+  },
+  "license": "MIT"
 }

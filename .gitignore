@@ -4,3 +4,4 @@ dist/
 *.log
 package-lock.json
 yarn.lock
+*.local
