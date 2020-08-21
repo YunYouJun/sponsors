@@ -131,3 +131,8 @@
   method: 支付宝
   date: 2020-08-21
   amount: 20
+- name: 群色批
+  method: QQ 红包
+  date: 2020-08-21
+  amount: 20
+  memo: 给云游君买瓶冰可乐
