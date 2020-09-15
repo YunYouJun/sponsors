@@ -145,3 +145,9 @@
   method: QQ 转账
   date: 2020-09-08
   amount: 20.00
+- name: SKNP
+  url: https://sknplz.xyz/
+  method: 微信支付
+  date: 2020-09-15
+  amount: 6.00
+  memo: 两瓶快乐水
