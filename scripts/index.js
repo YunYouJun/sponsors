@@ -82,7 +82,9 @@ for (let i = 0; i < data.length; i++) {
     ? `[${sponsor.name}](${sponsor.url})`
     : `${sponsor.name || "好心人"}`;
   const amount =
-    sponsor.amount >= 50 ? `**${sponsor.amount}**` : `${sponsor.amount}`;
+    sponsor.amount >= 50
+      ? `**${sponsor.amount.toFixed(2)}**`
+      : `${sponsor.amount.toFixed(2)}`;
   const sponsor_md = `|${boss}|${
     sponsor.method
   }|${amount}|${sponsor.date.toLocaleDateString("zh-CN")}|${
