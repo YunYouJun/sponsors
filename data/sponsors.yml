@@ -151,3 +151,7 @@
   date: 2020-09-15
   amount: 6.00
   memo: 两瓶快乐水
+- name: *大（不知名的好心人）
+  method: 微信支付
+  date: 2020-10-01
+  amount: 10.00
