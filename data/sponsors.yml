@@ -159,3 +159,9 @@
   date: 2020-10-01
   amount: 20.20
   memo: 群主中秋国庆快乐。
+- name: 大赵
+  url: zzychaser.top
+  method: 支付宝
+  date: 2020-11-13
+  amount: 50.00
+  memo: 希望主题能够一直完善下去，加油呀
