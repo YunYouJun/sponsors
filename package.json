@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "build:json": "node scripts/index.js && cp *.md ./dist/"
+    "build:json": "node scripts/index.js && cp *.md ./dist/",
+    "sponsor": "git add -A && git commit -m ':busts_in_silhouette: add new sponsor' && git push"
   },
   "repository": {
     "type": "git",
@@ -22,8 +23,8 @@
     "vue": "3.0.0-rc.6"
   },
   "devDependencies": {
-    "@vue/compiler-sfc": "^3.0.0-rc.6",
-    "vite": "^1.0.0-rc.1"
+    "@vue/compiler-sfc": "^3.0.2",
+    "vite": "^1.0.0-rc.9"
   },
   "license": "MIT"
 }
