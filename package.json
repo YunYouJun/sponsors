@@ -20,11 +20,12 @@
   "homepage": "https://www.yunyoujun.cn/sponsors/",
   "dependencies": {
     "js-yaml": "^3.13.1",
-    "vue": "3.0.0-rc.6"
+    "vue": "^3.0.4"
   },
   "devDependencies": {
-    "@vue/compiler-sfc": "^3.0.2",
-    "vite": "^1.0.0-rc.9"
+    "@vue/compiler-sfc": "^3.0.4",
+    "sass": "^1.30.0",
+    "vite": "^1.0.0-rc.13"
   },
   "license": "MIT"
 }

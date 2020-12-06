@@ -11,7 +11,7 @@
   </p>
   <table
     class="zi-table"
-    style="margin: 0 auto; padding: 0 1rem; max-width: 1000px;"
+    style="margin: 0 auto; padding: 0 1rem; max-width: 1000px"
   >
     <thead>
       <tr>
@@ -49,11 +49,6 @@
       </tr>
     </tbody>
   </table>
-  <p>
-    谢谢你们的支持！
-    您的每一份支持，都是激励我创造出更多有趣、有价值的事物的动力。
-    愿这个世界更美好也更加有趣，也愿诸位与我都能成为自己想要成为的人。
-  </p>
 </template>
 
 <style>

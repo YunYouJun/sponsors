@@ -86,6 +86,7 @@
   method: 支付宝
   date: 2020-07-01
   amount: 256.00
+  avatar: https://cf0.oss-cn-shanghai.aliyuncs.com/blog/avatar.webp
 - name: 偕臧
   url: https://xmuli.tech/
   method: 支付宝
@@ -170,3 +171,9 @@
   method: 支付宝
   date: 2020-11-17
   amount: 150.00
+- name: InzamZ
+  url: inzamz.top
+  method: 微信支付
+  date: 2020-12-03
+  amount: 10.00
+  memo: 冰阔落
