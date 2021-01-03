@@ -5,7 +5,7 @@
   "main": "src/main.js",
   "scripts": {
     "dev": "vite",
-    "build": "vuedx-typecheck . && vite build",
+    "build": "vite build",
     "build:json": "node scripts/index.js && cp *.md ./dist/",
     "sponsor": "git add -A && git commit -m ':busts_in_silhouette: add new sponsor' && git push"
   },
