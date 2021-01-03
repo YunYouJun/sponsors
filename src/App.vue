@@ -10,17 +10,18 @@
   </p>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from "vue";
 import DonateQrcode from "./components/DonateQrcode.vue";
 import SponsorsList from "./components/SponsorsList.vue";
 
-export default {
+export default defineComponent({
   name: "App",
   components: {
     DonateQrcode,
     SponsorsList,
   },
-};
+});
 </script>
 
 <style>

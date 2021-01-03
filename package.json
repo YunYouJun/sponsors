@@ -5,7 +5,7 @@
   "main": "src/main.js",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vuedx-typecheck . && vite build",
     "build:json": "node scripts/index.js && cp *.md ./dist/",
     "sponsor": "git add -A && git commit -m ':busts_in_silhouette: add new sponsor' && git push"
   },
@@ -19,13 +19,17 @@
   },
   "homepage": "https://www.yunyoujun.cn/sponsors/",
   "dependencies": {
-    "js-yaml": "^3.13.1",
-    "vue": "^3.0.4"
+    "js-yaml": "^4.0.0",
+    "vue": "3.0.5"
   },
   "devDependencies": {
-    "@vue/compiler-sfc": "^3.0.4",
-    "sass": "^1.30.0",
-    "vite": "^1.0.0-rc.13"
+    "@vue/compiler-sfc": "^3.0.5",
+    "@vitejs/plugin-vue": "^1.0.3",
+    "@vuedx/typecheck": "^0.4.1",
+    "@vuedx/typescript-plugin-vue": "^0.4.1",
+    "sass": "^1.32.0",
+    "typescript": "^4.1.3",
+    "vite": "^2.0.0-beta.3"
   },
   "license": "MIT"
 }

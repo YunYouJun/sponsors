@@ -32,7 +32,7 @@
           <img
             class="qrcode-img"
             width="200"
-            src="https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/qqpay-qrcode.png"
+            src="https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/wechatpay-qrcode.jpg"
             alt="微信支付"
           />
         </td>
@@ -40,7 +40,7 @@
           <img
             class="qrcode-img"
             width="200"
-            src="https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/wechatpay-qrcode.jpg"
+            src="https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/qqpay-qrcode.png"
             alt="QQ 支付"
           />
         </td>
