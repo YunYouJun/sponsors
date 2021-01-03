@@ -5,7 +5,7 @@ const name = "sponsors";
 
 let data = "";
 try {
-  data = yaml.safeLoad(fs.readFileSync(`./data/${name}.yml`, "utf8"));
+  data = yaml.load(fs.readFileSync(`./data/${name}.yml`, "utf8"));
   try {
     fs.mkdirSync("./dist/");
   } catch ({ code }) {
