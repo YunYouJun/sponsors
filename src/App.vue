@@ -23,9 +23,3 @@ export default defineComponent({
   },
 });
 </script>
-
-<style>
-hr {
-  opacity: 0.1;
-}
-</style>
