@@ -187,3 +187,8 @@
   date: 2021-01-30T07:41:25.777Z
   method: QQ 转账
   amount: 2
+- name: SKNP
+  url: https://sknplz.xyz/
+  date: 2021-02-11T18:42:18.869Z
+  method: 微信支付
+  amount: 30
