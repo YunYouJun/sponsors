@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 const { program } = require("commander");
 const pkg = require("../package.json");
-const dayjs = require("dayjs");
 const yaml = require("js-yaml");
 const fs = require("fs");
 
@@ -38,6 +37,11 @@ const questions = [
     type: "number",
     name: "amount",
     message: "赞助金额：",
+  },
+  {
+    type: "string",
+    name: "memo",
+    message: "备注内容：",
   },
 ];
 
