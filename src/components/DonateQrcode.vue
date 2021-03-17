@@ -49,13 +49,15 @@
   </table>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from "vue";
+
 import IconFont from "./IconFont.vue";
-export default {
+export default defineComponent({
   components: {
     IconFont,
   },
-};
+});
 </script>
 
 <style lang="scss">

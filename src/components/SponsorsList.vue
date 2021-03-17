@@ -73,6 +73,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import { RankSponsor } from "../types/index";
 
 export default defineComponent({
   name: "SponsorsList",
@@ -81,7 +82,7 @@ export default defineComponent({
   },
   data() {
     return {
-      sponsors: [] as any[],
+      sponsors: [] as RankSponsor[],
       total: 0,
     };
   },
@@ -96,6 +97,9 @@ export default defineComponent({
     });
   },
   methods: {
+    /**
+     * 根据索引获取对应 class
+     */
     getClassName(index: number) {
       let className = "";
       switch (index) {
