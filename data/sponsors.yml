@@ -193,3 +193,9 @@
   method: 微信支付
   amount: 30
   memo: 云游新年快乐呀😊
+- name: 懒鬼，起来干活！
+  url: ''
+  date: 2021-03-17T11:42:32.939Z
+  method: QQ 转账
+  amount: 4
+  memo: 一杯甜筒？

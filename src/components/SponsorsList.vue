@@ -71,15 +71,17 @@
 }
 </style>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from "vue";
+
+export default defineComponent({
   name: "SponsorsList",
   props: {
     msg: String,
   },
   data() {
     return {
-      sponsors: [],
+      sponsors: [] as any[],
       total: 0,
     };
   },
@@ -89,12 +91,12 @@ export default {
       return res.json();
     });
 
-    this.sponsors.forEach((sponsor) => {
+    this.sponsors.forEach((sponsor: any) => {
       this.total += sponsor.total;
     });
   },
   methods: {
-    getClassName(index) {
+    getClassName(index: number) {
       let className = "";
       switch (index) {
         case 0:
@@ -112,5 +114,5 @@ export default {
       return className + "-sponsor";
     },
   },
-};
+});
 </script>
