@@ -1,8 +1,8 @@
 <template>
-  <img alt="Sponsors logo" src="./assets/logo.png" width="128" />
-  <sponsors-list msg="Sponsors" />
-  <hr />
+  <base-header msg="Sponsors" />
   <donate-qrcode />
+  <sponsors-list />
+  <hr />
   <p>
     谢谢你们的支持！
     您的每一份支持，都是激励我创造出更多有趣、有价值的事物的动力。
@@ -12,6 +12,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import BaseHeader from "./components/BaseHeader.vue";
 import DonateQrcode from "./components/DonateQrcode.vue";
 import SponsorsList from "./components/SponsorsList.vue";
 
@@ -20,6 +21,7 @@ export default defineComponent({
   components: {
     DonateQrcode,
     SponsorsList,
+    BaseHeader,
   },
 });
 </script>

@@ -24,18 +24,23 @@
   "dependencies": {
     "commander": "^7.1.0",
     "dayjs": "^1.10.4",
+    "element-plus": "^1.0.2-beta.35",
+    "element-theme-ink": "^1.1.1",
     "inquirer": "^8.0.0",
     "inquirer-datepicker-prompt": "^0.4.2",
     "js-yaml": "^4.0.0",
+    "vite-plugin-components": "^0.8.3",
     "vue": "^3.0.7",
-    "vue-tsc": "^0.0.13"
+    "vue-tsc": "^0.0.14"
   },
   "devDependencies": {
+    "@iconify/json": "^1.1.318",
     "@vitejs/plugin-vue": "^1.1.5",
     "@vue/compiler-sfc": "^3.0.7",
     "sass": "^1.32.8",
     "typescript": "^4.2.3",
-    "vite": "2.0.5"
+    "vite": "2.1.2",
+    "vite-plugin-icons": "^0.3.2"
   },
   "license": "MIT"
 }

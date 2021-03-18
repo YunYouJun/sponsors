@@ -167,12 +167,12 @@
   amount: 50.00
   memo: 希望主题能够一直完善下去，加油呀
 - name: AngEvil
-  url: angevilv.cn
+  url: https://angevilv.cn
   method: 支付宝
   date: 2020-11-17
   amount: 150.00
 - name: InzamZ
-  url: inzamz.top
+  url: https://inzamz.top
   method: 微信支付
   date: 2020-12-03
   amount: 10.00
@@ -194,8 +194,20 @@
   amount: 30
   memo: 云游新年快乐呀😊
 - name: 懒鬼，起来干活！
-  url: ''
+  url: ""
   date: 2021-03-17T11:42:32.939Z
   method: QQ 转账
   amount: 4
   memo: 一杯甜筒？
+- name: ""
+  url: ""
+  date: 2021-03-18T09:39:35.247Z
+  method: 微信支付
+  amount: 6.66
+  memo: 你的博客很棒
+- name: 落小梅
+  url: ""
+  date: 2021-03-18T09:50:13.183Z
+  method: QQ 转账
+  amount: 50
+  memo: 请老云豁奶茶 嘻嘻

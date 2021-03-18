@@ -1,57 +1,38 @@
 <template>
-  <a href="https://github.com/YunYouJun/sponsors" target="_blank">
-    <h1>{{ msg }}</h1>
-  </a>
-  <p>
-    Thank you for your appreciation.
-    <br />
-    <a href="https://github.com/YunYouJun/sponsors/blob/gh-pages/list.md"
-      >详细列表</a
-    >
-  </p>
-  <table
-    class="zi-table"
-    style="margin: 0 auto; padding: 0 1rem; max-width: 1000px"
-  >
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>头像</th>
-        <th>老板</th>
-        <th>共计</th>
-        <th>次数</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr v-for="(sponsor, i) in sponsors" :key="i" :class="getClassName(i)">
-        <td>{{ i + 1 }}</td>
-        <td>
-          <img
-            class="zi-avatar"
-            :src="
-              sponsor.avatar ||
-              'https://vercel.com/api/www/avatar/?u=evilrabbit&s=240'
-            "
-          />
-        </td>
-        <td>
-          <template v-if="sponsor.url">
-            <a :href="sponsor.url" target="_blank" :alt="sponsor.name">{{
-              sponsor.name || "不知名的好心人"
-            }}</a>
-          </template>
-          <template v-else>
-            {{ sponsor.name || "不知名的好心人" }}
-          </template>
-        </td>
-        <td>{{ sponsor.total.toFixed(2) }}</td>
-        <td>{{ sponsor.children.length }}</td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="sponsor-table">
+    <el-table :data="sponsors" show-summary :row-class-name="tableRowClassName">
+      <el-table-column type="expand" width="50px">
+        <template #default="props">
+          <detail-list :tableData="props.row.children" />
+        </template>
+      </el-table-column>
+      <el-table-column type="index"></el-table-column>
+      <el-table-column prop="name" label="老板">
+        <template #default="scope">
+          <a
+            v-if="scope.row.url"
+            :href="scope.row.url"
+            target="_blank"
+            :alt="scope.row.name"
+            >{{ scope.row.name || "不知名的好心人" }}
+          </a>
+          <span v-else>
+            {{ scope.row.name || "不知名的好心人" }}
+          </span>
+        </template>
+      </el-table-column>
+      <el-table-column prop="total" label="总额（元）" sortable>
+        <template #default="scope">
+          {{ scope.row.total.toFixed(2) }}
+        </template>
+      </el-table-column>
+      <el-table-column prop="children.length" label="次数" sortable>
+      </el-table-column>
+    </el-table>
+  </div>
 </template>
 
-<style>
+<style lang="scss">
 .first-sponsor > td {
   color: #ff9800;
   font-weight: bold;
@@ -69,6 +50,12 @@
   font-weight: bold;
   font-size: 1.1rem;
 }
+
+.sponsor-table {
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: 1000px;
+}
 </style>
 
 <script lang="ts">
@@ -77,9 +64,6 @@ import { RankSponsor } from "../types/index";
 
 export default defineComponent({
   name: "SponsorsList",
-  props: {
-    msg: String,
-  },
   data() {
     return {
       sponsors: [] as RankSponsor[],
@@ -100,9 +84,9 @@ export default defineComponent({
     /**
      * 根据索引获取对应 class
      */
-    getClassName(index: number) {
+    tableRowClassName(val: any) {
       let className = "";
-      switch (index) {
+      switch (val.rowIndex) {
         case 0:
           className = "first";
           break;

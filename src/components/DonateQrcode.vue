@@ -4,18 +4,20 @@
     <strong>好心人</strong> 了～）
   </p>
   <table
-    class="zi-table donate-table"
+    class="donate-table"
     style="margin: 0 auto; padding: 0 1rem; max-width: 1000px"
   >
     <thead>
       <tr>
         <th title="支付宝">
-          <icon-font icon="alipay-line" color="#00A3EE" />
+          <i-ri-alipay-line class="vite-icon" color="#00A3EE" />
         </th>
         <th title="微信">
-          <icon-font icon="wechat-pay-line" color="#2DC100" />
+          <i-ri-wechat-pay-line class="vite-icon" color="#2DC100" />
         </th>
-        <th title="QQ"><icon-font icon="qq-line" color="#12B7F5" /></th>
+        <th title="QQ">
+          <i-ri-qq-line class="vite-icon" color="#12B7F5" />
+        </th>
       </tr>
     </thead>
     <tbody>
@@ -49,17 +51,6 @@
   </table>
 </template>
 
-<script lang="ts">
-import { defineComponent } from "vue";
-
-import IconFont from "./IconFont.vue";
-export default defineComponent({
-  components: {
-    IconFont,
-  },
-});
-</script>
-
 <style lang="scss">
 .donate-table {
   th,
@@ -68,13 +59,23 @@ export default defineComponent({
     text-align: center;
   }
 }
+
 .qrcode-img {
+  padding: 4px;
+  border: 1px solid #eee;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  transition: 0.2s;
+  transition: 0.4s;
   margin: 0.5rem;
 
   &:hover {
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
   }
+}
+
+/* iconfont */
+.vite-icon {
+  width: 2em;
+  height: 2em;
+  fill: currentColor;
 }
 </style>
