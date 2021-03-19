@@ -6,7 +6,7 @@
   "bin": "cli/index.js",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
+    "build": "vite build",
     "build:json": "node scripts/index.js && cp *.md ./dist/",
     "update": "git add -A && git commit -m ':busts_in_silhouette: add new sponsor' && git push",
     "serve": "vite preview",
@@ -29,17 +29,18 @@
     "inquirer": "^8.0.0",
     "inquirer-datepicker-prompt": "^0.4.2",
     "js-yaml": "^4.0.0",
-    "vite-plugin-components": "^0.8.3",
-    "vue": "^3.0.7",
-    "vue-tsc": "^0.0.14"
+    "vue": "^3.0.7"
   },
   "devDependencies": {
     "@iconify/json": "^1.1.318",
+    "@types/inquirer": "^7.3.1",
+    "@types/js-yaml": "^4.0.0",
     "@vitejs/plugin-vue": "^1.1.5",
     "@vue/compiler-sfc": "^3.0.7",
     "sass": "^1.32.8",
     "typescript": "^4.2.3",
     "vite": "2.1.2",
+    "vite-plugin-components": "^0.8.3",
     "vite-plugin-icons": "^0.3.2"
   },
   "license": "MIT"
