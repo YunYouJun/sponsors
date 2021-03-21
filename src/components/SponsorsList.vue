@@ -50,35 +50,35 @@
   font-weight: bold;
   font-size: 1.1rem;
 }
-
-.sponsor-table {
-  margin: 0 auto;
-  padding: 0 1rem;
-  max-width: 1000px;
-}
 </style>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import store from "../store";
+import { defineComponent, onBeforeMount, ref } from "vue";
 import { RankSponsor } from "../types/index";
 
 export default defineComponent({
   name: "SponsorsList",
-  data() {
-    return {
-      sponsors: [] as RankSponsor[],
-      total: 0,
-    };
-  },
-  async beforeCreate() {
-    const url = "https://sponsors.yunyoujun.cn/rank.json";
-    this.sponsors = await fetch(url).then((res) => {
-      return res.json();
+  setup() {
+    const sponsors = ref<RankSponsor[]>([]);
+
+    onBeforeMount(async () => {
+      const url = "https://sponsors.yunyoujun.cn/rank.json";
+      sponsors.value = await fetch(url).then((res) => {
+        return res.json();
+      });
+
+      let total = 0;
+      sponsors.value.forEach((sponsor: any) => {
+        total += sponsor.total;
+      });
+
+      store.setIncome(total);
     });
 
-    this.sponsors.forEach((sponsor: any) => {
-      this.total += sponsor.total;
-    });
+    return {
+      sponsors,
+    };
   },
   methods: {
     /**

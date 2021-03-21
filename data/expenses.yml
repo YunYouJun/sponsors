@@ -30,7 +30,7 @@
   business: 七牛云
   amount: 10
   date: 2017-05-13
-- memo: yunyoujun.cn 域名注册（一年）
+- memo: yunyoujun.cn 域名注册（1 年）
   business: 腾讯云
   amount: 25
   date: 2017-06-10
@@ -50,7 +50,7 @@
   business: 腾讯云
   amount: 8
   date: 2017-08-02
-- memo: elpsy.cn 域名注册（五年）
+- memo: elpsy.cn 域名注册（5 年）
   business: 腾讯云
   amount: 165
   date: 2017-08-02
@@ -126,7 +126,7 @@
   business: 腾讯云
   amount: 50
   date: 2020-04-14
-- memo: elpsy.cn 域名续费（一年）
+- memo: elpsy.cn 域名续费（1 年）
   business: 腾讯云
   amount: 30
   date: 2020-04-14

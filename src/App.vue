@@ -2,6 +2,8 @@
   <base-header msg="Sponsors" />
   <donate-qrcode />
   <sponsors-list />
+  <expense-table />
+
   <hr />
   <p>
     谢谢你们的支持！
@@ -14,6 +16,7 @@
 import { defineComponent } from "vue";
 import BaseHeader from "./components/BaseHeader.vue";
 import DonateQrcode from "./components/DonateQrcode.vue";
+import ExpenseTable from "./components/ExpenseTable.vue";
 import SponsorsList from "./components/SponsorsList.vue";
 
 export default defineComponent({
@@ -22,6 +25,7 @@ export default defineComponent({
     DonateQrcode,
     SponsorsList,
     BaseHeader,
+    ExpenseTable,
   },
 });
 </script>

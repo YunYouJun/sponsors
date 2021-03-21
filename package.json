@@ -22,6 +22,7 @@
   },
   "homepage": "https://sponsors.yunyoujun.cn",
   "dependencies": {
+    "@yunyoujun/logger": "^0.1.2",
     "commander": "^7.1.0",
     "dayjs": "^1.10.4",
     "element-plus": "^1.0.2-beta.35",
@@ -32,7 +33,7 @@
     "vue": "^3.0.7"
   },
   "devDependencies": {
-    "@iconify/json": "^1.1.318",
+    "@iconify/json": "^1.1.320",
     "@types/inquirer": "^7.3.1",
     "@types/js-yaml": "^4.0.0",
     "@vitejs/plugin-vue": "^1.1.5",

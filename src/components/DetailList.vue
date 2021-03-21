@@ -4,22 +4,24 @@
       <template #default="scope">{{ formatDate(scope.row.date) }}</template>
     </el-table-column>
     <el-table-column prop="method" label="方式"></el-table-column>
-    <el-table-column prop="amount" label="金额"></el-table-column>
+    <el-table-column prop="amount" label="金额">
+      <template #default="scope">
+        {{ scope.row.amount.toFixed(2) }}
+      </template>
+    </el-table-column>
     <el-table-column prop="memo" label="备注"></el-table-column>
   </el-table>
 </template>
 
 <script lang="ts">
-import dayjs from "dayjs";
+import { formatDate } from "../utils";
 import { defineComponent } from "vue";
 export default defineComponent({
   props: {
     tableData: Array,
   },
   methods: {
-    formatDate(val: any) {
-      return dayjs(val).format("YYYY-MM-DD");
-    },
+    formatDate,
   },
 });
 </script>

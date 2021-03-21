@@ -11,3 +11,10 @@ hr {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+/* global */
+.sponsor-table {
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: 1000px;
+}
