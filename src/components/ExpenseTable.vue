@@ -3,17 +3,17 @@
     <el-collapse>
       <el-collapse-item>
         <template #title>
-          <el-tag type="success">
-            当前收入：{{ state.income.toFixed(2) }}
-          </el-tag>
-          <el-tag type="info" style="margin: 0 0.5rem">-</el-tag>
-          <el-tag type="danger">
-            当前支出：{{ state.expense.toFixed(2) }}
-          </el-tag>
-          <el-tag type="info" style="margin: 0 0.5rem">=</el-tag>
-          <el-tag type="warning">
-            盈余：{{ store.getBalance().toFixed(2) }}
-          </el-tag>
+          <div style="display: flex; gap: 0.5rem">
+            <el-tag type="success">
+              收入：{{ state.income.toFixed(2) }}
+            </el-tag>
+            <el-tag type="danger">
+              支出：{{ state.expense.toFixed(2) }}
+            </el-tag>
+            <el-tag type="warning">
+              盈余：{{ store.getBalance().toFixed(2) }}
+            </el-tag>
+          </div>
         </template>
 
         <el-table :data="expenses" show-summary>
@@ -39,10 +39,19 @@
 import store from "../store";
 import { formatDate } from "../utils";
 import { defineComponent } from "vue";
+import yaml from "js-yaml";
+
+interface Expense {
+  memo: string;
+  business: string;
+  amount: number;
+  date: Date;
+}
+
 export default defineComponent({
   data() {
     return {
-      expenses: [],
+      expenses: [] as Expense[],
       store: store,
       state: store.state,
     };
@@ -51,13 +60,17 @@ export default defineComponent({
     formatDate,
   },
   async beforeCreate() {
-    const url = "/expenses.json";
-    this.expenses = await fetch(url).then((res) => {
-      return res.json();
-    });
+    const url = "/data/expenses.yml";
+    this.expenses = await fetch(url)
+      .then((res) => {
+        return res.text();
+      })
+      .then((data) => {
+        return yaml.load(data) as Expense[];
+      });
 
     let total = 0;
-    this.expenses.forEach((expense: any) => {
+    this.expenses.forEach((expense: Expense) => {
       total += expense.amount;
     });
 

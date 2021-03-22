@@ -57,16 +57,25 @@ import store from "../store";
 import { defineComponent, onBeforeMount, ref } from "vue";
 import { RankSponsor } from "../types/index";
 
+import yaml from "js-yaml";
+
+import { sortSponsor } from "../utils";
+
 export default defineComponent({
   name: "SponsorsList",
   setup() {
     const sponsors = ref<RankSponsor[]>([]);
 
     onBeforeMount(async () => {
-      const url = "https://sponsors.yunyoujun.cn/rank.json";
-      sponsors.value = await fetch(url).then((res) => {
-        return res.json();
-      });
+      const url = "/data/sponsors.yml";
+      sponsors.value = (await fetch(url)
+        .then((res) => {
+          return res.text();
+        })
+        .then((data) => {
+          const sponsors = yaml.load(data);
+          return sortSponsor(sponsors);
+        })) as RankSponsor[];
 
       let total = 0;
       sponsors.value.forEach((sponsor: any) => {

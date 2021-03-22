@@ -211,3 +211,9 @@
   method: QQ 转账
   amount: 50
   memo: 请老云豁奶茶 嘻嘻
+- name: Ziming Zhang
+  url: https://ironmanzzm.gitee.io/
+  date: 2021-03-21T12:33:35.675Z
+  method: 微信支付
+  amount: 6.66
+  memo: ""

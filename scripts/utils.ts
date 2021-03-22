@@ -1,15 +1,18 @@
-const fs = require("fs");
-const yaml = require("js-yaml");
+import fs from "fs";
+import yaml from "js-yaml";
 
-const { Logger } = require("@yunyoujun/logger");
+import { Logger } from "@yunyoujun/logger";
 const logger = new Logger();
+
+import { sortSponsor } from "../src/utils";
+import { Sponsor } from "../src/types";
 
 /**
  * 从 yaml 文件生成 json
- * @param {string} name
+ * @param name
  */
-function generateJSONfromYaml(name) {
-  const data = yaml.load(fs.readFileSync(`./data/${name}.yml`, "utf8"));
+export function generateJSONfromYaml(name: string) {
+  const data = yaml.load(fs.readFileSync(`./public/data/${name}.yml`, "utf8"));
   try {
     fs.mkdirSync("./dist/");
   } catch ({ code }) {
@@ -22,41 +25,10 @@ function generateJSONfromYaml(name) {
 
 /**
  * 生成排序的 JSON
- * @param {*} json
+ * @param sponsors
  */
-function generateRank(sponsors) {
-  const json = [
-    {
-      name: "",
-      avatar: "https://vercel.com/api/www/avatar/?u=evilrabbit&s=240",
-      total: 0,
-      children: [],
-    },
-  ];
-  sponsors.forEach((sponsor) => {
-    if (!sponsor.name) sponsor.name = "";
-    const contain = json.some((data) => {
-      if (data.name === sponsor.name) {
-        data.total += sponsor.amount;
-        data.children.push(sponsor);
-        return true;
-      } else {
-        return false;
-      }
-    });
-    if (!contain) {
-      json.push({
-        name: sponsor.name,
-        url: sponsor.url,
-        total: sponsor.amount,
-        children: [sponsor],
-      });
-    }
-  });
-
-  json.sort((a, b) => {
-    return b.total - a.total;
-  });
+export function generateRank(sponsors: Sponsor[]) {
+  const json = sortSponsor(sponsors);
 
   const filename = "rank.json";
   fs.writeFileSync(`./dist/${filename}`, JSON.stringify(json));
@@ -68,7 +40,7 @@ function generateRank(sponsors) {
  * 生成 markdown
  * @param {*} data
  */
-function generateMarkdown(data, name = "sponsors") {
+export function generateMarkdown(data: Sponsor[], name = "sponsors") {
   // generate sponsors list
   let sponsors_md = `---
 title: 赞助者名单
@@ -101,9 +73,3 @@ title: 赞助者名单
   fs.writeFileSync(`./dist/${filename}`, sponsors_md);
   logger.success(`Generate ${filename} successfully!`);
 }
-
-module.exports = {
-  generateJSONfromYaml,
-  generateMarkdown,
-  generateRank,
-};

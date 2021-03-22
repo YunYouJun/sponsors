@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "build:json": "node scripts/index.js && cp *.md ./dist/",
+    "build:json": "ts-node-script scripts/index.ts && cp *.md ./dist/",
     "update": "git add -A && git commit -m ':busts_in_silhouette: add new sponsor' && git push",
     "serve": "vite preview",
     "sponsors": "sponsors add"
@@ -23,7 +23,7 @@
   "homepage": "https://sponsors.yunyoujun.cn",
   "dependencies": {
     "@yunyoujun/logger": "^0.1.2",
-    "commander": "^7.1.0",
+    "commander": "^7.2.0",
     "dayjs": "^1.10.4",
     "element-plus": "^1.0.2-beta.35",
     "element-theme-ink": "^1.1.1",
@@ -39,6 +39,7 @@
     "@vitejs/plugin-vue": "^1.1.5",
     "@vue/compiler-sfc": "^3.0.7",
     "sass": "^1.32.8",
+    "ts-node": "^9.1.1",
     "typescript": "^4.2.3",
     "vite": "2.1.2",
     "vite-plugin-components": "^0.8.3",
