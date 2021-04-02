@@ -9,7 +9,7 @@ inquirer.registerPrompt("datetime", require("inquirer-datepicker-prompt"));
 
 program.version(pkg.version);
 
-const dataFile = "./data/sponsors.yml";
+const dataFile = "./public/data/sponsors.yml";
 const questions = [
   {
     type: "input",
