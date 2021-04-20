@@ -25,25 +25,25 @@
     "@yunyoujun/logger": "^0.1.2",
     "commander": "^7.2.0",
     "dayjs": "^1.10.4",
-    "element-plus": "^1.0.2-beta.35",
+    "element-plus": "^1.0.2-beta.40",
     "element-theme-ink": "^1.1.1",
     "inquirer": "^8.0.0",
     "inquirer-datepicker-prompt": "^0.4.2",
-    "js-yaml": "^4.0.0",
+    "js-yaml": "^4.1.0",
     "vue": "^3.0.7"
   },
   "devDependencies": {
-    "@iconify/json": "^1.1.320",
+    "@iconify/json": "^1.1.331",
     "@types/inquirer": "^7.3.1",
     "@types/js-yaml": "^4.0.0",
     "@vitejs/plugin-vue": "^1.1.5",
     "@vue/compiler-sfc": "^3.0.7",
-    "sass": "^1.32.8",
+    "sass": "^1.32.11",
     "ts-node": "^9.1.1",
-    "typescript": "^4.2.3",
-    "vite": "2.1.2",
-    "vite-plugin-components": "^0.8.3",
-    "vite-plugin-icons": "^0.3.2"
+    "typescript": "^4.2.4",
+    "vite": "2.2.1",
+    "vite-plugin-components": "^0.8.4",
+    "vite-plugin-icons": "^0.5.0"
   },
   "license": "MIT"
 }

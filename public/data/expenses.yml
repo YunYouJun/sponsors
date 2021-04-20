@@ -130,3 +130,7 @@
   business: 腾讯云
   amount: 30
   date: 2020-04-14
+- memo: CDN 欠费
+  business: 又拍云
+  amount: 1
+  date: 2020-04-12
