@@ -259,3 +259,9 @@
   method: 微信支付
   amount: 5
   memo: ''
+- name: SKNP
+  url: https://sknplz.xyz/
+  date: 2021-05-05T11:39:58.880Z
+  method: 微信支付
+  amount: 30
+  memo: 祝好
