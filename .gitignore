@@ -1,11 +1,16 @@
 # custom
 rank.json
 
+# lock
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
 .DS_Store
 node_modules/
 dist/
 dist-ssr/
 *.log
-package-lock.json
-yarn.lock
 *.local
+
+lib/

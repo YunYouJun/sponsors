@@ -1,12 +1,5 @@
 <template>
-  <p>
-    如果能留下你的称呼和备注就再好不过了，我将会您添加至本页的赞助者列表中。（没留的话，就默认叫
-    <strong>好心人</strong> 了～）
-  </p>
-  <table
-    class="donate-table"
-    style="margin: 0 auto; padding: 0 1rem; max-width: 1000px"
-  >
+  <table class="donate-table" style="margin: 0 auto; padding: 0 1rem; max-width: 1000px">
     <thead>
       <tr>
         <th title="支付宝">
@@ -49,7 +42,14 @@
       </tr>
     </tbody>
   </table>
+
+  <p class="my-4">{{ t('tooltip') }}</p>
 </template>
+
+<script setup lang="ts">
+import { useI18n } from "vue-i18n";
+const { t } = useI18n();
+</script>
 
 <style lang="scss">
 .donate-table {
@@ -65,7 +65,7 @@
   border: 1px solid #eee;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: 0.4s;
-  margin: 0.5rem;
+  margin: 0.5rem auto;
   max-width: 80%;
 
   &:hover {

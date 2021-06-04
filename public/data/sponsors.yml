@@ -248,26 +248,31 @@
   amount: 10
   memo: 随便你写吧
 - name: 小庄
-  url: ''
+  url: ""
   date: 2021-04-21T08:54:00.076Z
   method: 微信支付
   amount: 1
-  memo: ''
-- name: ''
-  url: ''
+  memo: ""
+- name: ""
+  url: ""
   date: 2021-04-21T08:55:10.532Z
   method: 微信支付
   amount: 5
-  memo: ''
+  memo: ""
 - name: SKNP
   url: https://sknplz.xyz/
   date: 2021-05-05T11:39:58.880Z
   method: 微信支付
   amount: 30
   memo: 祝好
-- name: ''
-  url: ''
+- name: ""
+  url: ""
   date: 2021-05-06T14:32:48.703Z
   method: 微信支付
   amount: 10
   memo: 请云游喝奶茶hh
+- name: "134340号小行星普鲁托鸭"
+  url: "https://weibo.com/737897376"
+  date: 2021-06-02
+  method: 其他
+  content: 小空调软著申请

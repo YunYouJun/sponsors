@@ -1,37 +1,27 @@
 <template>
   <div class="sponsor-table">
-    <el-collapse>
-      <el-collapse-item>
-        <template #title>
-          <div style="display: flex; gap: 0.5rem">
-            <el-tag type="success">
-              收入：{{ state.income.toFixed(2) }}
-            </el-tag>
-            <el-tag type="danger">
-              支出：{{ state.expense.toFixed(2) }}
-            </el-tag>
-            <el-tag type="warning">
-              盈余：{{ store.getBalance().toFixed(2) }}
-            </el-tag>
-          </div>
-        </template>
+    <div style="display: flex; gap: 0.5rem">
+      <el-tag type="success">收入：{{ state.income.toFixed(2) }}</el-tag>
+      <el-tag type="danger">支出：{{ state.expense.toFixed(2) }}</el-tag>
+      <el-tag type="warning">盈余：{{ store.getBalance().toFixed(2) }}</el-tag>
+    </div>
 
-        <el-table :data="expenses" show-summary>
-          <el-table-column prop="date" label="日期">
-            <template #default="scope">{{
-              formatDate(scope.row.date)
-            }}</template>
-          </el-table-column>
-          <el-table-column prop="business" label="服务商"></el-table-column>
-          <el-table-column prop="memo" label="消费内容"></el-table-column>
-          <el-table-column prop="amount" label="金额">
-            <template #default="scope">
-              {{ scope.row.amount.toFixed(2) }}
-            </template>
-          </el-table-column>
-        </el-table>
-      </el-collapse-item>
-    </el-collapse>
+    <br />
+
+    <el-table :data="expenses" show-summary>
+      <el-table-column prop="date" label="日期">
+        <template #default="scope">
+          {{
+            formatDate(scope.row.date)
+          }}
+        </template>
+      </el-table-column>
+      <el-table-column prop="business" label="服务商"></el-table-column>
+      <el-table-column prop="memo" label="消费内容"></el-table-column>
+      <el-table-column prop="amount" label="金额">
+        <template #default="scope">{{ scope.row.amount.toFixed(2) }}</template>
+      </el-table-column>
+    </el-table>
   </div>
 </template>
 

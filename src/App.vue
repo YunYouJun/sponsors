@@ -1,31 +1,18 @@
-<template>
-  <base-header msg="Sponsors" />
-  <donate-qrcode />
-  <sponsors-list />
-  <expense-table />
+<script setup lang="ts">
+import { useHead } from '@vueuse/head'
+import pkg from "../package.json"
 
-  <hr />
-  <p>
-    谢谢你们的支持！
-    您的每一份支持，都是激励我创造出更多有趣、有价值的事物的动力。
-    愿这个世界更美好也更加有趣，也愿诸位与我都能成为自己想要成为的人。
-  </p>
-</template>
-
-<script lang="ts">
-import { defineComponent } from "vue";
-import BaseHeader from "./components/BaseHeader.vue";
-import DonateQrcode from "./components/DonateQrcode.vue";
-import ExpenseTable from "./components/ExpenseTable.vue";
-import SponsorsList from "./components/SponsorsList.vue";
-
-export default defineComponent({
-  name: "App",
-  components: {
-    DonateQrcode,
-    SponsorsList,
-    BaseHeader,
-    ExpenseTable,
-  },
-});
+// https://github.com/vueuse/head
+// you can use this to manipulate the document head in any components,
+// they will be rendered correctly in the html results with vite-ssg
+useHead({
+  title: pkg.description,
+  meta: [
+    { name: 'description', content: pkg.description },
+  ],
+})
 </script>
+
+<template>
+  <router-view />
+</template>

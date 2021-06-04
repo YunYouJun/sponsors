@@ -31,7 +31,7 @@ const questions = [
     type: "list",
     name: "method",
     message: "赞助方式：",
-    choices: ["微信支付", "支付宝", "QQ 转账", "QQ 红包"],
+    choices: ["微信支付", "支付宝", "QQ 转账", "QQ 红包", "其他"],
   },
   {
     type: "number",

@@ -1,25 +1,20 @@
-import { createApp } from "vue";
+import { ViteSSG } from "vite-ssg";
+import generatedRoutes from "virtual:generated-pages";
+import { setupLayouts } from "layouts-generated";
+
 import App from "./App.vue";
-import "./index.css";
 
-import {
-  ElCollapse,
-  ElCollapseItem,
-  ElTable,
-  ElTableColumn,
-  ElTag,
-} from "element-plus";
-// import ElementPlus from "element-plus";
-import "element-plus/lib/theme-chalk/index.css";
-// import "element-theme-ink";
+import "virtual:windi.css";
+import "virtual:windi-devtools";
 
-const app = createApp(App);
+import "./styles/main.css";
 
-app.use(ElCollapse);
-app.use(ElCollapseItem);
-app.use(ElTable);
-app.use(ElTableColumn);
-app.use(ElTag);
-// app.use(ElementPlus);
+const routes = setupLayouts(generatedRoutes);
 
-app.mount("#app");
+// https://github.com/antfu/vite-ssg
+export const createApp = ViteSSG(App, { routes }, (ctx) => {
+  // install all modules under `modules/`
+  Object.values(import.meta.globEager("./modules/*.ts")).map((i) =>
+    i.install?.(ctx)
+  );
+});

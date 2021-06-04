@@ -14,20 +14,15 @@
             :href="scope.row.url"
             target="_blank"
             :alt="scope.row.name"
-            >{{ scope.row.name || "不知名的好心人" }}
-          </a>
-          <span v-else>
-            {{ scope.row.name || "不知名的好心人" }}
-          </span>
+            class="sponsor-link"
+          >{{ scope.row.name || "不知名的好心人" }}</a>
+          <span v-else>{{ scope.row.name || "不知名的好心人" }}</span>
         </template>
       </el-table-column>
       <el-table-column prop="total" label="总额（元）" sortable>
-        <template #default="scope">
-          {{ scope.row.total.toFixed(2) }}
-        </template>
+        <template #default="scope">{{ scope.row.total.toFixed(2) }}</template>
       </el-table-column>
-      <el-table-column prop="children.length" label="次数" sortable>
-      </el-table-column>
+      <el-table-column prop="children.length" label="次数" sortable></el-table-column>
     </el-table>
   </div>
 </template>
@@ -55,7 +50,7 @@
 <script lang="ts">
 import store from "../store";
 import { defineComponent, onBeforeMount, ref } from "vue";
-import { RankSponsor } from "../types/index";
+import { RankSponsor, Sponsor } from "../types/index";
 
 import yaml from "js-yaml";
 
@@ -73,8 +68,9 @@ export default defineComponent({
           return res.text();
         })
         .then((data) => {
-          const sponsors = yaml.load(data);
-          return sortSponsor(sponsors);
+          const sponsors = yaml.load(data) as Sponsor[];
+          const result = sponsors.filter((item) => item.amount >= 5);
+          return sortSponsor(result);
         })) as RankSponsor[];
 
       let total = 0;
