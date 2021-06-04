@@ -25,6 +25,10 @@ interface BaseSponsor {
    * 赞助方式
    */
   method: SponsorMethod;
+  /**
+   * 备注内容
+   */
+  memo?: string;
 }
 
 /**
@@ -39,16 +43,12 @@ export interface MoneySponsor extends BaseSponsor {
    * 赞助金额
    */
   amount: number;
-  /**
-   * 备注内容
-   */
-  memo: string;
 }
 
 /**
  * 其他形似的赞助者
  */
-export interface OtherSponsor {
+export interface OtherSponsor extends BaseSponsor {
   method: SponsorMethod.OTHER;
   /**
    * 赞助内容

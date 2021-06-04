@@ -1,5 +1,5 @@
 import dayjs from "dayjs";
-import { Sponsor } from "../types";
+import { MoneySponsor } from "../types";
 
 /**
  * 格式化日期
@@ -14,7 +14,7 @@ export function formatDate(val: any) {
  * 对 sponsor 进行排序
  * @param sponsors
  */
-export function sortSponsor(sponsors: Sponsor[]) {
+export function sortSponsor(sponsors: MoneySponsor[]) {
   const json = [
     {
       name: "",

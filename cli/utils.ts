@@ -5,7 +5,7 @@ import { Logger } from "@yunyoujun/logger";
 const logger = new Logger();
 
 import { sortSponsor } from "../src/utils";
-import { Sponsor } from "../src/types";
+import { MoneySponsor } from "../src/types";
 
 /**
  * 从 yaml 文件生成 json
@@ -27,7 +27,7 @@ export function generateJSONfromYaml(name: string) {
  * 生成排序的 JSON
  * @param sponsors
  */
-export function generateRank(sponsors: Sponsor[]) {
+export function generateRank(sponsors: MoneySponsor[]) {
   const json = sortSponsor(sponsors);
 
   const filename = "rank.json";
@@ -40,7 +40,7 @@ export function generateRank(sponsors: Sponsor[]) {
  * 生成 markdown
  * @param {*} data
  */
-export function generateMarkdown(data: Sponsor[], name = "sponsors") {
+export function generateMarkdown(data: MoneySponsor[], name = "sponsors") {
   // generate sponsors list
   let sponsors_md = `---
 title: 赞助者名单
@@ -57,10 +57,12 @@ title: 赞助者名单
     const boss = sponsor.url
       ? `[${sponsor.name}](${sponsor.url})`
       : `${sponsor.name || "好心人"}`;
+
     const amount =
       sponsor.amount >= 50
         ? `**${sponsor.amount.toFixed(2)}**`
         : `${sponsor.amount.toFixed(2)}`;
+
     const sponsor_md = `|${boss}|${
       sponsor.method
     }|${amount}|${sponsor.date.toLocaleDateString("zh-CN")}|${

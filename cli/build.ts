@@ -1,23 +1,25 @@
 import { generateJSONfromYaml, generateMarkdown, generateRank } from "./utils";
-import { Sponsor } from "../src/types/index";
+import { Sponsor, MoneySponsor } from "../src/types/index";
 
 try {
-  const data = generateJSONfromYaml("sponsors") as Sponsor[];
+  let data = generateJSONfromYaml("sponsors") as Sponsor[];
   // filter
-  data.filter((item) => {
-    if (!item.method === "其他") {
-      return item.amount >= 5;
+  data = data.filter((item) => {
+    // todo: other sponsors
+    if (item.method === "其他") {
+      // return true;
+      return false;
     } else {
-      return true;
+      return item.amount >= 5;
     }
   });
 
   generateJSONfromYaml("expenses");
 
   // 生成排序的 JSON
-  generateRank(data);
+  generateRank(data as MoneySponsor[]);
 
-  generateMarkdown(data);
+  generateMarkdown(data as MoneySponsor[]);
 } catch (e) {
   console.error(e);
 }
