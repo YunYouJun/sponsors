@@ -15,15 +15,19 @@
         </template>
       </el-table-column>
       <el-table-column prop="content" label="内容"></el-table-column>
+      <el-table-column prop="date" label="日期">
+        <template #default="scope">{{ formatDate(scope.row.date) }}</template>
+      </el-table-column>
     </el-table>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, onBeforeMount, ref } from "vue";
-import { OtherSponsor, RankSponsor, Sponsor } from "../types/index";
+import { OtherSponsor, Sponsor } from "../types/index";
 
 import yaml from "js-yaml";
+import { formatDate } from "~/utils";
 
 export default defineComponent({
   name: "SponsorsList",
@@ -45,6 +49,7 @@ export default defineComponent({
 
     return {
       sponsors,
+      formatDate
     };
   },
 });
