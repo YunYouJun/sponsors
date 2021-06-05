@@ -74,7 +74,8 @@ export default defineConfig({
       customComponentResolvers: [
         // https://github.com/antfu/vite-plugin-icons
         ViteIconsResolver(),
-        ElementPlusResolver(),
+        // disable for build, wait for https://github.com/antfu/vite-plugin-components/issues/58
+        // ElementPlusResolver(),
       ],
     }),
 
