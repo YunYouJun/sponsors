@@ -2,8 +2,8 @@ import { ViteSSGContext } from "vite-ssg";
 export type UserModule = (ctx: ViteSSGContext) => void;
 
 export enum MoneyMethod {
-  ALI_PAY = "支付宝",
   WECHAT_PAY = "微信支付",
+  ALI_PAY = "支付宝",
   QQ_PAY = "QQ 钱包",
 }
 

@@ -401,3 +401,9 @@
   method: QQ 钱包
   amount: 6.66
   memo: 感谢小空调，周末面试加油
+- name: T*G
+  url: ''
+  date: 2021-06-07T06:54:01.758Z
+  method: 微信支付
+  amount: 5.2
+  memo: ''

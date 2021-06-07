@@ -5,9 +5,16 @@ import yaml from "js-yaml";
 import fs from "fs";
 
 import inquirer from "inquirer";
+import { MoneyMethod, SponsorMethod } from "../src/types";
+import { EnumKeys } from "../src/types/helper";
 inquirer.registerPrompt("datetime", require("inquirer-datepicker-prompt"));
 
 program.version(pkg.version);
+
+let sponsorMethods: SponsorMethod[] = EnumKeys(MoneyMethod).map(
+  (item) => MoneyMethod[item]
+);
+sponsorMethods.push("其他");
 
 const dataFile = "./public/data/sponsors.yml";
 const questions = [
@@ -31,7 +38,7 @@ const questions = [
     type: "list",
     name: "method",
     message: "赞助方式：",
-    choices: ["微信支付", "支付宝", "QQ 钱包", "其他"],
+    choices: sponsorMethods,
   },
   {
     type: "number",
