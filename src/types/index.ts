@@ -1,12 +1,15 @@
 import { ViteSSGContext } from "vite-ssg";
 export type UserModule = (ctx: ViteSSGContext) => void;
 
-export enum SponsorMethod {
+export enum MoneyMethod {
   ALI_PAY = "支付宝",
   WECHAT_PAY = "微信支付",
   QQ_PAY = "QQ 钱包",
-  OTHER = "其他",
 }
+
+export type OtherMethod = "其他";
+
+export type SponsorMethod = MoneyMethod | OtherMethod;
 
 interface BaseSponsor {
   /**
@@ -35,10 +38,7 @@ interface BaseSponsor {
  * 金钱赞助者
  */
 export interface MoneySponsor extends BaseSponsor {
-  method:
-    | SponsorMethod.ALI_PAY
-    | SponsorMethod.WECHAT_PAY
-    | SponsorMethod.QQ_PAY;
+  method: MoneyMethod.ALI_PAY | MoneyMethod.WECHAT_PAY | MoneyMethod.QQ_PAY;
   /**
    * 赞助金额
    */
@@ -49,7 +49,7 @@ export interface MoneySponsor extends BaseSponsor {
  * 其他形似的赞助者
  */
 export interface OtherSponsor extends BaseSponsor {
-  method: SponsorMethod.OTHER;
+  method: OtherMethod;
   /**
    * 赞助内容
    */

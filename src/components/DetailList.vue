@@ -3,11 +3,13 @@
     <el-table-column prop="date" label="日期">
       <template #default="scope">{{ formatDate(scope.row.date) }}</template>
     </el-table-column>
-    <el-table-column prop="method" label="方式"></el-table-column>
-    <el-table-column prop="amount" label="金额">
+    <el-table-column prop="method" label="方式">
       <template #default="scope">
-        {{ scope.row.amount.toFixed(2) }}
+        <MethodIcon :method="scope.row.method" />
       </template>
+    </el-table-column>
+    <el-table-column prop="amount" label="金额">
+      <template #default="scope">{{ scope.row.amount.toFixed(2) }}</template>
     </el-table-column>
     <el-table-column prop="memo" label="备注"></el-table-column>
   </el-table>
@@ -16,6 +18,7 @@
 <script lang="ts">
 import { formatDate } from "../utils";
 import { defineComponent } from "vue";
+import MethodIcon from "./MethodIcon.vue";
 export default defineComponent({
   props: {
     tableData: Array,
@@ -23,5 +26,6 @@ export default defineComponent({
   methods: {
     formatDate,
   },
+  components: { MethodIcon }
 });
 </script>

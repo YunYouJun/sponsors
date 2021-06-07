@@ -1,10 +1,10 @@
 #!/usr/bin/env node
-const { program } = require("commander");
-const pkg = require("../package.json");
-const yaml = require("js-yaml");
-const fs = require("fs");
+import { program } from "commander";
+import pkg from "../package.json";
+import yaml from "js-yaml";
+import fs from "fs";
 
-const inquirer = require("inquirer");
+import inquirer from "inquirer";
 inquirer.registerPrompt("datetime", require("inquirer-datepicker-prompt"));
 
 program.version(pkg.version);
@@ -31,7 +31,7 @@ const questions = [
     type: "list",
     name: "method",
     message: "赞助方式：",
-    choices: ["微信支付", "支付宝", "QQ 转账", "QQ 红包", "其他"],
+    choices: ["微信支付", "支付宝", "QQ 钱包", "其他"],
   },
   {
     type: "number",
@@ -52,4 +52,6 @@ program.command("add").action(async () => {
   fs.appendFileSync(dataFile, item);
 });
 
-program.parse(process.argv);
+export async function run() {
+  program.parse(process.argv);
+}

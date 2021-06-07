@@ -9,7 +9,7 @@ if (dev) {
   require("ts-node").register({ project });
 }
 
-require(`../${dev ? "src" : "lib"}`)
+require(`../${dev ? "cli" : "lib"}`)
   .run()
   .catch((e) => {
     console.log(e);

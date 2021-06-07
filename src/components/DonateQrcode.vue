@@ -2,53 +2,44 @@
   <table class="donate-table" style="margin: 0 auto; padding: 0 1rem; max-width: 1000px">
     <thead>
       <tr>
-        <th title="支付宝">
-          <i-ri-alipay-line class="vite-icon" color="#00A3EE" />
-        </th>
-        <th title="微信">
-          <i-ri-wechat-pay-line class="vite-icon" color="#2DC100" />
-        </th>
-        <th title="QQ">
-          <i-ri-qq-line class="vite-icon" color="#12B7F5" />
+        <th v-for="key in methods" :title="MoneyMethod[key]">
+          <MethodIcon :method="MoneyMethod[key]" />
         </th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>
-          <img
-            class="qrcode-img"
-            width="200"
-            src="https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/alipay-qrcode.jpg"
-            alt="支付宝"
-          />
-        </td>
-        <td>
-          <img
-            class="qrcode-img"
-            width="200"
-            src="https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/wechatpay-qrcode.jpg"
-            alt="微信支付"
-          />
-        </td>
-        <td>
-          <img
-            class="qrcode-img"
-            width="200"
-            src="https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/qqpay-qrcode.png"
-            alt="QQ 支付"
-          />
+        <td v-for="qr in donateQrcode">
+          <img class="qrcode-img" width="200" :src="qr.url" :alt="qr.title" />
         </td>
       </tr>
     </tbody>
   </table>
 
-  <p class="my-4">{{ t('tooltip') }}</p>
+  <p class="my-4">{{ t("tooltip") }}</p>
 </template>
 
 <script setup lang="ts">
 import { useI18n } from "vue-i18n";
+import { MoneyMethod } from "~/types";
+import { EnumKeys } from "~/types/helper";
+import MethodIcon from "./MethodIcon.vue";
 const { t } = useI18n();
+const methods = EnumKeys(MoneyMethod);
+const donateQrcode = [
+  {
+    title: "支付宝",
+    url: "https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/alipay-qrcode.jpg",
+  },
+  {
+    title: "微信支付",
+    url: "https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/wechatpay-qrcode.jpg",
+  },
+  {
+    title: "QQ 支付",
+    url: "https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/qqpay-qrcode.png",
+  },
+];
 </script>
 
 <style lang="scss">

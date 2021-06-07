@@ -123,7 +123,7 @@
   date: 2020-08-13
   amount: 4.58
 - name: 北漂的候鸟
-  method: QQ 转账
+  method: QQ 钱包
   date: 2020-08-17
   amount: 1.06
   memo: 嘿嘿嘿
@@ -138,12 +138,12 @@
   amount: 3
   memo: 给云游君买瓶冰可乐
 - name: H
-  method: QQ 转账
+  method: QQ 钱包
   date: 2020-08-25
   amount: 5.20
   memo: 感谢你的开源项目，七夕快
 - name: 一真
-  method: QQ 转账
+  method: QQ 钱包
   date: 2020-09-08
   amount: 20.00
 - name: SKNP
@@ -179,13 +179,13 @@
   memo: 冰阔落
 - name: Jigsaw
   url: https://blog.maddestroyer.xyz
-  method: QQ 转账
+  method: QQ 钱包
   date: 2020-12-28
   amount: 3.14
 - name: Chase杨念
   url: https://yangnian.top/
   date: 2021-01-30T07:41:25.777Z
-  method: QQ 转账
+  method: QQ 钱包
   amount: 2
 - name: SKNP
   url: https://sknplz.xyz/
@@ -196,7 +196,7 @@
 - name: 懒鬼，起来干活！
   url: ""
   date: 2021-03-17T11:42:32.939Z
-  method: QQ 转账
+  method: QQ 钱包
   amount: 4
   memo: 一杯甜筒？
 - name: ""
@@ -208,7 +208,7 @@
 - name: 落小梅
   url: ""
   date: 2021-03-18T09:50:13.183Z
-  method: QQ 转账
+  method: QQ 钱包
   amount: 50
   memo: 请老云豁奶茶 嘻嘻
 - name: Ziming Zhang
@@ -271,6 +271,11 @@
   method: 微信支付
   amount: 10
   memo: 请云游喝奶茶hh
+- name: 又拍云
+  url: https://www.upyun.com/
+  date: 2021-05-10T18:13:49.673Z
+  method: 其他
+  content: 1000 元代金券 (2021.05.11-2022.05.11)
 - name: "134340号小行星普鲁托鸭"
   url: "https://weibo.com/737897376"
   date: 2021-06-02
@@ -381,23 +386,18 @@
 - name: 迷糊
   url: ""
   date: 2021-05-09T18:09:50.704Z
-  method: QQ 转账
+  method: QQ 钱包
   amount: 5
   memo: 博客内容很有趣！
 - name: 王水
   url: ""
   date: 2021-05-09T18:10:23.960Z
-  method: QQ 转账
+  method: QQ 钱包
   amount: 5
   memo: Ax（谢谢你的空调！
 - name: 镜影♪
   url: ""
   date: 2021-05-10T18:11:44.182Z
-  method: QQ 转账
+  method: QQ 钱包
   amount: 6.66
   memo: 感谢小空调，周末面试加油
-- name: 又拍云
-  url: https://www.upyun.com/
-  date: 2021-05-10T18:13:49.673Z
-  method: 其他
-  content: 1000 元代金券 (2021.05.11-2022.05.11)
