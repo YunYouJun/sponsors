@@ -14,7 +14,7 @@
             :href="scope.row.url"
             target="_blank"
             :alt="scope.row.name"
-            class="sponsor-link"
+            class="sponsor-url"
           >
             <span>{{ scope.row.name || "不知名的好心人" }}</span>
           </a>

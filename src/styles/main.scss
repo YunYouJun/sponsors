@@ -35,8 +35,9 @@ p {
   font-size: 14px;
 }
 
+// sponsor-link will be disabled by AdblockPlus.
 .sponsor {
-  &-link {
+  &-url {
     color: #0078e7;
   }
 }

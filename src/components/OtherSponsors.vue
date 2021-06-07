@@ -9,7 +9,7 @@
             :href="scope.row.url"
             target="_blank"
             :alt="scope.row.name"
-            class="sponsor-link"
+            class="sponsor-url"
           >{{ scope.row.name || "不知名的好心人" }}</a>
           <span v-else>{{ scope.row.name || "不知名的好心人" }}</span>
         </template>
