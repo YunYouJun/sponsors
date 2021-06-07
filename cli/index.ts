@@ -48,6 +48,7 @@ const questions = [
 program.command("add").action(async () => {
   const answers = await inquirer.prompt(questions);
   const item = yaml.dump([answers]);
+  // for debug
   console.log(item);
   fs.appendFileSync(dataFile, item);
 });

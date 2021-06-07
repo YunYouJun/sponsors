@@ -11,6 +11,7 @@ import VueI18n from "@intlify/vite-plugin-vue-i18n";
 import Markdown from "vite-plugin-md";
 import Prism from "markdown-it-prism";
 import WindiCSS from "vite-plugin-windicss";
+import { VitePWA } from "vite-plugin-pwa";
 
 import StyleImport from "vite-plugin-style-import";
 
@@ -85,6 +86,23 @@ export default defineConfig({
     // https://github.com/antfu/vite-plugin-windicss
     WindiCSS({
       safelist: "prose prose-sm m-auto text-left",
+    }),
+
+    // https://github.com/antfu/vite-plugin-pwa
+    VitePWA({
+      registerType: "autoUpdate",
+      manifest: {
+        name: "YunYouJun's Sponsors",
+        short_name: "Sponsors",
+        theme_color: "#ffffff",
+        icons: [
+          {
+            src: "/logo.png",
+            sizes: "240x240",
+            type: "image/png",
+          },
+        ],
+      },
     }),
 
     // https://github.com/intlify/vite-plugin-vue-i18n

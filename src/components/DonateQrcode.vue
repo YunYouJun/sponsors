@@ -10,7 +10,9 @@
     <tbody>
       <tr>
         <td v-for="qr in donateQrcode">
-          <img class="qrcode-img" width="200" :src="qr.url" :alt="qr.title" />
+          <a :href="qr.url" :title="qr.title" target="_blank">
+            <img class="qrcode-img" :src="qr.url" :alt="qr.title" />
+          </a>
         </td>
       </tr>
     </tbody>
@@ -48,10 +50,12 @@ const donateQrcode = [
   td {
     background: transparent;
     text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.05);
   }
 }
 
 .qrcode-img {
+  width: 250px;
   padding: 4px;
   border: 1px solid #eee;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);

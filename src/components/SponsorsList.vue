@@ -15,7 +15,9 @@
             target="_blank"
             :alt="scope.row.name"
             class="sponsor-link"
-          >{{ scope.row.name || "不知名的好心人" }}</a>
+          >
+            <span>{{ scope.row.name || "不知名的好心人" }}</span>
+          </a>
           <span v-else>{{ scope.row.name || "不知名的好心人" }}</span>
         </template>
       </el-table-column>
@@ -76,7 +78,6 @@ export default defineComponent({
               return item.amount >= 5;
             }
           }) as MoneySponsor[];
-          console.log(result)
           return sortSponsor(result);
         })) as RankSponsor[];
 
