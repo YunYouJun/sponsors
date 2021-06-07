@@ -50,7 +50,7 @@
 <script lang="ts">
 import store from "../store";
 import { defineComponent, onBeforeMount, ref } from "vue";
-import { RankSponsor, Sponsor } from "../types/index";
+import { MoneySponsor, RankSponsor, Sponsor } from "../types/index";
 
 import yaml from "js-yaml";
 
@@ -69,7 +69,14 @@ export default defineComponent({
         })
         .then((data) => {
           const sponsors = yaml.load(data) as Sponsor[];
-          const result = sponsors.filter((item) => item.amount >= 5);
+          const result = sponsors.filter((item) => {
+            if (item.method === "其他") {
+              return false;
+            } else {
+              return item.amount >= 5;
+            }
+          }) as MoneySponsor[];
+          console.log(result)
           return sortSponsor(result);
         })) as RankSponsor[];
 
