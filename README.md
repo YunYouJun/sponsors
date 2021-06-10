@@ -39,4 +39,5 @@
 
 ```sh
 yarn sponsors
+# pnpm sponsors
 ```

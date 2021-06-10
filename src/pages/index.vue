@@ -14,7 +14,6 @@
     </el-tab-pane>
   </el-tabs>
 
-  <hr />
   <p class="mt-5">{{ t('acknowledgement') }}</p>
 </template>
 
