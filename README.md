@@ -2,6 +2,8 @@
 
 [![YunYouJun's Sponsors](https://github.com/YunYouJun/sponsors/workflows/Sponsors/badge.svg)](https://sponsors.yunyoujun.cn)
 
+> 赞助列表：<https://sponsors.yunyoujun.cn>
+
 ![打工是不可能打工的](https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/meme/no-work.jpg)
 
 谢谢您的支持。
@@ -18,9 +20,9 @@
 
 > 如果能留下你的称呼和备注就再好不过了，大于 6 元的我将会将其添加至 [赞助者列表](https://sponsors.yunyoujun.cn/) 中。（没留的话，就默认叫 `好心人` 了～）
 
-| 支付宝                                                                                                      | 微信支付                                                                                                     | QQ 支付                                                                                                         |
-| ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------- |
-| <img width="250" src="https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/alipay-qrcode.jpg" alt="支付宝"> | <img width="250" src="https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/qqpay-qrcode.png" alt="微信支付"> | <img width="250" src="https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/wechatpay-qrcode.jpg" alt="QQ 支付"> |
+| 支付宝                                                                                                      | 微信支付                                                                                                         | QQ 支付                                                                                                     |
+| ----------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| <img width="250" src="https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/alipay-qrcode.jpg" alt="支付宝"> | <img width="250" src="https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/wechatpay-qrcode.jpg" alt="微信支付"> | <img width="250" src="https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/qqpay-qrcode.png" alt="QQ 支付"> |
 
 - 爱发电：[@yunyoujun](https://afdian.net/@yunyoujun)
 - Patreon: [YunYouJun](https://www.patreon.com/yunyoujun)

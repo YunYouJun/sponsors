@@ -21,7 +21,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType } from "vue";
+import { defineComponent, defineProps, PropType } from "vue";
 import { MoneyMethod } from "~/types";
 export default defineComponent({
   props: {

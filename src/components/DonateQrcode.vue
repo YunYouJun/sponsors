@@ -9,9 +9,9 @@
     </thead>
     <tbody>
       <tr>
-        <td v-for="qr in donateQrcode">
-          <a :href="qr.url" :title="qr.title" target="_blank">
-            <img class="qrcode-img" :src="qr.url" :alt="qr.title" />
+        <td v-for="key in methods">
+          <a :href="donateMethod[key].url" :title="donateMethod[key].title" target="_blank">
+            <img class="qrcode-img" :src="donateMethod[key].url" :alt="donateMethod[key].title" />
           </a>
         </td>
       </tr>
@@ -26,22 +26,9 @@ import { useI18n } from "vue-i18n";
 import { MoneyMethod } from "~/types";
 import { EnumKeys } from "~/types/helper";
 import MethodIcon from "./MethodIcon.vue";
+import {donateMethod } from "~/assets/donate"
 const { t } = useI18n();
 const methods = EnumKeys(MoneyMethod);
-const donateQrcode = [
-  {
-    title: "支付宝",
-    url: "https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/alipay-qrcode.jpg",
-  },
-  {
-    title: "微信支付",
-    url: "https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/wechatpay-qrcode.jpg",
-  },
-  {
-    title: "QQ 支付",
-    url: "https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/qqpay-qrcode.png",
-  },
-];
 </script>
 
 <style lang="scss">
