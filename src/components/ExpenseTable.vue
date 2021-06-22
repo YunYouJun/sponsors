@@ -25,10 +25,10 @@
   </div>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
 import store from "../store";
 import { formatDate } from "../utils";
-import { defineComponent } from "vue";
+import { onBeforeMount, ref, toRefs } from "vue";
 import yaml from "js-yaml";
 
 interface Expense {
@@ -38,33 +38,24 @@ interface Expense {
   date: Date;
 }
 
-export default defineComponent({
-  data() {
-    return {
-      expenses: [] as Expense[],
-      store: store,
-      state: store.state,
-    };
-  },
-  methods: {
-    formatDate,
-  },
-  async beforeCreate() {
-    const url = "/data/expenses.yml";
-    this.expenses = await fetch(url)
-      .then((res) => {
-        return res.text();
-      })
-      .then((data) => {
-        return yaml.load(data) as Expense[];
-      });
+const expenses = ref<Expense[]>([])
+const state = store.state
 
-    let total = 0;
-    this.expenses.forEach((expense: Expense) => {
-      total += expense.amount;
+onBeforeMount(async ()=> {
+  const url = "/data/expenses.yml";
+  expenses.value = await fetch(url)
+    .then((res) => {
+      return res.text();
+    })
+    .then((data) => {
+      return yaml.load(data) as Expense[];
     });
 
-    store.setExpense(total);
-  },
-});
+  let total = 0;
+  expenses.value.forEach((expense: Expense) => {
+    total += expense.amount;
+  });
+
+  store.setExpense(total);
+})
 </script>

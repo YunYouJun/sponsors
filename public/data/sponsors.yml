@@ -402,14 +402,20 @@
   amount: 6.66
   memo: 感谢小空调，周末面试加油
 - name: T*G
-  url: ''
+  url: ""
   date: 2021-06-07T06:54:01.758Z
   method: 微信支付
   amount: 5.2
-  memo: ''
+  memo: ""
 - name: 知名的好心人
-  url: ''
+  url: ""
   date: 2021-06-10T06:12:42.100Z
   method: 微信支付
   amount: 482
-  memo: ''
+  memo: ""
+- name: 肥猪
+  url: https://feizhuqwq.com/
+  date: 2021-06-20T20:01:11.943Z
+  method: 支付宝
+  amount: 36.66
+  memo: ""
