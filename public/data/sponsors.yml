@@ -419,3 +419,9 @@
   method: 支付宝
   amount: 36.66
   memo: ""
+- name: 快乐的资本家
+  url: ''
+  date: 2021-06-23T13:58:43.355Z
+  method: 微信支付
+  amount: 120
+  memo: ''
