@@ -15,6 +15,8 @@ import { VitePWA } from "vite-plugin-pwa";
 
 import StyleImport from "vite-plugin-style-import";
 
+const markdownWrapperClasses = 'prose prose-sm m-auto text-left'
+
 // https://vitejs.dev/config/
 export default defineConfig({
   resolve: {
@@ -55,7 +57,7 @@ export default defineConfig({
 
     // https://github.com/antfu/vite-plugin-md
     Markdown({
-      wrapperClasses: "prose prose-sm m-auto text-left",
+      wrapperClasses: markdownWrapperClasses,
       headEnabled: true,
       markdownItSetup(md) {
         // https://prismjs.com/
@@ -71,6 +73,9 @@ export default defineConfig({
       // allow auto import and register components used in markdown
       customLoaderMatcher: (id) => id.endsWith(".md"),
 
+      // generate `components.d.ts` for ts support with Volar
+      globalComponentsDeclaration: true,
+
       // auto import icons
       customComponentResolvers: [
         // https://github.com/antfu/vite-plugin-icons
@@ -85,7 +90,7 @@ export default defineConfig({
 
     // https://github.com/antfu/vite-plugin-windicss
     WindiCSS({
-      safelist: "prose prose-sm m-auto text-left",
+      safelist: markdownWrapperClasses,
     }),
 
     // https://github.com/antfu/vite-plugin-pwa
@@ -107,7 +112,9 @@ export default defineConfig({
 
     // https://github.com/intlify/vite-plugin-vue-i18n
     VueI18n({
-      include: [path.resolve(__dirname, "locales/**")],
+      runtimeOnly: true,
+      compositionOnly: true,
+      include: [path.resolve(__dirname, 'locales/**')],
     }),
   ],
 
