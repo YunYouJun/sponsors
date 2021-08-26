@@ -12,10 +12,9 @@ import Markdown from "vite-plugin-md";
 import Prism from "markdown-it-prism";
 import WindiCSS from "vite-plugin-windicss";
 import { VitePWA } from "vite-plugin-pwa";
+import VitePluginElementPlus from "vite-plugin-element-plus";
 
-import StyleImport from "vite-plugin-style-import";
-
-const markdownWrapperClasses = 'prose prose-sm m-auto text-left'
+const markdownWrapperClasses = "prose prose-sm m-auto text-left";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -30,21 +29,11 @@ export default defineConfig({
       include: [/\.vue$/, /\.md$/],
     }),
 
-    StyleImport({
-      libs: [
-        {
-          libraryName: "element-plus",
-          esModule: true,
-          ensureStyleFile: true,
-          resolveStyle: (name) => {
-            name = name.slice(3);
-            return `element-plus/packages/theme-chalk/src/${name}.scss`;
-          },
-          resolveComponent: (name) => {
-            return `element-plus/lib/${name}`;
-          },
-        },
-      ],
+    VitePluginElementPlus({
+      // 如果你需要使用 [component name].scss 源文件，你需要把下面的注释取消掉。
+      // 对于所有的 API 你可以参考 https://github.com/element-plus/vite-plugin-element-plus
+      // 的文档注释
+      // useSource: true
     }),
 
     // https://github.com/hannoeru/vite-plugin-pages
@@ -114,9 +103,15 @@ export default defineConfig({
     VueI18n({
       runtimeOnly: true,
       compositionOnly: true,
-      include: [path.resolve(__dirname, 'locales/**')],
+      include: [path.resolve(__dirname, "locales/**")],
     }),
   ],
+
+  server: {
+    fs: {
+      strict: true,
+    },
+  },
 
   // https://github.com/antfu/vite-ssg
   ssgOptions: {
