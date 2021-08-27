@@ -5,7 +5,7 @@ import Vue from "@vitejs/plugin-vue";
 import Pages from "vite-plugin-pages";
 import Layouts from "vite-plugin-vue-layouts";
 
-import ViteComponents, { ElementPlusResolver } from "vite-plugin-components";
+import ViteComponents from "vite-plugin-components";
 import ViteIcons, { ViteIconsResolver } from "vite-plugin-icons";
 import VueI18n from "@intlify/vite-plugin-vue-i18n";
 import Markdown from "vite-plugin-md";
@@ -34,6 +34,7 @@ export default defineConfig({
       // 对于所有的 API 你可以参考 https://github.com/element-plus/vite-plugin-element-plus
       // 的文档注释
       // useSource: true
+      format: "cjs",
     }),
 
     // https://github.com/hannoeru/vite-plugin-pages
