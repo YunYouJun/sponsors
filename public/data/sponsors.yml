@@ -449,3 +449,9 @@
   method: 微信支付
   amount: 10
   memo: 文朔前来支持大佬～
+- name: 小海星
+  url: blog.xiaohaoxing.xyz
+  date: 2021-08-31T03:15:07.232Z
+  method: 支付宝
+  amount: 20
+  memo: 小海星一只

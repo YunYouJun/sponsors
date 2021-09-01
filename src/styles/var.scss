@@ -1,0 +1,14 @@
+html:not(.dark) {
+  --qrcode-border-color: #eee;
+}
+
+html.dark {
+  --qrcode-border-color: gray;
+
+  // element
+  .sponsor-table {
+    .el-table {
+      --el-table-background-color: transparent;
+    }
+  }
+}

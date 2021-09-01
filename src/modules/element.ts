@@ -4,7 +4,7 @@ import { UserModule } from "~/types";
 import { ElTable, ElTag, ElTabs } from "element-plus";
 
 // import ElementPlus from "element-plus";
-// import "element-plus/theme-chalk/index.css";
+// import "element-plus/dist/index.css";
 // import "element-theme-ink";
 
 export const install: UserModule = ({ app }) => {
