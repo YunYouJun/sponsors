@@ -5,14 +5,19 @@ import Vue from "@vitejs/plugin-vue";
 import Pages from "vite-plugin-pages";
 import Layouts from "vite-plugin-vue-layouts";
 
-import ViteComponents from "vite-plugin-components";
-import ViteIcons, { ViteIconsResolver } from "vite-plugin-icons";
+import Icons from "unplugin-icons/vite";
+import IconsResolver from "unplugin-icons/resolver";
+import Components from "unplugin-vue-components/vite";
+import AutoImport from "unplugin-auto-import/vite";
+
 import VueI18n from "@intlify/vite-plugin-vue-i18n";
 import Markdown from "vite-plugin-md";
 import Prism from "markdown-it-prism";
 import WindiCSS from "vite-plugin-windicss";
 import { VitePWA } from "vite-plugin-pwa";
 // import VitePluginElementPlus from "vite-plugin-element-plus";
+
+import LinkAttributes from "markdown-it-link-attributes";
 
 const markdownWrapperClasses = "prose prose-sm m-auto text-left";
 
@@ -47,47 +52,69 @@ export default defineConfig(({ mode }) => {
       // https://github.com/JohnCampionJr/vite-plugin-vue-layouts
       Layouts(),
 
-      // https://github.com/antfu/vite-plugin-md
-      Markdown({
-        wrapperClasses: markdownWrapperClasses,
-        headEnabled: true,
-        markdownItSetup(md) {
-          // https://prismjs.com/
-          md.use(Prism);
-        },
+      // https://github.com/antfu/unplugin-auto-import
+      AutoImport({
+        imports: [
+          "vue",
+          "vue-router",
+          "vue-i18n",
+          "@vueuse/head",
+          "@vueuse/core",
+        ],
+        dts: true,
       }),
 
-      // https://github.com/antfu/vite-plugin-components
-      ViteComponents({
+      // https://github.com/antfu/unplugin-vue-components
+      Components({
         // allow auto load markdown components under `./src/components/`
         extensions: ["vue", "md"],
 
+        dts: true,
+
         // allow auto import and register components used in markdown
-        customLoaderMatcher: (id) => id.endsWith(".md"),
+        include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
 
-        // generate `components.d.ts` for ts support with Volar
-        globalComponentsDeclaration: true,
-
-        // auto import icons
-        customComponentResolvers: [
-          // https://github.com/antfu/vite-plugin-icons
-          ViteIconsResolver(),
-          // disable for build, wait for https://github.com/antfu/vite-plugin-components/issues/58
-          // ElementPlusResolver(),
+        // custom resolvers
+        resolvers: [
+          // auto import icons
+          // https://github.com/antfu/unplugin-icons
+          IconsResolver({
+            // componentPrefix: "",
+            // enabledCollections: ['carbon']
+          }),
         ],
       }),
 
-      // https://github.com/antfu/vite-plugin-icons
-      ViteIcons(),
+      // https://github.com/antfu/unplugin-icons
+      Icons(),
 
       // https://github.com/antfu/vite-plugin-windicss
       WindiCSS({
         safelist: markdownWrapperClasses,
       }),
 
+      // https://github.com/antfu/vite-plugin-md
+      // Don't need this? Try vitesse-lite: https://github.com/antfu/vitesse-lite
+      Markdown({
+        wrapperClasses: markdownWrapperClasses,
+        headEnabled: true,
+        markdownItSetup(md) {
+          // https://prismjs.com/
+          md.use(Prism);
+          md.use(LinkAttributes, {
+            pattern: /^https?:\/\//,
+            attrs: {
+              target: "_blank",
+              rel: "noopener",
+            },
+          });
+        },
+      }),
+
       // https://github.com/antfu/vite-plugin-pwa
       VitePWA({
         registerType: "autoUpdate",
+        includeAssets: ["favicon.svg", "robots.txt", "safari-pinned-tab.svg"],
         manifest: {
           name: "YunYouJun's Sponsors",
           short_name: "Sponsors",
@@ -102,7 +129,7 @@ export default defineConfig(({ mode }) => {
         },
       }),
 
-      // https://github.com/intlify/vite-plugin-vue-i18n
+      // https://github.com/intlify/bundle-tools/tree/main/packages/vite-plugin-vue-i18n
       VueI18n({
         runtimeOnly: true,
         compositionOnly: true,
