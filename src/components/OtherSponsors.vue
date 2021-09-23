@@ -10,7 +10,8 @@
             target="_blank"
             :alt="scope.row.name"
             class="sponsor-url"
-          >{{ scope.row.name || "不知名的好心人" }}</a>
+            >{{ scope.row.name || "不知名的好心人" }}</a
+          >
           <span v-else>{{ scope.row.name || "不知名的好心人" }}</span>
         </template>
       </el-table-column>
@@ -22,35 +23,24 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent, onBeforeMount, ref } from "vue";
+<script setup lang="ts">
 import { OtherSponsor, Sponsor } from "../types/index";
 
 import yaml from "js-yaml";
 import { formatDate } from "~/utils";
 
-export default defineComponent({
-  name: "SponsorsList",
-  setup() {
-    const sponsors = ref<OtherSponsor[]>([]);
+const sponsors = ref<OtherSponsor[]>([]);
 
-    onBeforeMount(async () => {
-      const url = "/data/sponsors.yml";
-      sponsors.value = (await fetch(url)
-        .then((res) => {
-          return res.text();
-        })
-        .then((data) => {
-          const sponsors = yaml.load(data) as Sponsor[];
-          const result = sponsors.filter((item) => item.method === '其他');
-          return result;
-        })) as OtherSponsor[];
-    });
-
-    return {
-      sponsors,
-      formatDate
-    };
-  },
+onBeforeMount(async () => {
+  const url = "/data/sponsors.yml";
+  sponsors.value = (await fetch(url)
+    .then((res) => {
+      return res.text();
+    })
+    .then((data) => {
+      const sponsors = yaml.load(data) as Sponsor[];
+      const result = sponsors.filter((item) => item.method === "其他");
+      return result;
+    })) as OtherSponsor[];
 });
 </script>

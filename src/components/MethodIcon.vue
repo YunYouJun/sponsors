@@ -20,20 +20,17 @@
   <span v-else>{{ method }}</span>
 </template>
 
-<script lang="ts">
-import { defineComponent, defineProps, PropType } from "vue";
+<script setup lang="ts">
 import { MoneyMethod } from "~/types";
-export default defineComponent({
-  props: {
-    method: {
-      type: String as PropType<MoneyMethod>,
-      default: 'Other'
-    }
-  },
-  setup() {
-    return {
-      MoneyMethod
-    }
+
+const props = withDefaults(
+  defineProps<{
+    method: MoneyMethod;
+  }>(),
+  {
+    method: MoneyMethod.WECHAT_PAY,
   }
-})
+);
+
+const { method } = toRefs(props);
 </script>

@@ -15,7 +15,6 @@ import Markdown from "vite-plugin-md";
 import Prism from "markdown-it-prism";
 import WindiCSS from "vite-plugin-windicss";
 import { VitePWA } from "vite-plugin-pwa";
-// import VitePluginElementPlus from "vite-plugin-element-plus";
 
 import LinkAttributes from "markdown-it-link-attributes";
 
@@ -34,15 +33,6 @@ export default defineConfig(({ mode }) => {
       Vue({
         include: [/\.vue$/, /\.md$/],
       }),
-
-      // VitePluginElementPlus({
-      //   // 如果你需要使用 [component name].scss 源文件，你需要把下面的注释取消掉。
-      //   // 对于所有的 API 你可以参考 https://github.com/element-plus/vite-plugin-element-plus
-      //   // 的文档注释
-      //   // useSource: true,
-      //   // 开发时使用 esm，打包时使用 cjs
-      //   format: mode === "development" ? "esm" : "cjs",
-      // }),
 
       // https://github.com/hannoeru/vite-plugin-pages
       Pages({

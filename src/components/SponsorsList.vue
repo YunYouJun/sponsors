@@ -24,7 +24,11 @@
       <el-table-column prop="total" label="总额（元）" sortable>
         <template #default="scope">{{ scope.row.total.toFixed(2) }}</template>
       </el-table-column>
-      <el-table-column prop="children.length" label="次数" sortable></el-table-column>
+      <el-table-column
+        prop="children.length"
+        label="次数"
+        sortable
+      ></el-table-column>
     </el-table>
   </div>
 </template>
@@ -49,71 +53,60 @@
 }
 </style>
 
-<script lang="ts">
+<script setup lang="ts">
 import store from "../store";
-import { defineComponent, onBeforeMount, ref } from "vue";
 import { MoneySponsor, RankSponsor, Sponsor } from "../types/index";
 
 import yaml from "js-yaml";
 
 import { sortSponsor } from "../utils";
 
-export default defineComponent({
-  name: "SponsorsList",
-  setup() {
-    const sponsors = ref<RankSponsor[]>([]);
+const sponsors = ref<RankSponsor[]>([]);
 
-    onBeforeMount(async () => {
-      const url = "/data/sponsors.yml";
-      sponsors.value = (await fetch(url)
-        .then((res) => {
-          return res.text();
-        })
-        .then((data) => {
-          const sponsors = yaml.load(data) as Sponsor[];
-          const result = sponsors.filter((item) => {
-            if (item.method === "其他") {
-              return false;
-            } else {
-              return item.amount >= 5;
-            }
-          }) as MoneySponsor[];
-          return sortSponsor(result);
-        })) as RankSponsor[];
+onBeforeMount(async () => {
+  const url = "/data/sponsors.yml";
+  sponsors.value = (await fetch(url)
+    .then((res) => {
+      return res.text();
+    })
+    .then((data) => {
+      const sponsors = yaml.load(data) as Sponsor[];
+      const result = sponsors.filter((item) => {
+        if (item.method === "其他") {
+          return false;
+        } else {
+          return item.amount >= 5;
+        }
+      }) as MoneySponsor[];
+      return sortSponsor(result);
+    })) as RankSponsor[];
 
-      let total = 0;
-      sponsors.value.forEach((sponsor: any) => {
-        total += sponsor.total;
-      });
+  let total = 0;
+  sponsors.value.forEach((sponsor: any) => {
+    total += sponsor.total;
+  });
 
-      store.setIncome(total);
-    });
-
-    return {
-      sponsors,
-    };
-  },
-  methods: {
-    /**
-     * 根据索引获取对应 class
-     */
-    tableRowClassName(val: any) {
-      let className = "";
-      switch (val.rowIndex) {
-        case 0:
-          className = "first";
-          break;
-        case 1:
-          className = "second";
-          break;
-        case 2:
-          className = "third";
-          break;
-        default:
-          break;
-      }
-      return className + "-sponsor";
-    },
-  },
+  store.setIncome(total);
 });
+
+/**
+ * 根据索引获取对应 class
+ */
+function tableRowClassName(val: any) {
+  let className = "";
+  switch (val.rowIndex) {
+    case 0:
+      className = "first";
+      break;
+    case 1:
+      className = "second";
+      break;
+    case 2:
+      className = "third";
+      break;
+    default:
+      break;
+  }
+  return className + "-sponsor";
+}
 </script>

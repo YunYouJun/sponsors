@@ -17,7 +17,6 @@
 
 <script lang="ts">
 import { formatDate } from "../utils";
-import { defineComponent } from "vue";
 import MethodIcon from "./MethodIcon.vue";
 export default defineComponent({
   props: {
@@ -26,6 +25,6 @@ export default defineComponent({
   methods: {
     formatDate,
   },
-  components: { MethodIcon }
+  components: { MethodIcon },
 });
 </script>

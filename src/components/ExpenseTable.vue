@@ -11,14 +11,12 @@
     <el-table :data="expenses" show-summary>
       <el-table-column prop="date" label="日期">
         <template #default="scope">
-          {{
-            formatDate(scope.row.date)
-          }}
+          {{ formatDate(scope.row.date) }}
         </template>
       </el-table-column>
       <el-table-column prop="business" label="服务商"></el-table-column>
       <el-table-column prop="memo" label="消费内容"></el-table-column>
-      <el-table-column prop="amount" label="金额">
+      <el-table-column prop="amount" label="金额（¥）">
         <template #default="scope">{{ scope.row.amount.toFixed(2) }}</template>
       </el-table-column>
     </el-table>
@@ -28,7 +26,6 @@
 <script lang="ts" setup>
 import store from "../store";
 import { formatDate } from "../utils";
-import { onBeforeMount, ref, toRefs } from "vue";
 import yaml from "js-yaml";
 
 interface Expense {
@@ -38,10 +35,10 @@ interface Expense {
   date: Date;
 }
 
-const expenses = ref<Expense[]>([])
-const state = store.state
+const expenses = ref<Expense[]>([]);
+const state = store.state;
 
-onBeforeMount(async ()=> {
+onBeforeMount(async () => {
   const url = "/data/expenses.yml";
   expenses.value = await fetch(url)
     .then((res) => {
@@ -52,10 +49,10 @@ onBeforeMount(async ()=> {
     });
 
   let total = 0;
-  expenses.value.forEach((expense: Expense) => {
+  expenses.value.reverse().forEach((expense: Expense) => {
     total += expense.amount;
   });
 
   store.setExpense(total);
-})
+});
 </script>
