@@ -1,6 +1,10 @@
 import dayjs from "dayjs";
 import { MoneySponsor } from "../types";
 
+export const isProd = process.env.NODE_ENV === 'production'
+
+export * from './name'
+
 /**
  * 格式化日期
  * @param val

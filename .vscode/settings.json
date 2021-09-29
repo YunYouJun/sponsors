@@ -1,6 +1,14 @@
 {
-  "i18n-ally.localesPaths": ["locales"],
+  "cSpell.words": ["sponsors"],
   "i18n-ally.keystyle": "nested",
-  "volar.tsPlugin": true,
-  "volar.tsPluginStatus": false
+  "i18n-ally.localesPaths": "locales",
+  "i18n-ally.sortKeys": true,
+  "prettier.enable": false,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+  },
+  "files.associations": {
+    "*.css": "postcss",
+  },
 }

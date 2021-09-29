@@ -8,9 +8,10 @@ import { ElTable, ElTag, ElTabs } from "element-plus";
 // import "element-theme-ink";
 
 export const install: UserModule = ({ app }) => {
-  app.use(ElTable);
-  app.use(ElTag);
-  app.use(ElTabs);
+  const components = [ElTable, ElTag, ElTabs]
+  components.forEach((component) => {
+    app.use(component)
+  })
 
   // app.use(ElementPlus);
 };

@@ -3,7 +3,6 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from "vue";
 import VueAboutMe from "vue-about-me";
 import "vue-about-me/style.css";
 import { isDark } from "~/logic";

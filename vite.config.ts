@@ -8,15 +8,39 @@ import Layouts from "vite-plugin-vue-layouts";
 import Icons from "unplugin-icons/vite";
 import IconsResolver from "unplugin-icons/resolver";
 import Components from "unplugin-vue-components/vite";
+// import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
 import AutoImport from "unplugin-auto-import/vite";
 
 import VueI18n from "@intlify/vite-plugin-vue-i18n";
 import Markdown from "vite-plugin-md";
+import Inspect from "vite-plugin-inspect";
 import Prism from "markdown-it-prism";
 import WindiCSS from "vite-plugin-windicss";
 import { VitePWA } from "vite-plugin-pwa";
 
 import LinkAttributes from "markdown-it-link-attributes";
+
+// but lib seems can not tree-shake, wait vite-ssg/ssr support 'import' syntax
+// import { ComponentResolver } from "unplugin-vue-components/types";
+// import { isProd, kebabCase } from "./src/utils";
+// export function ElementPlusResolver(): ComponentResolver {
+//   const themeFolder = "element-plus/theme-chalk";
+//   const esComponentsFolder = "element-plus/es/components";
+//   const ssr = isProd;
+//   console.log("isprod", isProd);
+//   return (name: string) => {
+//     if (name.match(/^El[A-Z]/)) {
+//       const partialName = kebabCase(name.slice(2)); // ElTableColumn->table-column
+//       return {
+//         importName: name,
+//         path: `element-plus/${ssr ? "lib" : "es"}`,
+//         sideEffects: ssr
+//           ? `${themeFolder}/src/${partialName}.scss`
+//           : `${esComponentsFolder}/${partialName}/style`,
+//       };
+//     }
+//   };
+// }
 
 const markdownWrapperClasses = "prose prose-sm m-auto text-left";
 
@@ -72,6 +96,7 @@ export default defineConfig(({ mode }) => {
             // componentPrefix: "",
             // enabledCollections: ['carbon']
           }),
+          // ElementPlusResolver(),
         ],
       }),
 
@@ -125,6 +150,12 @@ export default defineConfig(({ mode }) => {
         compositionOnly: true,
         include: [path.resolve(__dirname, "locales/**")],
       }),
+
+      // https://github.com/antfu/vite-plugin-inspect
+      Inspect({
+        // change this to enable inspect for debugging
+        enabled: false,
+      }),
     ],
 
     server: {
@@ -140,7 +171,7 @@ export default defineConfig(({ mode }) => {
     },
 
     optimizeDeps: {
-      include: ["vue", "vue-router", "@vueuse/core"],
+      include: ["vue", "vue-router", "@vueuse/core", "@vueuse/head"],
       exclude: ["vue-demi"],
     },
   };
