@@ -55,10 +55,10 @@
     "sass": "^1.42.1",
     "ts-node": "^10.1.0",
     "typescript": "^4.4.2",
-    "unplugin-auto-import": "^0.4.8",
+    "unplugin-auto-import": "^0.4.10",
     "unplugin-icons": "^0.11.4",
-    "unplugin-vue-components": "^0.15.4",
-    "vite": "2.6.0",
+    "unplugin-vue-components": "^0.15.6",
+    "vite": "2.6.1",
     "vite-plugin-inspect": "^0.3.7",
     "vite-plugin-md": "^0.11.1",
     "vite-plugin-pages": "0.18.1",
@@ -66,7 +66,7 @@
     "vite-plugin-style-import": "^1.2.1",
     "vite-plugin-vue-layouts": "^0.5.0",
     "vite-plugin-windicss": "^1.2.6",
-    "vite-ssg": "^0.15.3",
+    "vite-ssg": "^0.15.4",
     "vue": "^3.2.19"
   },
   "license": "MIT"
