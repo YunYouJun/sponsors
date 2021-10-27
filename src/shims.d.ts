@@ -14,3 +14,8 @@ declare module "*.md" {
   const component: ComponentOptions;
   export default component;
 }
+
+declare module '*.yml' {
+  const data: any
+  export default data
+}

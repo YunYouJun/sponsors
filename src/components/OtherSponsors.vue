@@ -24,23 +24,13 @@
 </template>
 
 <script setup lang="ts">
-import { OtherSponsor, Sponsor } from "../types/index";
-
-import yaml from "js-yaml";
+import { OtherSponsor } from "~/types/index";
 import { formatDate } from "~/utils";
+import SponsorsData from '~/assets/data/sponsors.yml'
 
-const sponsors = ref<OtherSponsor[]>([]);
+const sponsors = ref<OtherSponsor[]>(SponsorsData);
 
 onBeforeMount(async () => {
-  const url = "/data/sponsors.yml";
-  sponsors.value = (await fetch(url)
-    .then((res) => {
-      return res.text();
-    })
-    .then((data) => {
-      const sponsors = yaml.load(data) as Sponsor[];
-      const result = sponsors.filter((item) => item.method === "其他");
-      return result;
-    })) as OtherSponsor[];
+  sponsors.value = sponsors.value.filter((item) => item.method === "其他");
 });
 </script>

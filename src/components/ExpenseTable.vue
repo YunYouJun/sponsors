@@ -26,7 +26,8 @@
 <script lang="ts" setup>
 import store from "../store";
 import { formatDate } from "../utils";
-import yaml from "js-yaml";
+
+import ExpenseData from '~/assets/data/expenses.yml'
 
 interface Expense {
   memo: string;
@@ -35,19 +36,10 @@ interface Expense {
   date: Date;
 }
 
-const expenses = ref<Expense[]>([]);
+const expenses = ref<Expense[]>(ExpenseData);
 const state = store.state;
 
 onBeforeMount(async () => {
-  const url = "/data/expenses.yml";
-  expenses.value = await fetch(url)
-    .then((res) => {
-      return res.text();
-    })
-    .then((data) => {
-      return yaml.load(data) as Expense[];
-    });
-
   let total = 0;
   expenses.value.reverse().forEach((expense: Expense) => {
     total += expense.amount;

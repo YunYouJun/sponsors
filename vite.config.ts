@@ -18,6 +18,8 @@ import Prism from "markdown-it-prism";
 import WindiCSS from "vite-plugin-windicss";
 import { VitePWA } from "vite-plugin-pwa";
 
+import Yaml from '@rollup/plugin-yaml'
+
 import LinkAttributes from "markdown-it-link-attributes";
 
 // but lib seems can not tree-shake, wait vite-ssg/ssr support 'import' syntax
@@ -101,7 +103,10 @@ export default defineConfig(({ mode }) => {
       }),
 
       // https://github.com/antfu/unplugin-icons
-      Icons(),
+      Icons({
+        // expiremental
+        autoInstall: true
+      }),
 
       // https://github.com/antfu/vite-plugin-windicss
       WindiCSS({
@@ -155,6 +160,11 @@ export default defineConfig(({ mode }) => {
       Inspect({
         // change this to enable inspect for debugging
         enabled: false,
+      }),
+
+      Yaml({
+        // avoid conflict with i18n yml
+        exclude: 'locales/*.yml',
       }),
     ],
 

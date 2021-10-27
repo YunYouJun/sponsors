@@ -1,8 +1,11 @@
 import { generateJSONfromYaml, generateMarkdown, generateRank } from "./utils";
 import { Sponsor, MoneySponsor } from "../src/types/index";
 
+import path from 'path'
+import { config } from "./config";
+
 try {
-  let data = generateJSONfromYaml("sponsors") as Sponsor[];
+  let data = generateJSONfromYaml(path.resolve(config.dataFolder, 'sponsors.yml')) as Sponsor[];
   // filter
   data = data.filter((item) => {
     // todo: other sponsors
@@ -14,7 +17,7 @@ try {
     }
   });
 
-  generateJSONfromYaml("expenses");
+  generateJSONfromYaml(path.resolve(config.dataFolder, 'expenses.yml'));
 
   // 生成排序的 JSON
   generateRank(data as MoneySponsor[]);

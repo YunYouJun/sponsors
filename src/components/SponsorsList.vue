@@ -54,35 +54,27 @@
 </style>
 
 <script setup lang="ts">
-import store from "../store";
-import { MoneySponsor, RankSponsor, Sponsor } from "../types/index";
+import store from "~/store";
+import { MoneySponsor, RankSponsor, Sponsor } from "~/types/index";
+import SponsorsData from '~/assets/data/sponsors.yml'
 
-import yaml from "js-yaml";
-
-import { sortSponsor } from "../utils";
+import { sortSponsor } from "~/utils";
 
 const sponsors = ref<RankSponsor[]>([]);
 
 onBeforeMount(async () => {
-  const url = "/data/sponsors.yml";
-  sponsors.value = (await fetch(url)
-    .then((res) => {
-      return res.text();
-    })
-    .then((data) => {
-      const sponsors = yaml.load(data) as Sponsor[];
-      const result = sponsors.filter((item) => {
-        if (item.method === "其他") {
-          return false;
-        } else {
-          return item.amount >= 5;
-        }
-      }) as MoneySponsor[];
-      return sortSponsor(result);
-    })) as RankSponsor[];
+  const result = (SponsorsData as Sponsor[]).filter((item) => {
+    if (item.method === "其他") {
+      return false;
+    } else {
+      return item.amount >= 5;
+    }
+  });
+
+  sponsors.value = sortSponsor(result as MoneySponsor[])
 
   let total = 0;
-  sponsors.value.forEach((sponsor: any) => {
+  sponsors.value.forEach((sponsor) => {
     total += sponsor.total;
   });
 

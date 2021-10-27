@@ -1,4 +1,5 @@
 import fs from "fs";
+import { basename } from 'path'
 import yaml from "js-yaml";
 
 import { Logger } from "@yunyoujun/logger";
@@ -8,11 +9,13 @@ import { sortSponsor } from "../src/utils";
 import { MoneySponsor } from "../src/types";
 
 /**
- * 从 yaml 文件生成 json
- * @param name
+ * 从 Yaml 文件生成 json
+ * @param path Yaml 路径
  */
-export function generateJSONfromYaml(name: string) {
-  const data = yaml.load(fs.readFileSync(`./public/data/${name}.yml`, "utf8"));
+export function generateJSONfromYaml(path: string) {
+  const filename = basename(path)
+  const name = filename.slice(0, filename.lastIndexOf('.'))
+  const data = yaml.load(fs.readFileSync(path, "utf8"));
   try {
     fs.mkdirSync("./dist/");
   } catch ({ code }) {

@@ -1,16 +1,18 @@
 import yaml from "js-yaml";
 import fs from "fs";
+import path from 'path'
 
 import inquirer from "inquirer";
 import { MoneyMethod, SponsorMethod } from "../src/types";
 import { EnumKeys } from "../src/types/helper";
+import { config } from "./config";
 
 let sponsorMethods: SponsorMethod[] = EnumKeys(MoneyMethod).map(
   (item) => MoneyMethod[item]
 );
 sponsorMethods.push("其他");
 
-const dataFile = "./public/data/sponsors.yml";
+const dataFile = path.resolve(config.dataFolder, 'sponsors.yml');
 const questions = [
   {
     type: "input",
