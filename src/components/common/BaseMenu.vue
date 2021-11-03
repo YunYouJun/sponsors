@@ -26,6 +26,10 @@ const toggleLocales = () => {
       <i-carbon-language />
     </a>
 
+    <router-link class="icon-btn mx-2" to="/projects" :title="t('button.projects')">
+      <i-mdi-projector-screen-outline />
+    </router-link>
+
     <router-link class="icon-btn mx-2" to="/about" :title="t('button.about')">
       <i-carbon-dicom-overlay />
     </router-link>

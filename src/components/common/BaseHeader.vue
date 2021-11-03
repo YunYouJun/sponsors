@@ -1,12 +1,13 @@
 <template>
-  <img style="margin: 2rem auto" alt="Sponsors logo" src="/logo.png" width="128" />
+  <img class="p-4 m-auto" alt="Sponsors logo" src="/logo.png" width="128" />
+  <router-link to="/projects">
+    <a
+      class="inline-block my-2 px-4 py-1 text-sm text-purple-600 font-semibold rounded-full border border-purple-200 hover:(text-white bg-purple-600 border-transparent) focus:(outline-none ring-2 ring-purple-600 ring-offset-2)"
+    >{{ t('message.projects') }}</a>
+  </router-link>
 </template>
 
-<script lang="ts">
-import { defineComponent } from "vue";
-export default defineComponent({
-  props: {
-    msg: String,
-  },
-});
+<script setup lang="ts">
+defineProps<{ msg: string }>()
+const { t } = useI18n()
 </script>

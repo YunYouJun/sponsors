@@ -15,16 +15,7 @@
   </el-table>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 import { formatDate } from "../utils";
-import MethodIcon from "./MethodIcon.vue";
-export default defineComponent({
-  props: {
-    tableData: Array,
-  },
-  methods: {
-    formatDate,
-  },
-  components: { MethodIcon },
-});
+defineProps<{ tableData: any[] }>()
 </script>

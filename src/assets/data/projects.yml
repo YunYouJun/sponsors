@@ -1,0 +1,102 @@
+- name: hexo-theme-yun
+  desc: 我的博客主题，也就是 yunyoujun.cn 你所看到的样式和各类功能，它本质是被抽象可复用的。
+  color: "#0078E7"
+  github: YunYouJun/hexo-theme-yun
+  emoji: ☁️
+  url: https://www.yunyoujun.cn
+  docs: https://yun.yunyoujun.cn
+- name: mirai-ts
+  emoji: 🔧
+  color: "#2b7489"
+  desc: Mirai（QQ 机器人）TypeScript SDK，简单来说 mirai-ts 是零件包，可以用来自由地搭建你想要的机器人。
+  github: YunYouJun/mirai-ts
+  docs: https://yunyoujun.cn/mirai-ts/
+- name: el-bot
+  emoji: 🤖️
+  desc: 使用 mirai-ts 构建的 Node 端机器人框架，可以自定义插件，封装了更多内容。el-bot 则是自行车，可以加装各类插件装饰。
+  color: steelblue
+  github: YunYouJun/el-bot
+  docs: https://docs.bot.elpsy.cn
+- name: air-conditioner
+  emoji: ❄️
+  color: "#4ea5f5"
+  desc: 云空调，便携小空调！其实是个冷笑话，随身携带的毫无制冷效果的仿真小空调，使用纯 CSS 编写节能。
+  textColor: white
+  github: YunYouJun/air-conditioner
+  url: https://ac.yunyoujun.cn
+  docs: https://www.yunyoujun.cn/air-conditioner-room/
+- name: give-me-money
+  emoji: 🎣
+  desc: 我很可爱，请给我钱！直白的绅士钓鱼网站！
+  color: "#8a91d0"
+  textColor: white
+  github: YunYouJun/give-me-money
+  url: https://gmm.yunyoujun.cn
+- name: electric-fan
+  emoji: ♻️
+  desc: 电风扇，便携夏日小风扇！纯 CSS 编写，小空调的前辈。
+  color: "#20c077"
+  textColor: white
+  github: ElpsyCN/electric-fan
+  url: https://fan.elpsy.cn
+- name: color-dust
+  emoji: 🎨
+  desc: 基于 K-Means 色彩聚类提取主题色
+  color: "#bff2d3"
+  github: YunYouJun/color-dust
+  url: https://color-dust.yunyoujun.cn
+- name: cocos-creator-joystick
+  emoji: 🕹
+  desc: 基于 Cocos Creator 的虚拟摇杆实现，算是咱比较早期的开源作品了。
+  github: YunYouJun/cocos-creator-joystick
+  url: https://yunyoujun.github.io/cocos-creator-joystick/
+- name: web-resume
+  desc: 可在线编辑的 Web 简历，斩获 BAT Offer 未尝败绩！
+  emoji: 📄
+  color: "#222"
+  github: YunYouJun/web-resume
+  url: https://resume.elpsy.cn
+- name: nnrm
+  desc: 最小依赖的 NPM 源管理器，譬如切换 NPM 淘宝镜像等。
+  emoji: 🔧
+  color: "#f1e05a"
+  github: YunYouJun/nnrm
+  url: https://www.npmjs.com/package/nnrm
+  docs: https://www.yunyoujun.cn/posts/nnrm-new-nrm/
+- name: char-dust
+  desc: 在线图片转字符画
+  emoji: 📝
+  color: gray
+  textColor: white
+  github: YunYouJun/nnrm
+  url: https://yunyoujun.github.io/char-dust/
+  docs: https://www.yunyoujun.cn/posts/why-make-char-dust/
+- name: ak-ui
+  desc: 明日方舟 UI 组件库（WIP）
+  emoji: 🎮
+  color: "#22bbff"
+  textColor: white
+  github: YunYouJun/ak-ui
+  url: https://ak-ui.yunyoujun.cn
+- name: augma
+  desc: 刀剑神域-序列之争 AUGMA AR UI 组件库（WIP）
+  emoji: 🎮
+  color: "#4682b4"
+  textColor: white
+  github: YunYouJun/augma
+  url: https://augma.elpsy.cn/
+  docs: https://docs.saugma.elpsy.cn/
+- name: go-far-away
+  desc: 去往这个世界上最遥远的地方。此后，不管你如何前进，都在回家的路上。
+  emoji: 🧭
+  color: pink
+  github: YunYouJun/go-far-away
+  url: https://www.yunyoujun.cn/go-far-away/
+- name: element-theme-ink
+  desc: Element 极简主题（WIP）
+  emoji: 🪄
+  color: black
+  github: YunYouJun/element-theme-ink
+  docs: https://ink.elpsy.cn/
+- name: 哼哼
+  desc: 还有很多下次再整理！

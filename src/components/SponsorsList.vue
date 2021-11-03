@@ -2,8 +2,8 @@
   <div class="sponsor-table">
     <el-table :data="sponsors" show-summary :row-class-name="tableRowClassName">
       <el-table-column type="expand" width="50px">
-        <template #default="props">
-          <detail-list :tableData="props.row.children" />
+        <template #default="scope">
+          <detail-list :tableData="scope.row.children" />
         </template>
       </el-table-column>
       <el-table-column type="index"></el-table-column>
@@ -24,11 +24,7 @@
       <el-table-column prop="total" label="总额（元）" sortable>
         <template #default="scope">{{ scope.row.total.toFixed(2) }}</template>
       </el-table-column>
-      <el-table-column
-        prop="children.length"
-        label="次数"
-        sortable
-      ></el-table-column>
+      <el-table-column prop="children.length" label="次数" sortable></el-table-column>
     </el-table>
   </div>
 </template>
