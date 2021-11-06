@@ -6,10 +6,12 @@
     :style="cardStyle"
   >
     <div v-if="project.emoji" class="mt-4">{{ project.emoji }}</div>
-    <h2 class="text-lg" font="black" m="2">{{ project.name || '忘记叫啥了' }}</h2>
+    <a :href="githubUrl">
+      <h2 class="text-lg" font="black" m="2">{{ project.name || '忘记叫啥了' }}</h2>
+    </a>
     <small class="block" p="2">{{ project.desc || '说点什么好呢' }}</small>
     <p p="4">
-      <a v-if="githubUrl" class="m-2" :href="githubUrl" target="_blank">
+      <a class="m-2" :href="githubUrl" target="_blank">
         <i-ri-github-line />
       </a>
       <a v-if="project.url" class="m-2" :href="project.url" target="_blank">
@@ -58,9 +60,10 @@ const project = toRef(props, 'project')
 const cardStyle = computed(() => {
   if (project.value.color) {
     const color = new TinyColor(project.value.color)
+    const textColor = project.value.textColor || (color.isDark() ? 'white' : 'black')
     return {
       '--tw-gradient-stops': `${color.spin(55).toHexString()}, ${project.value.color}`,
-      color: project.value.textColor || color.isDark() ? 'white' : 'black'
+      color: textColor
     }
   } else {
     return {
@@ -72,6 +75,8 @@ const cardStyle = computed(() => {
 const githubUrl = computed(() => {
   if (project.value.github) {
     return `https://github.com/${project.value.github}`
+  } else {
+    return `https://github.com/YunYouJun/${project.value.name}`
   }
 })
-</script>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </script>
