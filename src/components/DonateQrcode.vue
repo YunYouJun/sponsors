@@ -1,8 +1,5 @@
 <template>
-  <table
-    class="donate-table"
-    style="margin: 0 auto; padding: 0 1rem; max-width: 1000px"
-  >
+  <table class="donate-table" style="margin: 0 auto; padding: 0 1rem; max-width: 1000px">
     <thead>
       <tr>
         <th v-for="key in methods" :title="MoneyMethod[key]">
@@ -13,16 +10,23 @@
     <tbody>
       <tr>
         <td v-for="key in methods">
+          <a :href="donateMethod[key].url" :title="donateMethod[key].title" target="_blank">
+            <img class="qrcode-img" :src="donateMethod[key].url" :alt="donateMethod[key].title" />
+          </a>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3">
           <a
-            :href="donateMethod[key].url"
-            :title="donateMethod[key].title"
+            class="flex justify-center items-center"
+            m="2"
+            href="https://afdian.net/@yunyoujun"
             target="_blank"
           >
-            <img
-              class="qrcode-img"
-              :src="donateMethod[key].url"
-              :alt="donateMethod[key].title"
-            />
+            或者要试试
+            <span text="purple-500" class="flex justify-center items-center" m="x-1">
+              <i-ri-flashlight-line />爱发电
+            </span>吗？
           </a>
         </td>
       </tr>

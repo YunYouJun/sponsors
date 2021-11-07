@@ -521,3 +521,9 @@
   method: 微信支付
   amount: 9.9
   memo: ''
+- name: '*扯'
+  url: ''
+  date: 2021-11-07T13:20:41.165Z
+  method: 微信支付
+  amount: 15
+  memo: 谢谢小空调！
