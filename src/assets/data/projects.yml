@@ -129,8 +129,6 @@ tools:
     desc: 百度图片爬虫小工具 By Node.js.
     emoji: 🕷️
     color: "#e41c13"
-    github: YunYouJun/explosions
-    url: https://explosions.yunyoujun.cn/
   - name: export-nideriji
     emoji: 📒
     desc: 导出《你的日记》JSON 格式
