@@ -8,6 +8,7 @@
     <ProjectCollection title="🔧 工具" :projects="projects.tools" />
     <ProjectCollection title="🔌 插件" :projects="projects.plugins" />
     <ProjectCollection title="🔬 实验" :projects="projects.lab" />
+    <ProjectCollection title="👥 参与" :projects="projects.open_source" />
     <ProjectCollection title="📁 其他" :projects="projects.other" />
   </div>
 </template>

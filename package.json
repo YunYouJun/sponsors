@@ -40,8 +40,8 @@
     "vue-router": "^4.0.10"
   },
   "devDependencies": {
-    "@iconify-json/carbon": "^1.0.9",
-    "@iconify-json/mdi": "^1.0.8",
+    "@iconify-json/carbon": "^1.0.10",
+    "@iconify-json/mdi": "^1.0.9",
     "@iconify-json/ri": "^1.0.1",
     "@intlify/vite-plugin-vue-i18n": "^2.4.0",
     "@rollup/plugin-yaml": "^3.1.0",

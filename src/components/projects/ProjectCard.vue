@@ -1,15 +1,16 @@
 <template>
   <div
-    class="rounded shadow-md hover:shadow-lg w-90 transition m-2 bg-gradient-to-br from-white"
+    class="rounded shadow-md transform transition w-90 m-2 duration-400"
     bg="opacity-80 gradient-to-br"
     p="2"
+    hover="shadow-lg from-white scale-105"
     :style="cardStyle"
   >
     <div v-if="project.emoji" class="mt-4">{{ project.emoji }}</div>
     <a :href="githubUrl">
       <h2 class="text-lg" font="black" m="2">{{ project.name || '忘记叫啥了' }}</h2>
     </a>
-    <small class="block" p="2">{{ project.desc || '说点什么好呢' }}</small>
+    <small class="block" p="2" v-html="project.desc || '说点什么好呢'"></small>
     <p p="4">
       <a class="m-2" :href="githubUrl" target="_blank">
         <i-ri-github-line />
@@ -79,4 +80,4 @@ const githubUrl = computed(() => {
     return `https://github.com/YunYouJun/${project.value.name}`
   }
 })
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </script>
+</script>
