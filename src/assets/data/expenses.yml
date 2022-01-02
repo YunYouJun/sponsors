@@ -150,3 +150,11 @@
   business: Cloudflare
   amount: 66.80
   date: 2021-12-04
+- memo: 小云设定约稿定金
+  business: 蓝
+  amount: 1000.00
+  date: 2021-12-22
+- memo: 购买轻量应用服务器 1核/2GB 5Mbps 500GB/月
+  business: 腾讯云
+  amount: 38.00
+  date: 2021-12-25
