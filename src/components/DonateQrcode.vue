@@ -39,11 +39,12 @@
 <script setup lang="ts">
 import { useI18n } from "vue-i18n";
 import { MoneyMethod } from "~/types";
-import { EnumKeys } from "~/types/helper";
+// import { EnumKeys } from "~/types/helper";
 import MethodIcon from "./MethodIcon.vue";
 import { donateMethod } from "~/assets/donate";
 const { t } = useI18n();
-const methods = EnumKeys(MoneyMethod);
+// const methods = EnumKeys(MoneyMethod);
+const methods: (keyof typeof MoneyMethod)[] = ['ALI_PAY', 'WECHAT_REWARD', 'QQ_PAY'];
 </script>
 
 <style lang="scss">
@@ -67,6 +68,7 @@ const methods = EnumKeys(MoneyMethod);
   @apply rounded;
 
   &:hover {
+    transform: scale(1.5);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
   }
 }

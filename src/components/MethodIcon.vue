@@ -6,7 +6,7 @@
     title="支付宝"
   />
   <i-ri-wechat-pay-line
-    v-else-if="method === MoneyMethod.WECHAT_PAY"
+    v-else-if="method === MoneyMethod.WECHAT_PAY || method === MoneyMethod.WECHAT_REWARD"
     class="vite-icon"
     color="#2DC100"
     title="微信支付"

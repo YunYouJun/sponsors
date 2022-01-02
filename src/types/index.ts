@@ -3,6 +3,7 @@ export type UserModule = (ctx: ViteSSGContext) => void;
 
 export enum MoneyMethod {
   WECHAT_PAY = "微信支付",
+  WECHAT_REWARD = "微信赞赏",
   ALI_PAY = "支付宝",
   QQ_PAY = "QQ 钱包",
 }
@@ -38,7 +39,7 @@ interface BaseSponsor {
  * 金钱赞助者
  */
 export interface MoneySponsor extends BaseSponsor {
-  method: MoneyMethod.ALI_PAY | MoneyMethod.WECHAT_PAY | MoneyMethod.QQ_PAY;
+  method: MoneyMethod.ALI_PAY | MoneyMethod.WECHAT_PAY | MoneyMethod.QQ_PAY | MoneyMethod.WECHAT_REWARD;
   /**
    * 赞助金额
    */
