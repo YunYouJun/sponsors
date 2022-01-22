@@ -551,3 +551,9 @@
   method: 微信支付
   amount: 50
   memo: ''
+- name: box
+  url: ''
+  date: 2022-01-22T14:55:43.355Z
+  method: 支付宝
+  amount: 100
+  memo: 赞助
