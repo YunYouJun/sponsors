@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "@iconify-json/carbon": "^1.0.14",
-    "@iconify-json/mdi": "^1.0.12",
+    "@iconify-json/mdi": "^1.0.13",
     "@iconify-json/ri": "^1.0.2",
     "@intlify/vite-plugin-vue-i18n": "^3.2.1",
     "@rollup/plugin-yaml": "^3.1.0",
