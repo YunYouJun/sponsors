@@ -170,3 +170,7 @@
   business: 阿里云
   amount: 49.00
   date: 2021-01-23
+- memo: 购买小云微信红包封面 30 个
+  business: 微信
+  amount: 30.00
+  date: 2021-01-30
