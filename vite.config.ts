@@ -181,7 +181,7 @@ export default defineConfig(({ mode }) => {
     },
 
     optimizeDeps: {
-      include: ["vue", "vue-router", "@vueuse/core", "@vueuse/head", "@ctrl/tinycolor", 'dayjs', 'vue-about-me'],
+      include: ["vue", "vue-router", "@vueuse/core", "@vueuse/head", "@ctrl/tinycolor", 'dayjs', 'vue-about-me', 'dayjs/plugin/customParseFormat.js'],
       exclude: ["vue-demi"],
     },
   };
