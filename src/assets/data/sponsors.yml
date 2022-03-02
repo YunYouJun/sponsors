@@ -581,3 +581,9 @@
   method: QQ 钱包
   amount: 5
   memo: ''
+- name: 小潘
+  url: ''
+  date: 2022-03-02T07:02:15.933Z
+  method: 微信赞赏
+  amount: 5
+  memo: ''
