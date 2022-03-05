@@ -1,6 +1,8 @@
 # custom
 rank.json
 
+.env
+
 # lock
 package-lock.json
 yarn.lock

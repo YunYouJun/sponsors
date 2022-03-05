@@ -11,4 +11,7 @@
   "files.associations": {
     "*.css": "postcss",
   },
+  "yaml.schemas": {
+    "https://json.schemastore.org/github-workflow.json": "file:///Users/yunyou/github/pages/sponsors/.github/workflows/build.yml"
+  },
 }
