@@ -568,22 +568,28 @@
   date: 2022-01-30T14:06:18.542Z
   method: 微信赞赏
   amount: 5
-  memo: ''
+  memo: ""
 - name: Delightful
-  url: ''
+  url: ""
   date: 2022-02-17T16:40:56.637Z
   method: QQ 钱包
   amount: 5.21
-  memo: ''
+  memo: ""
 - name: 科兴垃圾佬
-  url: ''
+  url: ""
   date: 2022-02-25T07:19:13.238Z
   method: QQ 钱包
   amount: 5
-  memo: ''
+  memo: ""
 - name: 小潘
-  url: ''
+  url: ""
   date: 2022-03-02T07:02:15.933Z
   method: 微信赞赏
   amount: 5
-  memo: ''
+  memo: ""
+- name: MHuiG
+  url: https://mhuig.top
+  date: 2022-03-06T10:21:26.279Z
+  method: 支付宝
+  amount: 20.22
+  memo: ""
