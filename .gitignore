@@ -1,6 +1,11 @@
 # custom
 rank.json
 
+# sponsorkit
+sponsorkit
+sponsors.json
+.cache.json
+
 .env
 
 # lock

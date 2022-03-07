@@ -40,8 +40,17 @@
 添加赞助者
 
 ```sh
-yarn sponsors
+npm run sponsors
 # pnpm sponsors
+```
+
+```bash
+vim .env
+```
+
+```bash
+SPONSORKIT_GITHUB_TOKEN=
+SPONSORKIT_GITHUB_LOGIN=YunYouJun
 ```
 
 ## Thanks

@@ -1,7 +1,9 @@
 {
   "private": true,
   "scripts": {
-    "build": "sponsorkit"
+    "build": "sponsorkit",
+    "generate": "npx sponsorkit -w 800 --dir ../public",
+    "generate:wide": "npx sponsorkit -w 1300 --name sponsors.wide --dir ../public"
   },
   "devDependencies": {
     "sponsorkit": "latest"

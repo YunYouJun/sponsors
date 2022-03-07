@@ -17,7 +17,7 @@ export default defineConfig({
     },
     {
       title: 'Sponsors',
-      monthlyDollars: 10,
+      monthlyDollars: 5,
       preset: presets.medium,
       // to insert custom elements after the tier block
       composeAfter: (composer, tierSponsors, config) => {
@@ -26,7 +26,7 @@ export default defineConfig({
     },
     {
       title: 'Silver Sponsors',
-      monthlyDollars: 50,
+      monthlyDollars: 20,
       preset: presets.large,
     },
     {
