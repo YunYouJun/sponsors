@@ -4,6 +4,7 @@ rank.json
 # sponsorkit
 sponsorkit
 sponsors.json
+sponsors.wide.json
 .cache.json
 
 .env
