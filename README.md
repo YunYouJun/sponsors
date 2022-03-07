@@ -4,7 +4,9 @@
 
 > 赞助列表：<https://sponsors.yunyoujun.cn>
 
-![打工是不可能打工的](https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/meme/no-work.jpg)
+<p align="center">
+  <img src='https://cdn.jsdelivr.net/gh/YunYouJun/yun/images/meme/yun-good-alpha-compressed.png' width="200"/>
+</p>
 
 谢谢您的支持。
 
@@ -52,6 +54,14 @@ vim .env
 SPONSORKIT_GITHUB_TOKEN=
 SPONSORKIT_GITHUB_LOGIN=YunYouJun
 ```
+
+## Sponsors
+
+<p align="center">
+  <a href="https://cdn.jsdelivr.net/gh/YunYouJun/sponsors/public/sponsors.svg">
+    <img src='https://cdn.jsdelivr.net/gh/YunYouJun/sponsors/public/sponsors.svg'/>
+  </a>
+</p>
 
 ## Thanks
 

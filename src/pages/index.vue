@@ -8,6 +8,13 @@
     p="5"
     hover="shadow-lg"
   >
+    <h2 text="xl purple-500" font="bold">
+      <a class="flex justify-center items-center" href="https://github.com/sponsors/YunYouJun" target="_blank">
+        <i-ri-github-line  m="x-1" /> Become a Sponsor in GitHub
+      </a>
+    </h2>
+    <embed m="auto" :src="config.githubSponsors.url" type="image/svg+xml" />
+
     <el-tabs type="card">
       <el-tab-pane label="经济赞助">
         <sponsors-list />
@@ -25,6 +32,7 @@
 </template>
 
 <script setup lang="ts">
+import { config } from '~/config'
 import { useI18n } from "vue-i18n";
 
 const { t } = useI18n();
