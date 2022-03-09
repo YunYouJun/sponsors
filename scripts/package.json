@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "afdian": "esno afdian.ts"
+  },
+  "devDependencies": {
+    "afdian-api": "^1.0.4"
+  }
+}
