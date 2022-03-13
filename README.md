@@ -55,7 +55,7 @@ SPONSORKIT_GITHUB_TOKEN=
 SPONSORKIT_GITHUB_LOGIN=YunYouJun
 ```
 
-## Sponsors
+## [Sponsors](https://sponsors.yunyoujun.cn)
 
 <p align="center">
   <a href="https://cdn.jsdelivr.net/gh/YunYouJun/sponsors/public/sponsors.svg">

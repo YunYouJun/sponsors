@@ -5,8 +5,8 @@
   "version": "2.0.0",
   "bin": "bin/run",
   "scripts": {
-    "dev": "vite",
-    "build": "cross-env NODE_ENV=production vite-ssg build",
+    "dev": "pnpm run dev -C packages/site",
+    "build": "pnpm run build -C packages/site",
     "build:json": "ts-node-script cli/build.ts && cp *.md ./dist/",
     "update": "git add -A && git commit -m ':busts_in_silhouette: add new sponsor' && git push",
     "sponsors": "node bin/run add"
@@ -26,11 +26,11 @@
     "dayjs": "^1.10.8"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.18.3",
+    "@antfu/eslint-config": "^0.18.8",
     "@types/inquirer": "^8.2.0",
     "@types/js-yaml": "^4.0.5",
     "cross-env": "^7.0.3",
-    "eslint": "^8.10.0",
+    "eslint": "^8.11.0",
     "typescript": "^4.6.2"
   },
   "license": "MIT"

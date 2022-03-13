@@ -17,6 +17,10 @@ const toggleLocales = () => {
       <div i-carbon-home />
     </router-link>
 
+    <router-link class="icon-btn mx-1" to="/account" title="账单">
+      <div i-ri-money-cny-box-line />
+    </router-link>
+
     <a class="icon-btn mx-1" :title="t('button.toggle_dark')" @click="toggleDark()">
       <div i="carbon-sun dark:carbon-moon" />
     </a>

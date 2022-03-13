@@ -6,7 +6,7 @@
         <div :class="['sponsor-method-icon', methodMap[key].icon, 'm-auto']" text="2xl" :title="methodMap[key].title" />
 
         <a :href="donateMethod[key].url" :title="donateMethod[key].title" target="_blank">
-          <img class="qrcode-img" :style="`--qrcode-border-color: ${methodMap[key].color}`" :src="donateMethod[key].url" :alt="donateMethod[key].title">
+          <img class="qrcode-img shadow-md" :style="`--qrcode-border-color: ${methodMap[key].color}`" :src="donateMethod[key].url" :alt="donateMethod[key].title">
         </a>
       </div>
     </div>
@@ -45,7 +45,7 @@ const methods: (keyof typeof MoneyMethod)[] = ['ALI_PAY', 'WECHAT_REWARD', 'QQ_P
 .qrcode-img {
   width: 250px;
   padding: 6px;
-  border: 2px solid var(--qrcode-border-color, #eee);
+  border: 2px dashed var(--qrcode-border-color, #eee);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: 0.4s;
   margin: 0.5rem auto;

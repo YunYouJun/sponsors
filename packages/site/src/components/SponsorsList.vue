@@ -1,7 +1,7 @@
 <template>
   <div class="sponsor-table">
     <el-table :data="sponsors" show-summary :row-class-name="tableRowClassName">
-      <el-table-column type="expand" width="50px">
+      <el-table-column type="expand" width="60px">
         <template #default="scope">
           <detail-list :tableData="scope.row.children" />
         </template>

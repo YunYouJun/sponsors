@@ -2,18 +2,19 @@
   <donate-qrcode />
   <br>
 
-  <div
-    class="block m-auto max-w-1000px shadow rounded transition"
-    bg="white dark:dark-700"
-    p="4"
-    hover="shadow-lg"
-  >
+  <div class="post-card">
     <h2 m="t-2" text="xl purple-500" font="bold">
       <a class="flex justify-center items-center" href="https://github.com/sponsors/YunYouJun" target="_blank">
         <div i-ri-github-line m="x-1" /> Become a Sponsor in GitHub
       </a>
     </h2>
     <embed w="full" m="auto" :src="config.githubSponsors.url" type="image/svg+xml">
+
+    <blockquote class="inline-flex justify-center items-center">
+      更多内容见 <router-link class="inline-flex justify-center items-center cursor-pointer text-purple-500" to="/account">
+        <div i-ri-money-cny-box-line inline-flex m-1 />账簿
+        </router-link>。（正在写图片生成工具，之后其他途径赞助者会在此处展示。）
+    </blockquote>
   </div>
 
   <p class="mt-5">
