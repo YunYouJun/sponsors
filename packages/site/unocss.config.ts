@@ -36,5 +36,16 @@ export default defineConfig({
     transformerDirectives(),
     transformerVariantGroup(),
   ],
-  safelist: 'prose prose-sm m-auto text-left'.split(' '),
+  safelist: 'prose prose-sm m-auto text-left'.split(' ').concat([
+    'i-ri-qq-line',
+    'i-ri-wechat-pay-line',
+    'i-ri-alipay-line',
+  ]),
+  theme: {
+    animation: {
+      keyframes: {
+        bounce: '{0%, 100% {transform:translateY(-11%);animation-timing-function:cubic-bezier(0.8,0,1,1)} 50% {transform:translateY(0);animation-timing-function:cubic-bezier(0,0,0.2,1)}}',
+      },
+    },
+  },
 })

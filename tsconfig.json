@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["packages/site/src/*"],
+      "@sponsors/types": ["packages/types/index.ts"]
+    }
+  }
+}

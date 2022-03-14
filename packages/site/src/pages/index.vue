@@ -10,10 +10,12 @@
     </h2>
     <embed w="full" m="auto" :src="config.githubSponsors.url" type="image/svg+xml">
 
-    <blockquote class="inline-flex justify-center items-center">
-      更多内容见 <router-link class="inline-flex justify-center items-center cursor-pointer text-purple-500" to="/account">
-        <div i-ri-money-cny-box-line inline-flex m-1 />账簿
-        </router-link>。（正在写图片生成工具，之后其他途径赞助者会在此处展示。）
+    <blockquote class="inline-flex justify-center items-center flex-col">
+      更多内容见
+      <router-link class="inline-flex justify-center items-center cursor-pointer text-purple-500" to="/account">
+        <div i-ri-money-cny-box-line inline-flex mx-1 /> <span>账簿</span>
+      </router-link>
+      （正在写图片生成工具，之后其他途径赞助者会在此处展示。）
     </blockquote>
   </div>
 
