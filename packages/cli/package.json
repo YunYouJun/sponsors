@@ -1,0 +1,14 @@
+{
+  "version": "1.0.0",
+  "scripts": {
+    "add": "esno index.ts add",
+    "build": "esno build.ts"
+  },
+  "dependencies": {
+    "inquirer": "^8.2.1",
+    "inquirer-datepicker-prompt": "^0.4.2"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^8.2.0"
+  }
+}

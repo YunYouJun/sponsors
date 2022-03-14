@@ -1,6 +1,3 @@
-import type { ViteSSGContext } from 'vite-ssg'
-export type UserModule = (ctx: ViteSSGContext) => void
-
 export enum MoneyMethod {
   WECHAT_PAY = '微信支付',
   WECHAT_REWARD = '微信赞赏',

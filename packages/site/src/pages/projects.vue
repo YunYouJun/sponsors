@@ -1,5 +1,7 @@
 <template>
-  <h2 class="text-2xl my-5">{{ t('title.projects') }}</h2>
+  <h2 class="text-2xl my-5">
+    {{ t('title.projects') }}
+  </h2>
 
   <div flex="~ wrap" justify="center">
     <ProjectCollection title="🎨 设计" :projects="projects.design" />
@@ -15,8 +17,8 @@
 
 <script lang="ts" setup>
 import ProjectData from '~/assets/data/projects.yml'
-import type { ProjectItem } from '~/components/projects/ProjectCard.vue';
-import ProjectCollection from '~/components/projects/ProjectCollection.vue';
+import type { ProjectItem } from '~/components/projects/ProjectCard.vue'
+import ProjectCollection from '~/components/projects/ProjectCollection.vue'
 const { t } = useI18n()
 
 export interface ProjectDataType {
