@@ -10,7 +10,8 @@
     "build:json": "ts-node-script cli/build.ts && cp *.md ./dist/",
     "update": "git add -A && git commit -m ':busts_in_silhouette: add new sponsor' && git push",
     "serve": "vite preview",
-    "sponsors": "node bin/run add"
+    "sponsors": "node bin/run add",
+    "typecheck": "vue-tsc --noEmit"
   },
   "repository": {
     "type": "git",
@@ -47,6 +48,7 @@
     "@types/nprogress": "^0.2.0",
     "@unocss/reset": "^0.28.0",
     "@vitejs/plugin-vue": "^2.2.4",
+    "critters": "^0.0.16",
     "cross-env": "^7.0.3",
     "eslint": "^8.11.0",
     "markdown-it-link-attributes": "^4.0.0",
@@ -63,7 +65,8 @@
     "vite-plugin-pages": "0.21.4",
     "vite-plugin-pwa": "^0.11.13",
     "vite-plugin-vue-layouts": "^0.6.0",
-    "vite-ssg": "0.16.2"
+    "vite-ssg": "0.16.2",
+    "vue-tsc": "^0.33.1"
   },
   "license": "MIT"
 }
