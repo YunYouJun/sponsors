@@ -10,16 +10,23 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: [16]
     steps:
       - uses: actions/checkout@v2
+
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
-      - run: npm install
+
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 6
+          run_install: true
+
       - run: npm run build
       - run: npm run build:json
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:

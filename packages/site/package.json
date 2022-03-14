@@ -23,10 +23,10 @@
   "homepage": "https://sponsors.yunyoujun.cn",
   "dependencies": {
     "@ctrl/tinycolor": "^3.4.0",
-    "@vueuse/core": "^8.0.0",
+    "@vueuse/core": "^8.0.1",
     "@vueuse/head": "^0.7.5",
     "dayjs": "^1.10.8",
-    "element-plus": "2.1.0",
+    "element-plus": "2.1.1",
     "element-theme-ink": "^1.1.4",
     "js-yaml": "^4.1.0",
     "nprogress": "^0.2.0",
@@ -37,7 +37,7 @@
     "vue-router": "^4.0.14"
   },
   "devDependencies": {
-    "@iconify-json/carbon": "^1.1.1",
+    "@iconify-json/carbon": "^1.1.2",
     "@iconify-json/mdi": "^1.1.1",
     "@iconify-json/ri": "^1.1.1",
     "@intlify/vite-plugin-vue-i18n": "^3.3.1",
