@@ -3,10 +3,10 @@
     <el-table :data="sponsors" show-summary :row-class-name="tableRowClassName">
       <el-table-column type="expand" width="60px">
         <template #default="scope">
-          <detail-list :tableData="scope.row.children" />
+          <detail-list :table-data="scope.row.children" />
         </template>
       </el-table-column>
-      <el-table-column type="index"></el-table-column>
+      <el-table-column type="index" />
       <el-table-column prop="name" label="老板">
         <template #default="scope">
           <a
@@ -22,12 +22,64 @@
         </template>
       </el-table-column>
       <el-table-column prop="total" label="总额（元）" sortable>
-        <template #default="scope">{{ scope.row.total.toFixed(2) }}</template>
+        <template #default="scope">
+          {{ scope.row.total.toFixed(2) }}
+        </template>
       </el-table-column>
-      <el-table-column prop="children.length" label="次数" sortable></el-table-column>
+      <el-table-column prop="children.length" label="次数" sortable />
     </el-table>
   </div>
 </template>
+
+<script setup lang="ts">
+import type { MoneySponsor, RankSponsor, Sponsor } from '@sponsors/types'
+import store from '~/store'
+import SponsorsData from '~/assets/data/sponsors.yml'
+
+import { sortSponsor } from '~/utils'
+
+const sponsors = ref<RankSponsor[]>([])
+
+onBeforeMount(async() => {
+  const result = (SponsorsData as Sponsor[]).filter((item) => {
+    if (item.method === '其他')
+      return false
+
+    else
+      return item.amount >= 5
+  })
+
+  sponsors.value = sortSponsor(result as MoneySponsor[])
+
+  let total = 0
+  sponsors.value.forEach((sponsor) => {
+    total += sponsor.total
+  })
+
+  store.setIncome(total)
+})
+
+/**
+ * 根据索引获取对应 class
+ */
+function tableRowClassName(val: any) {
+  let className = ''
+  switch (val.rowIndex) {
+    case 0:
+      className = 'first'
+      break
+    case 1:
+      className = 'second'
+      break
+    case 2:
+      className = 'third'
+      break
+    default:
+      break
+  }
+  return `${className}-sponsor`
+}
+</script>
 
 <style lang="scss">
 .first-sponsor > td {
@@ -48,53 +100,3 @@
   font-size: 1.1rem;
 }
 </style>
-
-<script setup lang="ts">
-import store from "~/store";
-import { MoneySponsor, RankSponsor, Sponsor } from "~/types/index";
-import SponsorsData from '~/assets/data/sponsors.yml'
-
-import { sortSponsor } from "~/utils";
-
-const sponsors = ref<RankSponsor[]>([]);
-
-onBeforeMount(async () => {
-  const result = (SponsorsData as Sponsor[]).filter((item) => {
-    if (item.method === "其他") {
-      return false;
-    } else {
-      return item.amount >= 5;
-    }
-  });
-
-  sponsors.value = sortSponsor(result as MoneySponsor[])
-
-  let total = 0;
-  sponsors.value.forEach((sponsor) => {
-    total += sponsor.total;
-  });
-
-  store.setIncome(total);
-});
-
-/**
- * 根据索引获取对应 class
- */
-function tableRowClassName(val: any) {
-  let className = "";
-  switch (val.rowIndex) {
-    case 0:
-      className = "first";
-      break;
-    case 1:
-      className = "second";
-      break;
-    case 2:
-      className = "third";
-      break;
-    default:
-      break;
-  }
-  return className + "-sponsor";
-}
-</script>

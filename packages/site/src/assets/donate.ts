@@ -1,4 +1,4 @@
-import type { MoneyMethod } from '~/types'
+import type { MoneyMethod } from '@sponsors/types'
 
 export const donateMethod: {
   [key in keyof typeof MoneyMethod]: {
