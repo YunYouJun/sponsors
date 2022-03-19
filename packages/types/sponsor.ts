@@ -36,7 +36,7 @@ interface BaseSponsor {
   /**
    * 赞助方式
    */
-  method: SponsorMethod
+  method: SponsorMethod | string
   /**
    * 备注内容
    */

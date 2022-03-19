@@ -34,17 +34,16 @@
 <script setup lang="ts">
 import type { MoneySponsor, RankSponsor, Sponsor } from '@sponsors/types'
 import store from '~/store'
-import SponsorsData from '~/assets/data/sponsors.yml'
+import SponsorsData from '~/../public/manual-sponsors.json'
 
 import { sortSponsor } from '~/utils'
 
 const sponsors = ref<RankSponsor[]>([])
 
 onBeforeMount(async() => {
-  const result = (SponsorsData as Sponsor[]).filter((item) => {
+  const result = (SponsorsData as any as Sponsor[]).filter((item) => {
     if (item.method === '其他')
       return false
-
     else
       return item.amount >= 5
   })

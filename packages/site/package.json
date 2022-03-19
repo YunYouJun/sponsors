@@ -7,7 +7,6 @@
   "scripts": {
     "dev": "vite",
     "build": "cross-env NODE_ENV=production vite-ssg build",
-    "build:json": "ts-node-script cli/build.ts && cp *.md ./dist/",
     "update": "git add -A && git commit -m ':busts_in_silhouette: add new sponsor' && git push",
     "serve": "vite preview",
     "sponsors": "node bin/run add",
@@ -54,7 +53,6 @@
     "markdown-it-link-attributes": "^4.0.0",
     "markdown-it-prism": "^2.2.3",
     "sass": "^1.49.9",
-    "ts-node": "^10.7.0",
     "typescript": "^4.6.2",
     "unocss": "^0.29.3",
     "unplugin-auto-import": "^0.6.6",

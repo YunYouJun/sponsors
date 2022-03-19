@@ -1,11 +1,12 @@
 import fs from 'fs'
 import path from 'path'
-import yaml from 'js-yaml'
+import consola from 'consola'
 
 import inquirer from 'inquirer'
 import type { SponsorMethod } from '../types'
 import { MoneyMethod } from '../types'
 import { EnumKeys } from '../types/helper'
+import sponsors from '../site/public/manual-sponsors.json'
 import { config } from './config'
 
 const sponsorMethods: SponsorMethod[] = EnumKeys(MoneyMethod).map(
@@ -13,7 +14,8 @@ const sponsorMethods: SponsorMethod[] = EnumKeys(MoneyMethod).map(
 )
 sponsorMethods.push('其他')
 
-const dataFile = path.resolve(config.dataFolder, 'sponsors.yml')
+const sponsorsJsonFile = path.resolve(config.publicFOlder, 'manual-sponsors.json')
+
 const questions = [
   {
     type: 'input',
@@ -51,9 +53,14 @@ const questions = [
 
 export async function onAdd() {
   const answers = await inquirer.prompt(questions)
-  const item = yaml.dump([answers])
   // for debug
   // eslint-disable-next-line no-console
-  console.log(item)
-  fs.appendFileSync(dataFile, item)
+  consola.info(answers)
+  sponsors.push(answers)
+  try {
+    fs.writeFileSync(sponsorsJsonFile, JSON.stringify(sponsors, null, 2))
+  }
+  catch {
+    consola.error(`Write ${sponsorsJsonFile} failed!`)
+  }
 }

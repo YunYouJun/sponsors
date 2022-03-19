@@ -1,11 +1,12 @@
 import path from 'path'
 import type { MoneySponsor, Sponsor } from '../types/index'
+import sponsors from '../site/public/manual-sponsors.json'
 import { generateJSONfromYaml, generateMarkdown, generateRank } from './utils'
 
 import { config } from './config'
 
 try {
-  let data = generateJSONfromYaml(path.resolve(config.dataFolder, 'sponsors.yml')) as Sponsor[]
+  let data = sponsors as any as Sponsor[]
   // filter
   data = data.filter((item) => {
     // todo: other sponsors
