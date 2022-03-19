@@ -19,7 +19,7 @@ jobs:
           run_install: true
 
       - name: Update sponsors
-        run: npm run generate && npm run generate:wide
+        run: npm run generate
         env:
           SPONSORKIT_GITHUB_TOKEN: ${{ secrets.SPONSORKIT_GITHUB_TOKEN }}
           SPONSORKIT_GITHUB_LOGIN: YunYouJun

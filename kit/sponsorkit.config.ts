@@ -14,7 +14,11 @@ export default defineConfig({
   //   login: 'YunYouJun',
   // },
 
-  svgInlineCSS: `${defaultInlineCSS}.silver-sponsors{font-size: 16px;}`,
+  formats: ['svg'],
+
+  svgInlineCSS: `${defaultInlineCSS}
+  .silver-sponsors{font-size: 16px;}
+  `,
 
   outputDir: path.resolve(__dirname, '../public'),
 
@@ -57,7 +61,7 @@ export default defineConfig({
         composer.addSponsorGrid(typeSponsors.avatar, presets.medium)
         generateTextSponsors(composer, typeSponsors.noAvatar, config)
 
-        // composer.addSpan(20)
+        composer.addSpan(20)
       },
       // to insert custom elements after the tier block
       // composeAfter: (composer, tierSponsors, config) => {
