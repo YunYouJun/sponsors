@@ -1,9 +1,13 @@
 {
   "compilerOptions": {
+    "module": "ESNext",
     "baseUrl": ".",
+    "esModuleInterop": true,
     "paths": {
       "~/*": ["packages/site/src/*"],
-      "@sponsors/types": ["packages/types/index.ts"]
+      "@sponsors/types": ["packages/types/index.ts"],
+      "@sponsors/utils": ["packages/utils/index.ts"]
     }
-  }
+  },
+  "exclude": ["dist", "node_modules"]
 }

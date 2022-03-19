@@ -1,11 +1,14 @@
 {
   "private": true,
   "scripts": {
-    "build": "sponsorkit",
-    "generate": "npx sponsorkit -w 800 --dir ../public",
-    "generate:wide": "npx sponsorkit -w 1300 --name sponsors.wide --dir ../public"
+    "build": "sponsorkit -f",
+    "generate": "sponsorkit -w 800 -f",
+    "generate:wide": "sponsorkit -f -w 1300 --name sponsors.wide --dir ../public"
   },
   "devDependencies": {
-    "sponsorkit": "latest"
+    "sponsorkit": "latest",
+    "@sponsors/utils": "workspace:*",
+    "@sponsors/types": "workspace:*",
+    "afdian-api": "^1.0.4"
   }
 }

@@ -1,10 +1,25 @@
+import path from 'path'
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { defineConfig, presets } from 'sponsorkit'
+import { AfdianProvider } from './providers/afdian'
+import { CustomProvider } from './providers/custom'
+// import { AfdianProvider } from './providers/afdian'
 
 export default defineConfig({
   // github: {
   //   login: 'YunYouJun',
   // },
+
+  outputDir: path.resolve(__dirname, '../public'),
+
+  providers: [
+    'github',
+    // @ts-expect-error provider
+    AfdianProvider,
+    // @ts-expect-error provider
+    CustomProvider,
+  ],
+
   tiers: [
     {
       title: 'Backers',
@@ -17,7 +32,7 @@ export default defineConfig({
     },
     {
       title: 'Sponsors',
-      monthlyDollars: 5,
+      monthlyDollars: 3,
       preset: presets.medium,
       // to insert custom elements after the tier block
       composeAfter: (composer, tierSponsors, config) => {
@@ -26,12 +41,12 @@ export default defineConfig({
     },
     {
       title: 'Silver Sponsors',
-      monthlyDollars: 20,
+      monthlyDollars: 10,
       preset: presets.large,
     },
     {
       title: 'Gold Sponsors',
-      monthlyDollars: 100,
+      monthlyDollars: 50,
       preset: presets.xl,
     },
   ],

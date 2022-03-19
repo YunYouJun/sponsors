@@ -1,4 +1,5 @@
 {
+  "name": "@sponsors/cli",
   "version": "1.0.0",
   "scripts": {
     "add": "esno index.ts add",

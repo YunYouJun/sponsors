@@ -63,7 +63,7 @@ const methods: (keyof typeof MoneyMethod)[] = ['ALI_PAY', 'WECHAT_REWARD', 'QQ_P
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
   }
 
-  animation: fadeIn 1s ease;
+  animation: fadeIn 1s ease-in-out;
 }
 
 @keyframes fadeIn {

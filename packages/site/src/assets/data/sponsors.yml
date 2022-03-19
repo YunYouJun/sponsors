@@ -342,6 +342,7 @@
   amount: 5
   memo: 云游君加油
 - name: 知名的好心人
+  avatar: https://upyun.yunyoujun.cn/images/wzq-avatar.jpg
   url: ""
   date: 2021-06-02T18:01:44.408Z
   method: 微信支付
@@ -600,7 +601,7 @@
   amount: 22.22
   memo: ""
 - name: 羽田野之朝
-  url: ''
+  url: ""
   date: 2022-03-16T13:55:58.708Z
   method: 微信赞赏
   amount: 8.88

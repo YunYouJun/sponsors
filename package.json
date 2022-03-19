@@ -7,6 +7,7 @@
     "dev": "pnpm run dev -C packages/site",
     "build": "pnpm run build -C packages/site",
     "build:json": "pnpm run build -C packages/cli && cp packages/cli/dist/* packages/site/dist/",
+    "generate": "pnpm run generate -C kit",
     "update": "git add -A && git commit -m ':busts_in_silhouette: add new sponsor' && git push",
     "sponsors": "pnpm run add -C packages/cli"
   },
@@ -21,8 +22,8 @@
   "homepage": "https://sponsors.yunyoujun.cn",
   "dependencies": {
     "@yunyoujun/logger": "^0.2.1",
-    "commander": "^9.0.0",
-    "dayjs": "^1.10.8"
+    "commander": "^9.1.0",
+    "dayjs": "^1.11.0"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.18.8",
