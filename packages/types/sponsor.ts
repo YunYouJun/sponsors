@@ -22,6 +22,10 @@ interface BaseSponsor {
    */
   name: string
   /**
+   * 头像
+   */
+  avatar?: string
+  /**
    * 赞助者链接
    */
   url?: string

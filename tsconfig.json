@@ -1,6 +1,5 @@
 {
   "compilerOptions": {
-    "module": "ESNext",
     "baseUrl": ".",
     "esModuleInterop": true,
     "paths": {

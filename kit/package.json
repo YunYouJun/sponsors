@@ -1,9 +1,9 @@
 {
   "private": true,
   "scripts": {
-    "build": "sponsorkit -f",
-    "generate": "sponsorkit -w 800 -f",
-    "generate:wide": "sponsorkit -f -w 1300 --name sponsors.wide --dir ../public"
+    "build": "sponsorkit",
+    "generate": "sponsorkit -w 800",
+    "generate:wide": "sponsorkit -w 1300 --name sponsors.wide --dir ../public"
   },
   "devDependencies": {
     "sponsorkit": "latest",

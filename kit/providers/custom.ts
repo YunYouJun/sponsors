@@ -1,10 +1,10 @@
 import consola from 'consola'
 // https://cdn.jsdelivr.net/gh/YunYouJun/cdn@latest/img/avatar/none.webp
 import { $fetch } from 'ohmyfetch'
-import { defaultAvatarUrl } from '@sponsors/utils'
 import type { RankSponsor } from '@sponsors/types'
 
 import type { Provider, Sponsorship } from 'sponsorkit'
+import { defaultAvatarUrl } from '@sponsors/utils'
 
 export const CustomProvider: Provider = {
   name: 'custom',

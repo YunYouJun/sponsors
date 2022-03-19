@@ -41,6 +41,7 @@ export function sortSponsor(sponsors: MoneySponsor[]) {
     if (!contain) {
       const info = {
         name: sponsor.name,
+        avatar: sponsor.avatar,
         url: sponsor.url,
         total: sponsor.amount,
         children: [sponsor],
