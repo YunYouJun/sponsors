@@ -59,6 +59,7 @@
   },
   {
     "name": "SKNP",
+    "avatar": "https://cdn.jsdelivr.net/gh/Sknp1006/cdn@master/img/albums/arknights_Skadi/024.png",
     "url": "https://sknplz.xyz/",
     "total": 112,
     "children": [
@@ -153,6 +154,7 @@
   },
   {
     "name": "jason",
+    "avatar": "https://cdn.jsdelivr.net/gh/zhizunjiege/cdn/img/avatar.jpg",
     "url": "https://blog.jason.moe",
     "total": 66.66,
     "children": [

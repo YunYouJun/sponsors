@@ -7,9 +7,9 @@
     "generate:wide": "sponsorkit -w 1300 --name sponsors.wide --dir ../public"
   },
   "devDependencies": {
-    "sponsorkit": "latest",
-    "@sponsors/utils": "workspace:*",
     "@sponsors/types": "workspace:*",
-    "afdian-api": "^1.0.4"
+    "@sponsors/utils": "workspace:*",
+    "afdian-api": "^1.0.5",
+    "sponsorkit": "latest"
   }
 }

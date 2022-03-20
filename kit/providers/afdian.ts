@@ -1,6 +1,6 @@
 import 'dotenv/config'
+import type { AfdianApiOpts } from 'afdian-api'
 import Afdian from 'afdian-api'
-import type { AfdianApiOpts } from 'afdian-api/dist/src/types/common'
 
 import type { Provider, Sponsorship } from 'sponsorkit'
 
