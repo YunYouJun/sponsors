@@ -1024,5 +1024,18 @@
         "memo": ""
       }
     ]
+  },
+  {
+    "name": "小于全球救援会",
+    "url": "https://yby.zone/",
+    "total": 88,
+    "children": [
+      {
+        "date": "2022-03-20T13:46:48.301Z",
+        "method": "微信赞赏",
+        "amount": 88,
+        "memo": ""
+      }
+    ]
   }
 ]

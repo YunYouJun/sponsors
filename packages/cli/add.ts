@@ -67,6 +67,7 @@ export async function onAdd() {
       name: answer.name,
       url: answer.url,
       avatar: answer.avatar,
+      total: answer.amount,
       children: [
         {
           date: answer.date,
