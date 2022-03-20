@@ -1,10 +1,11 @@
 import consola from 'consola'
-// https://cdn.jsdelivr.net/gh/YunYouJun/cdn@latest/img/avatar/none.webp
 import { $fetch } from 'ohmyfetch'
 import type { RankSponsor } from '@sponsors/types'
 
 import type { Provider, Sponsorship } from 'sponsorkit'
 import { defaultAvatarUrl } from '@sponsors/utils'
+
+import manualSponsors from '../../packages/site/public/manual-sponsors.json'
 
 export const CustomProvider: Provider = {
   name: 'custom',
@@ -15,10 +16,10 @@ export const CustomProvider: Provider = {
 }
 
 /**
- * https://sponsors.yunyoujun.cn/rank.json
+ * https://sponsors.yunyoujun.cn/manual-sponsors.json
  */
 export async function fetchCustomSponsors(): Promise<Sponsorship[]> {
-  const rank: RankSponsor[] = await $fetch('https://sponsors.yunyoujun.cn/rank.json')
+  const rank: RankSponsor[] = manualSponsors as any
 
   if (!rank.length) {
     consola.error('Rank Error!')

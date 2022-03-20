@@ -27,11 +27,7 @@
 <script setup lang="ts">
 import type { OtherSponsor } from '@sponsors/types'
 import { formatDate } from '~/utils'
-import SponsorsData from '~/../public/manual-sponsors.json'
+import SponsorsData from '~/../public/special-sponsors.json'
 
 const sponsors = ref<OtherSponsor[]>(SponsorsData as any)
-
-onBeforeMount(async() => {
-  sponsors.value = sponsors.value.filter(item => item.method === '其他')
-})
 </script>

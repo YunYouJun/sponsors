@@ -8,6 +8,7 @@ import { MoneyMethod } from '../types'
 import { EnumKeys } from '../types/helper'
 import sponsors from '../site/public/manual-sponsors.json'
 import { config } from './config'
+import { sortSponsor } from '~/utils'
 
 const sponsorMethods: SponsorMethod[] = EnumKeys(MoneyMethod).map(
   item => MoneyMethod[item],
@@ -52,13 +53,52 @@ const questions = [
 ]
 
 export async function onAdd() {
-  const answers = await inquirer.prompt(questions)
+  const answer = await inquirer.prompt(questions)
   // for debug
   // eslint-disable-next-line no-console
-  consola.info(answers)
-  sponsors.push(answers)
+  consola.info(answer)
+
+  const item = sponsors.find(sponsor => sponsor.name === answer.name)
+
+  if (!item) {
+    consola.success('The first sponsorship from this person!')
+
+    sponsors.push({
+      name: answer.name,
+      url: answer.url,
+      avatar: answer.avatar,
+      children: [
+        {
+          date: answer.date,
+          method: answer.method,
+          amount: answer.amount,
+          memo: answer.memo,
+        },
+      ],
+    } as any)
+  }
+  else {
+    consola.info('I find you!')
+    consola.info(item)
+
+    if (Array.isArray(item.children)) {
+      item.children.push(
+        {
+          date: answer.date,
+          method: answer.method,
+          amount: answer.amount,
+          memo: answer.memo,
+        },
+      )
+
+      item.total += answer.amount
+    }
+  }
+
+  const sortSponsorsData = sortSponsor(sponsors as any)
+
   try {
-    fs.writeFileSync(sponsorsJsonFile, JSON.stringify(sponsors, null, 2))
+    fs.writeFileSync(sponsorsJsonFile, JSON.stringify(sortSponsorsData, null, 2))
   }
   catch {
     consola.error(`Write ${sponsorsJsonFile} failed!`)

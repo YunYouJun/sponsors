@@ -14,7 +14,7 @@ export enum MoneyMethod {
 
 export type OtherMethod = '其他'
 
-export type SponsorMethod = (keyof typeof MoneyMethod) | OtherMethod
+export type SponsorMethod = MoneyMethod | OtherMethod
 
 interface BaseSponsor {
   /**

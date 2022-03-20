@@ -1,7 +1,7 @@
 import path from 'path'
 import type { MoneySponsor, Sponsor } from '../types/index'
 import sponsors from '../site/public/manual-sponsors.json'
-import { generateJSONfromYaml, generateMarkdown, generateRank } from './utils'
+import { generateJSONfromYaml, generateMarkdown } from './utils'
 
 import { config } from './config'
 
@@ -20,9 +20,6 @@ try {
   })
 
   generateJSONfromYaml(path.resolve(config.dataFolder, 'expenses.yml'))
-
-  // 生成排序的 JSON
-  generateRank(data as MoneySponsor[])
 
   generateMarkdown(data as MoneySponsor[])
 }

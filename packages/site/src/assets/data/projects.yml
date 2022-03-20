@@ -139,7 +139,12 @@ tools:
     emoji: ⏩
     desc: 将 Valine 评论数据转换为 Disqus 可导入的格式。
     color: blue
+    github:
     docs: https://www.yunyoujun.cn/posts/migrate-from-valine-to-disqus/
+  - name: valaxy
+    emoji: 🌌
+    desc: Static Blog Framework 新一代静态博客框架
+    color: "#0078e7"
 
 interesting:
   - name: air-conditioner

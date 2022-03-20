@@ -4,7 +4,6 @@ import yaml from 'js-yaml'
 
 import { Logger } from '@yunyoujun/logger'
 
-import { sortSponsor } from '../site/src/utils'
 import type { MoneySponsor } from '../types'
 const logger = new Logger()
 
@@ -25,19 +24,6 @@ export function generateJSONfromYaml(path: string) {
   fs.writeFileSync(`./dist/${name}.json`, JSON.stringify(data))
   logger.success(`Generated ${name}.json successfully!`)
   return data
-}
-
-/**
- * 生成排序的 JSON
- * @param sponsors
- */
-export function generateRank(sponsors: MoneySponsor[]) {
-  const json = sortSponsor(sponsors)
-
-  const filename = 'rank.json'
-  fs.writeFileSync(`./dist/${filename}`, JSON.stringify(json))
-  logger.success(`Generated ${filename} successfully!`)
-  return json
 }
 
 /**
@@ -69,7 +55,7 @@ title: 赞助者名单
 
     const sponsor_md = `|${boss}|${
       sponsor.method
-    }|${amount}|${sponsor.date.toLocaleDateString('zh-CN')}|${
+    }|${amount}|${(new Date(sponsor.date)).toLocaleDateString('zh-CN')}|${
       sponsor.memo || '冰阔落'
     }|\n`
     sponsors_md += sponsor_md

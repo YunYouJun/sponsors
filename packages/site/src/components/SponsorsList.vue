@@ -32,24 +32,13 @@
 </template>
 
 <script setup lang="ts">
-import type { MoneySponsor, RankSponsor, Sponsor } from '@sponsors/types'
+import type { RankSponsor } from '@sponsors/types'
 import store from '~/store'
-import SponsorsData from '~/../public/manual-sponsors.json'
+import sponsorsData from '~/../public/manual-sponsors.json'
 
-import { sortSponsor } from '~/utils'
-
-const sponsors = ref<RankSponsor[]>([])
+const sponsors = ref<RankSponsor[]>(sponsorsData as any as RankSponsor[])
 
 onBeforeMount(async() => {
-  const result = (SponsorsData as any as Sponsor[]).filter((item) => {
-    if (item.method === '其他')
-      return false
-    else
-      return item.amount >= 5
-  })
-
-  sponsors.value = sortSponsor(result as MoneySponsor[])
-
   let total = 0
   sponsors.value.forEach((sponsor) => {
     total += sponsor.total
