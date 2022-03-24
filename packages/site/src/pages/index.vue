@@ -8,7 +8,7 @@
         <div i-ri-github-line m="x-1" /> Become a Sponsor in GitHub
       </a>
     </h2>
-    <embed w="full" m="auto" :src="config.githubSponsors.url" type="image/svg+xml">
+    <embed class="animate-iteration-1 animate-fade-in" w="full" m="auto" :src="config.githubSponsors.url" type="image/svg+xml">
 
     <blockquote class="inline-flex justify-center items-center flex-col">
       更多内容见

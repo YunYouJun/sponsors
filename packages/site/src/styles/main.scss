@@ -1,5 +1,7 @@
-@import "./var.scss";
-@import "./markdown.css";
+@use "./var.scss" as *;
+@use "./markdown.css";
+
+@use './helper.scss' as *;
 
 a {
   cursor: pointer;

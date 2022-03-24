@@ -10,6 +10,7 @@ import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Unocss from 'unocss/vite'
 
+
 import VueI18n from '@intlify/vite-plugin-vue-i18n'
 import Markdown from 'vite-plugin-md'
 import Inspect from 'vite-plugin-inspect'
@@ -48,6 +49,13 @@ const markdownWrapperClasses = 'prose prose-sm m-auto text-left'
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export default defineConfig(({ mode }) => {
   return {
+
+    build: {
+      rollupOptions: {
+        external: ['element-plus']
+      }
+    },
+
     resolve: {
       alias: {
         '~/': `${path.resolve(__dirname, 'src')}/`,
@@ -86,6 +94,12 @@ export default defineConfig(({ mode }) => {
         // allow auto import and register components used in markdown
         include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
         dts: 'src/components.d.ts',
+
+        resolvers: [
+          // ElementPlusResolver({
+          //   // importStyle: 'sass',
+          // }),
+        ],
       }),
 
       // https://github.com/antfu/unocss
@@ -160,7 +174,7 @@ export default defineConfig(({ mode }) => {
     },
 
     optimizeDeps: {
-      include: ['vue', 'vue-router', '@vueuse/core', '@vueuse/head', '@ctrl/tinycolor', 'dayjs', 'vue-about-me', 'dayjs/plugin/customParseFormat'],
+      include: ['vue', 'vue-router', '@vueuse/core', '@vueuse/head', '@ctrl/tinycolor', 'dayjs', 'vue-about-me'],
       exclude: ['vue-demi'],
     },
   }
