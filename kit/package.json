@@ -10,6 +10,6 @@
     "@sponsors/types": "workspace:*",
     "@sponsors/utils": "workspace:*",
     "afdian-api": "^1.0.5",
-    "sponsorkit": "latest"
+    "sponsorkit": "^0.3.1"
   }
 }
