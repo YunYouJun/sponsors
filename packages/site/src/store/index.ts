@@ -1,4 +1,4 @@
-import { reactive } from "@vue/reactivity";
+import { reactive } from '@vue/reactivity'
 
 export default {
   state: reactive({
@@ -7,14 +7,14 @@ export default {
   }),
 
   getBalance() {
-    return this.state.income - this.state.expense;
+    return this.state.income - this.state.expense
   },
 
   setIncome(val: number) {
-    this.state.income = val;
+    this.state.income = val
   },
 
   setExpense(val: number) {
-    this.state.expense = val;
+    this.state.expense = val
   },
-};
+}

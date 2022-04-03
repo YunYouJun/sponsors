@@ -1,3 +1,5 @@
+export const anonymousImage = 'https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/avatar/none.jpg'
+
 export const methodMap = {
   ALI_PAY: {
     icon: 'i-ri-alipay-line',

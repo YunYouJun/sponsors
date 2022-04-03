@@ -32,8 +32,15 @@ hr {
 /* global */
 .sponsor-table {
   margin: 0 auto;
-  padding: 0 1rem;
-  max-width: 1000px;
+  max-width: 800px;
+
+  .header {
+    border-bottom: 1px solid var(--c-border);
+  }
+
+  .sponsor-col {
+    border-bottom: 1px solid var(--c-border);
+  }
 }
 
 p {

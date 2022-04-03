@@ -1,0 +1,81 @@
+<script lang="ts" setup>
+import type { RankSponsor } from '@sponsors/types'
+import { anonymousImage } from '~/config'
+
+defineProps<{
+  i: number
+  sponsor: RankSponsor
+}>()
+
+const expand = ref(false)
+
+/**
+ * 根据索引获取对应 class
+ */
+function sponsorClassName(order: number) {
+  let className = ''
+  switch (order) {
+    case 0:
+      className = 'first'
+      break
+    case 1:
+      className = 'second'
+      break
+    case 2:
+      className = 'third'
+      break
+    default:
+      break
+  }
+  return className ? `${className}-sponsor` : ''
+}
+</script>
+
+<template>
+  <div class="sponsor-col flex justify-between" p="1" :class="sponsorClassName(i)">
+    <div w="10" class="inline-flex justify-start items-center cursor-pointer" font="mono" text="gray" @click="expand = !expand">
+      <div v-if="!expand" m="r-1" i-ri-arrow-right-s-line />
+      <div v-else m="r-1" i-ri-arrow-down-s-line />
+      <span>{{ i + 1 }}</span>
+    </div>
+    <div w="40" class="inline-flex justify-start items-center">
+      <img class="shadow" m="r-2" w="5" h="5" rounded="full" :src="sponsor.avatar || anonymousImage">
+      <a
+        v-if="sponsor.url"
+        :href="sponsor.url"
+        target="_blank"
+        :alt="sponsor.name"
+        class="sponsor-url"
+      >
+        <span>{{ sponsor.name || "不知名的好心人" }}</span>
+      </a>
+      <span v-else>{{ sponsor.name || "不知名的好心人" }}</span>
+    </div>
+    <div w="24" class="inline-flex justify-end" font="mono">
+      {{ sponsor.total.toFixed(2) }}
+    </div>
+    <div w="12" class="inline-flex justify-end" font="mono">
+      {{ sponsor.children.length }}
+    </div>
+  </div>
+  <Transition>
+    <DetailList v-if="expand" :details="sponsor.children" />
+  </Transition>
+</template>
+
+<style lang="scss">
+.first-sponsor {
+  color: #ff9800;
+  font-weight: bold;
+}
+
+.second-sponsor {
+  color: #607d8b;
+  font-weight: bold;
+}
+
+.third-sponsor {
+  color: #795548;
+  font-weight: bold;
+}
+</style>

@@ -1,42 +1,9 @@
-<template>
-  <div class="sponsor-table">
-    <el-table :data="sponsors" show-summary :row-class-name="tableRowClassName">
-      <el-table-column type="expand" width="60px">
-        <template #default="scope">
-          <detail-list :table-data="scope.row.children" />
-        </template>
-      </el-table-column>
-      <el-table-column type="index" />
-      <el-table-column prop="name" label="老板">
-        <template #default="scope">
-          <a
-            v-if="scope.row.url"
-            :href="scope.row.url"
-            target="_blank"
-            :alt="scope.row.name"
-            class="sponsor-url"
-          >
-            <span>{{ scope.row.name || "不知名的好心人" }}</span>
-          </a>
-          <span v-else>{{ scope.row.name || "不知名的好心人" }}</span>
-        </template>
-      </el-table-column>
-      <el-table-column prop="total" label="总额（元）" sortable>
-        <template #default="scope">
-          {{ scope.row.total.toFixed(2) }}
-        </template>
-      </el-table-column>
-      <el-table-column prop="children.length" label="次数" sortable />
-    </el-table>
-  </div>
-</template>
-
 <script setup lang="ts">
 import type { RankSponsor } from '@sponsors/types'
 import store from '~/store'
 import sponsorsData from '~/../public/manual-sponsors.json'
 
-const sponsors = ref<RankSponsor[]>(sponsorsData as any as RankSponsor[])
+const sponsors = ref<RankSponsor[]>((sponsorsData as any as RankSponsor[]).filter(i => i.total >= 6))
 
 onBeforeMount(async() => {
   let total = 0
@@ -46,45 +13,26 @@ onBeforeMount(async() => {
 
   store.setIncome(total)
 })
-
-/**
- * 根据索引获取对应 class
- */
-function tableRowClassName(val: any) {
-  let className = ''
-  switch (val.rowIndex) {
-    case 0:
-      className = 'first'
-      break
-    case 1:
-      className = 'second'
-      break
-    case 2:
-      className = 'third'
-      break
-    default:
-      break
-  }
-  return `${className}-sponsor`
-}
 </script>
 
-<style lang="scss">
-.first-sponsor > td {
-  color: #ff9800;
-  font-weight: bold;
-  font-size: 1.3rem;
-}
+<template>
+  <div class="opacity-80" text="sm" p="b-2">
+    如果你希望展示一个头像，可以联系我（比如发头像链接给我）
+  </div>
+  <div class="sponsor-table md:p-2">
+    <div class="header flex justify-between">
+      <div w="10" />
+      <div w="40" class="inline-flex justify-center" font="bold">
+        老板
+      </div>
+      <div w="24" class="inline-flex justify-end" font="bold">
+        ￥ 总额
+      </div>
+      <div w="12" class="inline-flex justify-end" font="bold">
+        次数
+      </div>
+    </div>
 
-.second-sponsor > td {
-  color: #607d8b;
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
-.third-sponsor > td {
-  color: #795548;
-  font-weight: bold;
-  font-size: 1.1rem;
-}
-</style>
+    <SponsorCol v-for="sponsor, i in sponsors" :key="i" :sponsor="sponsor" :i="i" />
+  </div>
+</template>
