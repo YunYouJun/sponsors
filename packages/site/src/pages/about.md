@@ -8,7 +8,7 @@ title: 关于
 
 ## 谢谢您的支持！
 
-<a href="https://github.com/YunYouJun/sponsors/blob/gh-pages/list.md" target="_blank">赞助详细列表</a>
+<router-link to="/account">赞助详细列表</router-link>
 
 ## 说明
 
@@ -20,7 +20,6 @@ title: 关于
 
 ## Todo
 
-- 亮暗模式
 - 国际化（喂，真的有必要吗！）
 
 </div>

@@ -7,14 +7,16 @@ import OtherSponsors from '~/components/OtherSponsors.vue'
 import ExpenseTable from '~/components/ExpenseTable.vue'
 import { sumExpense, sumIncome } from '~/utils'
 
+import sponsors from '~/../public/manual-sponsors.json'
+import expenses from '~/assets/data/expenses.yml'
+
+const { t } = useI18n()
 const state = store.state
 
 interface TabItem {
   name: string
   component: ComponentOptions
 }
-
-const { t } = useI18n()
 
 const tabs: TabItem[] = [{
   name: t('tab.sponsor_list'),
@@ -30,15 +32,16 @@ const tabs: TabItem[] = [{
 const currentTab = shallowRef<TabItem>(tabs[0])
 
 onBeforeMount(() => {
-  sumIncome()
-  sumExpense()
+  sumIncome(sponsors as any)
+  sumExpense(expenses)
 })
+
 </script>
 
 <template>
   <div class="post-card">
-    <h1>
-      账单
+    <h1 text="xl" font="serif black">
+      {{ t('title.account') }}
     </h1>
 
     <div class="flex justify-center items-center" m="2" p="b-2" text="sm">
@@ -57,7 +60,7 @@ onBeforeMount(() => {
       <span class="tag" text="yellow-600" bg="yellow-50">
         <div class="inline-flex" m="r-1" i-ri-scales-line />
         <span>盈余：</span>
-        <span font="mono">{{ store.getBalance().toFixed(2) }}</span>
+        <span font="mono">{{ store.balance.value.toFixed(2) }}</span>
       </span>
     </div>
 

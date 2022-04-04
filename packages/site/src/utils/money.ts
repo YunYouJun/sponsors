@@ -1,8 +1,7 @@
-import sponsors from '~/../public/manual-sponsors.json'
-import expenses from '~/assets/data/expenses.yml'
+import type { RankSponsor } from '@sponsors/types'
 import store from '~/store'
 
-export function sumIncome() {
+export function sumIncome(sponsors: RankSponsor[]) {
   let total = 0
   sponsors.forEach((sponsor) => {
     total += sponsor.total
@@ -17,7 +16,7 @@ export interface Expense {
   date: Date
 }
 
-export function sumExpense() {
+export function sumExpense(expenses: Expense[]) {
   let total = 0
   expenses.forEach((expense: Expense) => {
     total += expense.amount

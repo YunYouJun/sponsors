@@ -1,14 +1,14 @@
 import { reactive } from 'vue'
 
-export default {
-  state: reactive({
-    income: 0,
-    expense: 0,
-  }),
+const state = reactive({
+  income: 0,
+  expense: 0,
+})
 
-  getBalance() {
-    return this.state.income - this.state.expense
-  },
+export default {
+  state,
+
+  balance: computed(() => state.income - state.expense),
 
   setIncome(val: number) {
     this.state.income = val

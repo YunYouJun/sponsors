@@ -25,8 +25,8 @@ const toggleLocales = () => {
       <div i="carbon-sun dark:carbon-moon" />
     </a>
 
-    <a class="icon-btn mx-1" :title="t('button.toggle_langs')" @click="toggleLocales">
-      <div i-carbon-language />
+    <a class="icon-btn mx-1" :class="locale === 'en' ? 'rotate-y-180' : ''" :title="t('button.toggle_langs')" @click="toggleLocales">
+      <div i-ri-translate />
     </a>
 
     <router-link class="icon-btn mx-1" to="/projects" :title="t('button.projects')">
@@ -44,7 +44,7 @@ const toggleLocales = () => {
       target="_blank"
       title="GitHub"
     >
-      <div i-carbon-logo-github />
+      <div i-ri-github-line />
     </a>
   </nav>
 </template>
