@@ -20,6 +20,8 @@ import Yaml from '@rollup/plugin-yaml'
 
 import LinkAttributes from 'markdown-it-link-attributes'
 
+import SvgLoader from 'vite-svg-loader'
+
 // but lib seems can not tree-shake, wait vite-ssg/ssr support 'import' syntax
 // import { ComponentResolver } from "unplugin-vue-components/types";
 // import { isProd, kebabCase } from "./src/utils";
@@ -63,6 +65,9 @@ export default defineConfig(({ mode }) => {
       Pages({
         extensions: ['vue', 'md'],
       }),
+
+      // https://github.com/jpkleemans/vite-svg-loader
+      SvgLoader(),
 
       // https://github.com/JohnCampionJr/vite-plugin-vue-layouts
       Layouts(),

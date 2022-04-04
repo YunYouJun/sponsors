@@ -1,3 +1,10 @@
+<script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+import SponsorSvg from '../../../../public/sponsors.svg?raw'
+
+const { t } = useI18n()
+</script>
+
 <template>
   <donate-qrcode />
   <br>
@@ -8,10 +15,9 @@
         <div i-ri-github-line m="x-1" /> Become a Sponsor in GitHub
       </a>
     </h2>
-    <object class="animate-iteration-1 animate-fade-in" w="full" m="auto" :data="config.githubSponsors.url" type="image/svg+xml">
-      <!-- fall back -->
-      <img :src="config.githubSponsors.url">
-    </object>
+    <!-- <SponsorSvg /> -->
+    <!-- component missing of viewbox -->
+    <div class="svg-container" v-html="SponsorSvg" />
 
     <blockquote class="inline-flex justify-center items-center flex-col">
       更多内容见
@@ -26,9 +32,11 @@
   </p>
 </template>
 
-<script setup lang="ts">
-import { useI18n } from 'vue-i18n'
-import { config } from '~/config'
-
-const { t } = useI18n()
-</script>
+<style lang="scss">
+.svg-container {
+  // width: 100%;
+  svg {
+    height: auto;
+  }
+}
+</style>

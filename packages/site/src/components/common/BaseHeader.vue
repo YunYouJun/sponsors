@@ -5,7 +5,7 @@ const { t } = useI18n()
 
 <template>
   <div class="relative flex justify-center items-center flex-col animate-iteration-1 animate-duration-1000 animate-fade-in">
-    <img class="xiao-yun-q inline-flex m-auto animated animate-bounce z-2" src="https://cdn.jsdelivr.net/gh/YunYouJun/yun/images/meme/yun-good-alpha-compressed.png" alt="小云觉得你很棒棒">
+    <img class="xiao-yun-q inline-flex m-auto fade-in z-2" src="https://cdn.jsdelivr.net/gh/YunYouJun/yun/images/meme/yun-good-alpha-compressed.png" alt="小云觉得你很棒棒">
     <p class="absolute bottom-0">
       我很可爱，请给我钱！
     </p>

@@ -1,3 +1,5 @@
+import type { MoneyMethod } from '@sponsors/types'
+
 export const anonymousImage = 'https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/avatar/none.jpg'
 
 export const methodMap = {
@@ -22,6 +24,8 @@ export const methodMap = {
     title: 'QQ 钱包',
   },
 }
+
+export const methods: (keyof typeof MoneyMethod)[] = ['ALI_PAY', 'WECHAT_REWARD', 'QQ_PAY']
 
 export const config = {
   githubSponsors: {
