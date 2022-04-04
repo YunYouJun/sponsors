@@ -4,7 +4,7 @@ import { formatDate } from '../utils'
 
 import ExpenseData from '~/assets/data/expenses.yml'
 
-const expenses = ref<Expense[]>(ExpenseData)
+const expenses = ref<Expense[]>(ExpenseData.reverse())
 </script>
 
 <template>
@@ -24,7 +24,7 @@ const expenses = ref<Expense[]>(ExpenseData)
           ¥ 金额
         </div>
       </div>
-      <div v-for="row,i in expenses.reverse()" :key="i" class="sponsor-row flex justify-between items-center" p="1" text="sm">
+      <div v-for="row,i in expenses" :key="i" class="sponsor-row flex justify-between items-center" p="1" text="sm">
         <div w="28" class="inline-flex items-center justify-start" text="xs">
           {{ formatDate(row.date) }}
         </div>

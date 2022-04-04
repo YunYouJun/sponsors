@@ -7,7 +7,6 @@ export function sumIncome() {
   sponsors.forEach((sponsor) => {
     total += sponsor.total
   })
-
   store.setIncome(total)
 }
 
@@ -23,6 +22,5 @@ export function sumExpense() {
   expenses.forEach((expense: Expense) => {
     total += expense.amount
   })
-
   store.setExpense(total)
 }
