@@ -38,8 +38,9 @@ hr {
     border-bottom: 1px solid var(--c-border);
   }
 
-  .sponsor-col {
+  .sponsor-row {
     border-bottom: 1px solid var(--c-border);
+    align-items: center;
   }
 }
 

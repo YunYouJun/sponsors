@@ -33,6 +33,6 @@ onBeforeMount(async() => {
       </div>
     </div>
 
-    <SponsorCol v-for="sponsor, i in sponsors" :key="i" :sponsor="sponsor" :i="i" />
+    <SponsorRow v-for="sponsor, i in sponsors" :key="i" :sponsor="sponsor" :i="i" />
   </div>
 </template>

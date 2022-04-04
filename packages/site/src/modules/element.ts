@@ -1,4 +1,4 @@
-import { ElTable, ElTabs, ElTag } from 'element-plus'
+import { ElTabs } from 'element-plus'
 import type { UserModule } from '~/types'
 
 // 按需引入 https://element-plus.org/#/zh-CN/component/quickstart#an-xu-yin-ru
@@ -8,7 +8,7 @@ import type { UserModule } from '~/types'
 // import "element-theme-ink";
 
 export const install: UserModule = ({ app }) => {
-  const components = [ElTable, ElTag, ElTabs]
+  const components = [ElTabs]
   components.forEach((component) => {
     app.use(component)
   })

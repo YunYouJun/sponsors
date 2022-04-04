@@ -12,7 +12,6 @@ interface Expense {
 }
 
 const expenses = ref<Expense[]>(ExpenseData)
-const state = store.state
 
 onBeforeMount(async() => {
   let total = 0
@@ -26,33 +25,37 @@ onBeforeMount(async() => {
 
 <template>
   <div class="sponsor-table">
-    <div style="display: flex; gap: 0.5rem">
-      <el-tag type="success">
-        收入：{{ state.income.toFixed(2) }}
-      </el-tag>
-      <el-tag type="danger">
-        支出：{{ state.expense.toFixed(2) }}
-      </el-tag>
-      <el-tag type="warning">
-        盈余：{{ store.getBalance().toFixed(2) }}
-      </el-tag>
+    <div class="sponsor-table">
+      <div class="header sponsor-row flex justify-between items-center" m="1">
+        <div w="28" class="inline-flex justify-start">
+          日期
+        </div>
+        <div w="20" class="inline-flex justify-start">
+          服务商
+        </div>
+        <div w="50" class="inline-flex justify-start">
+          消费内容
+        </div>
+        <div w="20" class="inline-flex justify-end">
+          ¥ 金额
+        </div>
+      </div>
+      <div v-for="row,i in expenses" :key="i" class="sponsor-row flex justify-between items-center" p="1" text="sm">
+        <div w="28" class="inline-flex items-center justify-start" text="xs">
+          {{ formatDate(row.date) }}
+        </div>
+        <div w="20" class="inline-flex justify-start items-center" font="serif black">
+          {{ row.business }}
+        </div>
+
+        <div w="64" class="inline-flex justify-start items-start" text="xs">
+          {{ row.memo }}
+        </div>
+
+        <div w="20" class="inline-flex justify-end items-center" font="mono">
+          {{ row.amount.toFixed(2) }}
+        </div>
+      </div>
     </div>
-
-    <br>
-
-    <el-table :data="expenses" show-summary>
-      <el-table-column prop="date" label="日期">
-        <template #default="scope">
-          {{ formatDate(scope.row.date) }}
-        </template>
-      </el-table-column>
-      <el-table-column prop="business" label="服务商" />
-      <el-table-column prop="memo" label="消费内容" />
-      <el-table-column prop="amount" label="金额（¥）">
-        <template #default="scope">
-          {{ scope.row.amount.toFixed(2) }}
-        </template>
-      </el-table-column>
-    </el-table>
   </div>
 </template>

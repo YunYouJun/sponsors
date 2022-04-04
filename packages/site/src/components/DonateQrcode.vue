@@ -1,3 +1,14 @@
+<script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+import type { MoneyMethod } from '@sponsors/types'
+// import { EnumKeys } from "~/types/helper";
+import { donateMethod } from '~/assets/donate'
+import { methodMap } from '~/config'
+const { t } = useI18n()
+// const methods = EnumKeys(MoneyMethod);
+const methods: (keyof typeof MoneyMethod)[] = ['ALI_PAY', 'WECHAT_REWARD', 'QQ_PAY']
+</script>
+
 <template>
   <div class="post-card" m="auto" p="4" bg="white opacity-5">
     <base-header msg="Sponsors" />
@@ -29,21 +40,9 @@
   </div>
 </template>
 
-<script setup lang="ts">
-import { useI18n } from 'vue-i18n'
-import type { MoneyMethod } from '@sponsors/types'
-// import { EnumKeys } from "~/types/helper";
-import { donateMethod } from '~/assets/donate'
-import { methodMap } from '~/config'
-const { t } = useI18n()
-// const methods = EnumKeys(MoneyMethod);
-const methods: (keyof typeof MoneyMethod)[] = ['ALI_PAY', 'WECHAT_REWARD', 'QQ_PAY']
-
-</script>
-
 <style lang="scss">
 .qrcode-img {
-  --qrcode-img-size: 230px;
+  --qrcode-img-size: 220px;
   width: var(--qrcode-img-size);
   height: var(--qrcode-img-size);
 

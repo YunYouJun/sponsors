@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import type { RankSponsor } from '@sponsors/types'
-import { anonymousImage } from '~/config'
 
 defineProps<{
   i: number
@@ -32,14 +31,14 @@ function sponsorClassName(order: number) {
 </script>
 
 <template>
-  <div class="sponsor-col flex justify-between" p="1" :class="sponsorClassName(i)">
+  <div class="sponsor-row flex justify-between" p="1" :class="sponsorClassName(i)">
     <div w="10" class="inline-flex justify-start items-center cursor-pointer" font="mono" text="gray" @click="expand = !expand">
       <div v-if="!expand" m="r-1" i-ri-arrow-right-s-line />
       <div v-else m="r-1" i-ri-arrow-down-s-line />
       <span>{{ i + 1 }}</span>
     </div>
-    <div w="40" class="inline-flex justify-start items-center">
-      <img class="shadow" m="r-2" w="5" h="5" rounded="full" :src="sponsor.avatar || anonymousImage">
+    <div w="40" class="inline-flex justify-start items-center" font="serif black">
+      <SmallAvatar :avatar="sponsor.avatar" />
       <a
         v-if="sponsor.url"
         :href="sponsor.url"
