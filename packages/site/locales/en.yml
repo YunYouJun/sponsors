@@ -11,3 +11,11 @@ tooltip: It would be great if you could leave your name and links, I will add yo
 
 message:
   projects: Would you like to see my other projects?
+
+title:
+  projects: My other toys
+
+tab:
+  sponsor_list: Sponsor List
+  other_sponsors: Other Sponsor
+  expense: Expense

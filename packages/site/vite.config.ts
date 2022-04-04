@@ -48,13 +48,6 @@ const markdownWrapperClasses = 'prose prose-sm m-auto text-left'
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 export default defineConfig(({ mode }) => {
   return {
-
-    build: {
-      rollupOptions: {
-        external: ['element-plus'],
-      },
-    },
-
     resolve: {
       alias: {
         '~/': `${path.resolve(__dirname, 'src')}/`,

@@ -48,3 +48,9 @@ const toggleLocales = () => {
     </a>
   </nav>
 </template>
+
+<style lang="scss">
+.icon-btn.router-link-active {
+  color: var(--c-primary);
+}
+</style>

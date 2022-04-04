@@ -18,3 +18,8 @@ message:
 
 title:
   projects: 我的其他小玩具们
+
+tab:
+  sponsor_list: 经济赞助
+  other_sponsors: 其他赞助
+  expense: 当前支出
