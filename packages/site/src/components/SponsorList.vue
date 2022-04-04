@@ -1,18 +1,8 @@
 <script setup lang="ts">
 import type { RankSponsor } from '@sponsors/types'
-import store from '~/store'
 import sponsorsData from '~/../public/manual-sponsors.json'
 
 const sponsors = ref<RankSponsor[]>((sponsorsData as any as RankSponsor[]).filter(i => i.total >= 6))
-
-onBeforeMount(async() => {
-  let total = 0
-  sponsors.value.forEach((sponsor) => {
-    total += sponsor.total
-  })
-
-  store.setIncome(total)
-})
 </script>
 
 <template>

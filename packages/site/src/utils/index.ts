@@ -4,6 +4,7 @@ import type { RankSponsor } from '@sponsors/types'
 export const isProd = process.env.NODE_ENV === 'production'
 
 export * from './name'
+export * from './money'
 
 /**
  * 格式化日期

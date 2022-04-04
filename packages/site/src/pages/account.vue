@@ -5,6 +5,7 @@ import store from '../store'
 import SponsorList from '~/components/SponsorList.vue'
 import OtherSponsors from '~/components/OtherSponsors.vue'
 import ExpenseTable from '~/components/ExpenseTable.vue'
+import { sumExpense, sumIncome } from '~/utils'
 
 const state = store.state
 
@@ -27,6 +28,11 @@ const tabs: TabItem[] = [{
 }]
 
 const currentTab = shallowRef<TabItem>(tabs[0])
+
+onBeforeMount(() => {
+  sumIncome()
+  sumExpense()
+})
 </script>
 
 <template>

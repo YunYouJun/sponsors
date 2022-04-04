@@ -1,26 +1,10 @@
 <script lang="ts" setup>
-import store from '../store'
+import type { Expense } from '../utils'
 import { formatDate } from '../utils'
 
 import ExpenseData from '~/assets/data/expenses.yml'
 
-interface Expense {
-  memo: string
-  business: string
-  amount: number
-  date: Date
-}
-
 const expenses = ref<Expense[]>(ExpenseData)
-
-onBeforeMount(async() => {
-  let total = 0
-  expenses.value.reverse().forEach((expense: Expense) => {
-    total += expense.amount
-  })
-
-  store.setExpense(total)
-})
 </script>
 
 <template>
@@ -40,7 +24,7 @@ onBeforeMount(async() => {
           ¥ 金额
         </div>
       </div>
-      <div v-for="row,i in expenses" :key="i" class="sponsor-row flex justify-between items-center" p="1" text="sm">
+      <div v-for="row,i in expenses.reverse()" :key="i" class="sponsor-row flex justify-between items-center" p="1" text="sm">
         <div w="28" class="inline-flex items-center justify-start" text="xs">
           {{ formatDate(row.date) }}
         </div>
