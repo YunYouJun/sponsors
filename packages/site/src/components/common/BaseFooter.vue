@@ -1,7 +1,3 @@
-<template>
-  <vue-about-me :is-dark="isDark" :copyright="copyright" />
-</template>
-
 <script lang="ts" setup>
 import VueAboutMe from 'vue-about-me'
 import 'vue-about-me/style.css'
@@ -13,3 +9,7 @@ const copyright = ref({
   author: 'YunYouJun',
 })
 </script>
+
+<template>
+  <vue-about-me :is-dark="isDark" :copyright="copyright" />
+</template>

@@ -19,7 +19,8 @@ export function generateJSONfromYaml(path: string) {
     fs.mkdirSync('./dist/')
   }
   catch ({ code }) {
-    if (code !== 'EEXIST') return
+    if (code !== 'EEXIST')
+      return
   }
   fs.writeFileSync(`./dist/${name}.json`, JSON.stringify(data))
   logger.success(`Generated ${name}.json successfully!`)
@@ -30,7 +31,7 @@ export function generateJSONfromYaml(path: string) {
  * 生成 markdown
  * @param {*} data
  */
-export function generateMarkdown(data: MoneySponsor[], name = 'sponsors') {
+export function generateMarkdown(data: MoneySponsor[]) {
   // generate sponsors list
   let sponsors_md = `---
 title: 赞助者名单

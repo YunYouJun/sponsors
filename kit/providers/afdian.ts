@@ -18,8 +18,10 @@ export const AfdianProvider: Provider = {
       })
     }
 
-    if (!token) console.error('Token is null')
-    if (!userId) console.error('UserId is null')
+    if (!token)
+      console.error('Token is null')
+    if (!userId)
+      console.error('UserId is null')
   },
 }
 

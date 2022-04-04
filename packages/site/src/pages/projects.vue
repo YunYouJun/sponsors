@@ -1,3 +1,21 @@
+<script lang="ts" setup>
+import ProjectData from '~/assets/data/projects.yml'
+import type { ProjectItem } from '~/components/projects/ProjectCard.vue'
+import ProjectCollection from '~/components/projects/ProjectCollection.vue'
+
+export interface ProjectDataType {
+  applets: ProjectItem[]
+  tools: ProjectItem[]
+  plugins: ProjectItem[]
+  interesting: ProjectItem[]
+  design: ProjectItem[]
+  other: ProjectItem[]
+}
+const { t } = useI18n()
+
+const projects = reactive(ProjectData as ProjectDataType)
+</script>
+
 <template>
   <h2 class="text-2xl my-5">
     {{ t('title.projects') }}
@@ -14,21 +32,3 @@
     <ProjectCollection title="📁 其他" :projects="projects.other" />
   </div>
 </template>
-
-<script lang="ts" setup>
-import ProjectData from '~/assets/data/projects.yml'
-import type { ProjectItem } from '~/components/projects/ProjectCard.vue'
-import ProjectCollection from '~/components/projects/ProjectCollection.vue'
-const { t } = useI18n()
-
-export interface ProjectDataType {
-  applets: ProjectItem[]
-  tools: ProjectItem[]
-  plugins: ProjectItem[]
-  interesting: ProjectItem[]
-  design: ProjectItem[]
-  other: ProjectItem[]
-}
-
-const projects = reactive(ProjectData as ProjectDataType)
-</script>

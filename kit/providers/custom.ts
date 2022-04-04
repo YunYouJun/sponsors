@@ -1,5 +1,4 @@
 import consola from 'consola'
-import { $fetch } from 'ohmyfetch'
 import type { RankSponsor } from '@sponsors/types'
 
 import type { Provider, Sponsorship } from 'sponsorkit'

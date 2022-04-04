@@ -1,15 +1,3 @@
-<template>
-  <main
-    class="p-4 text-center text-gray-700 dark:text-gray-200 min-h-screen"
-    bg="cover center no-repeat fixed"
-    :style="mainStyle"
-  >
-    <BaseMenu />
-    <router-view />
-    <BaseFooter />
-  </main>
-</template>
-
 <script setup lang="ts">
 import { isDark } from '~/composables'
 
@@ -22,3 +10,15 @@ const mainStyle = computed(() => {
   }
 })
 </script>
+
+<template>
+  <main
+    class="p-4 text-center text-gray-700 dark:text-gray-200 min-h-screen"
+    bg="cover center no-repeat fixed"
+    :style="mainStyle"
+  >
+    <BaseMenu />
+    <router-view />
+    <BaseFooter />
+  </main>
+</template>
