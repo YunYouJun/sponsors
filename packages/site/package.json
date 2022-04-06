@@ -13,7 +13,6 @@
   "scripts": {
     "dev": "vite",
     "build": "cross-env NODE_ENV=production vite-ssg build",
-    "update": "git add -A && git commit -m ':busts_in_silhouette: add new sponsor' && git push",
     "serve": "vite preview",
     "sponsors": "node bin/run add",
     "typecheck": "vue-tsc --noEmit"

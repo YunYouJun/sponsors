@@ -24,15 +24,15 @@ const expenses = ref<Expense[]>(ExpenseData.reverse())
           ¥ 金额
         </div>
       </div>
-      <div v-for="row,i in expenses" :key="i" class="sponsor-row flex justify-between items-center" p="1" text="sm">
-        <div w="28" class="inline-flex items-center justify-start" text="xs">
+      <div v-for="row,i in expenses" :key="i" class="sponsor-row flex justify-between items-center" p="1" text="xs">
+        <div w="28" class="inline-flex items-center justify-start">
           {{ formatDate(row.date) }}
         </div>
         <div w="20" class="inline-flex justify-start items-center" font="serif black">
           {{ row.business }}
         </div>
 
-        <div w="64" class="inline-flex justify-start items-start" text="xs">
+        <div w="64" class="inline-flex justify-start items-start">
           {{ row.memo }}
         </div>
 

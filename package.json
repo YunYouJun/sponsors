@@ -17,7 +17,7 @@
     "generate:force": "pnpm run generate:force -C kit",
     "generate:wide": "pnpm run generate:wide -C kit",
     "lint": "eslint . --fix",
-    "update": "git add -A && git commit -m ':busts_in_silhouette: add new sponsor' && git push",
+    "update": "git add -A && git commit -m 'chore: add new sponsor' && git push",
     "sponsors": "pnpm run add -C packages/cli"
   },
   "bugs": {
