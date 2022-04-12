@@ -68,7 +68,3 @@ SPONSORKIT_GITHUB_LOGIN=YunYouJun
     <img src='https://cdn.jsdelivr.net/gh/YunYouJun/sponsors/public/sponsors.svg'/>
   </a>
 </p>
-
-## Thanks
-
-Built with [element-plus](https://github.com/element-plus/element-plus), [vitesse](https://github.com/antfu/vitesse) and [SponsorKit](https://github.com/antfu/sponsorkit).

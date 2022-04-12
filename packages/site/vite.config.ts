@@ -22,28 +22,6 @@ import LinkAttributes from 'markdown-it-link-attributes'
 
 import SvgLoader from 'vite-svg-loader'
 
-// but lib seems can not tree-shake, wait vite-ssg/ssr support 'import' syntax
-// import { ComponentResolver } from "unplugin-vue-components/types";
-// import { isProd, kebabCase } from "./src/utils";
-// export function ElementPlusResolver(): ComponentResolver {
-//   const themeFolder = "element-plus/theme-chalk";
-//   const esComponentsFolder = "element-plus/es/components";
-//   const ssr = isProd;
-//   console.log("isprod", isProd);
-//   return (name: string) => {
-//     if (name.match(/^El[A-Z]/)) {
-//       const partialName = kebabCase(name.slice(2)); // ElTableColumn->table-column
-//       return {
-//         importName: name,
-//         path: `element-plus/${ssr ? "lib" : "es"}`,
-//         sideEffects: ssr
-//           ? `${themeFolder}/src/${partialName}.scss`
-//           : `${esComponentsFolder}/${partialName}/style`,
-//       };
-//     }
-//   };
-// }
-
 const markdownWrapperClasses = 'prose prose-sm m-auto text-left'
 
 // https://vitejs.dev/config/
@@ -91,12 +69,6 @@ export default defineConfig(({ mode }) => {
         // allow auto import and register components used in markdown
         include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
         dts: 'src/components.d.ts',
-
-        resolvers: [
-          // ElementPlusResolver({
-          //   // importStyle: 'sass',
-          // }),
-        ],
       }),
 
       // https://github.com/antfu/unocss
