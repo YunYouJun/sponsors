@@ -26,11 +26,11 @@
   "homepage": "https://sponsors.yunyoujun.cn",
   "dependencies": {
     "@yunyoujun/logger": "^0.2.1",
-    "commander": "^9.1.0",
-    "dayjs": "^1.11.0"
+    "commander": "^9.2.0",
+    "dayjs": "^1.11.1"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.20.2",
+    "@antfu/eslint-config": "^0.20.6",
     "@types/js-yaml": "^4.0.5",
     "cross-env": "^7.0.3",
     "eslint": "^8.13.0",
