@@ -988,6 +988,19 @@
     ]
   },
   {
+    "name": "加持真平",
+    "url": "",
+    "total": 5.2,
+    "children": [
+      {
+        "date": "2022-04-24T03:25:42.711Z",
+        "method": "微信赞赏",
+        "amount": 5.2,
+        "memo": "有趣的做饭小网站，向你学习"
+      }
+    ]
+  },
+  {
     "name": "绅士兔",
     "url": "https://gentrabbit.moe/",
     "total": 5,
