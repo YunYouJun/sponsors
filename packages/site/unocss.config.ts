@@ -21,14 +21,22 @@ export default defineConfig({
     presetAttributify(),
     presetIcons({
       scale: 1.2,
+      extraProperties: {
+        'display': 'inline-block',
+        'vertical-align': 'middle',
+        // ...
+      },
       // warn: true,
     }),
     presetTypography(),
     presetWebFonts({
       fonts: {
-        sans: 'DM Sans',
-        serif: 'DM Serif Display',
-        mono: 'DM Mono',
+        serif: [
+          {
+            name: 'Noto Serif SC',
+            weights: [900],
+          },
+        ],
       },
     }),
   ],
