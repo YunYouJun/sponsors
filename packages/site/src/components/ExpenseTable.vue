@@ -11,16 +11,16 @@ const expenses = ref<Expense[]>(ExpenseData.reverse())
   <div class="sponsor-table">
     <div class="sponsor-table">
       <div class="header sponsor-row flex justify-between items-center" m="1">
-        <div w="28" class="inline-flex justify-start">
+        <div w="28" class="inline-flex justify-start" font="bold">
           日期
         </div>
-        <div w="20" class="inline-flex justify-start">
+        <div w="20" class="inline-flex justify-start" font="bold">
           服务商
         </div>
-        <div w="50" class="inline-flex justify-start">
+        <div w="64" class="inline-flex justify-start" font="bold">
           消费内容
         </div>
-        <div w="20" class="inline-flex justify-end">
+        <div w="20" class="inline-flex justify-end" font="bold">
           ¥ 金额
         </div>
       </div>

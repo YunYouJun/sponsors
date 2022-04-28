@@ -22,7 +22,7 @@ import LinkAttributes from 'markdown-it-link-attributes'
 
 import SvgLoader from 'vite-svg-loader'
 
-const markdownWrapperClasses = 'prose prose-sm m-auto text-left'
+export const markdownWrapperClasses = 'markdown-body m-auto text-left'
 
 // https://vitejs.dev/config/
 // eslint-disable-next-line @typescript-eslint/no-unused-vars

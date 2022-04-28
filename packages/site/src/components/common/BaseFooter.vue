@@ -7,6 +7,7 @@ const copyright = ref({
   name: 'Sponsors',
   repo: 'sponsors',
   author: 'YunYouJun',
+  authorUrl: 'https://www.yunyoujun.cn',
 })
 </script>
 

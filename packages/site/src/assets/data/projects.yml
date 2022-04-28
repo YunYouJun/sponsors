@@ -242,6 +242,10 @@ other:
   - name: yun
     emoji: ☁️
     desc: 小云设定资源大公开
+  - name: yunyoujun.github.io
+    emoji: 📖
+    desc: 我的博客
+    url: https://www.yunyoujun.cn
   - name: YunYouJun
     emoji: ☁️
     desc: 哼哼，还有很多下次再整理！<br/> <del>我已经一滴也没有了。</del>
