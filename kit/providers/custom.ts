@@ -18,7 +18,7 @@ export const CustomProvider: Provider = {
  * https://sponsors.yunyoujun.cn/manual-sponsors.json
  */
 export async function fetchCustomSponsors(): Promise<Sponsorship[]> {
-  const rank: RankSponsor[] = manualSponsors as any
+  const rank: RankSponsor[] = (manualSponsors as any as RankSponsor[]).filter(sponsor => sponsor.total >= 6)
 
   if (!rank.length) {
     consola.error('Rank Error!')

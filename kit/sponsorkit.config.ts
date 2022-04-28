@@ -33,7 +33,6 @@ export default defineConfig({
   tiers: [
     {
       title: 'Backers',
-      monthlyDollars: 1,
       // to replace the entire tier rendering
       compose: (composer, sponsors, config) => {
         composer.addSpan(20)
