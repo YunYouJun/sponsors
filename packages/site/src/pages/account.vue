@@ -45,19 +45,19 @@ onBeforeMount(() => {
     </h1>
 
     <div class="flex justify-center items-center" m="2" p="b-2" text="sm">
-      <span class="tag" text="green-600" bg="green-50">
+      <span class="tag" text="green-600 dark:green-100" bg="green-50 dark:(green-700 opacity-80)">
         <div class="inline-flex" m="r-1" i-icon-park-outline-income />
         <span>收入：</span>
         <span font="mono">{{ state.income.toFixed(2) }}</span>
       </span>
       <span font="mono">-</span>
-      <span class="tag" text="red-600" bg="red-50">
+      <span class="tag" text="red-600 dark:red-100" bg="red-50 dark:(red-700 opacity-80)">
         <div class="inline-flex" m="r-1" i-icon-park-outline-expenses />
         <span>支出：</span>
         <span font="mono">{{ state.expense.toFixed(2) }}</span>
       </span>
       <span font="mono">=</span>
-      <span class="tag" text="yellow-600" bg="yellow-50">
+      <span class="tag" text="yellow-600 dark:yellow-100" bg="yellow-50 dark:(yellow-700 opacity-80)">
         <div class="inline-flex" m="r-1" i-ri-scales-line />
         <span>盈余：</span>
         <span font="mono">{{ store.balance.value.toFixed(2) }}</span>
