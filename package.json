@@ -25,16 +25,16 @@
   },
   "homepage": "https://sponsors.yunyoujun.cn",
   "dependencies": {
-    "@yunyoujun/logger": "^0.2.1",
+    "@yunyoujun/logger": "^0.2.3",
     "commander": "^9.2.0",
     "dayjs": "^1.11.1"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.21.1",
+    "@antfu/eslint-config": "^0.22.0",
     "@types/js-yaml": "^4.0.5",
     "cross-env": "^7.0.3",
     "eslint": "^8.14.0",
     "esno": "^0.14.1",
-    "typescript": "^4.6.3"
+    "typescript": "^4.6.4"
   }
 }
