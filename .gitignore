@@ -9,7 +9,7 @@ sponsorkit
 # lock
 package-lock.json
 yarn.lock
-pnpm-lock.yaml
+# pnpm-lock.yaml
 
 .DS_Store
 node_modules/
