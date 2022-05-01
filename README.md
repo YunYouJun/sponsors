@@ -6,7 +6,7 @@ English Doc (Todo) | [中文文档]
 
 English Please see [YunYouJun | GitHub Sponsors](https://github.com/sponsors/YunYouJun).
 
-> 赞助列表：<https://sponsors.yunyoujun.cn>
+> 赞助站点：[sponsors.yunyoujun.cn](https://sponsors.yunyoujun.cn)
 
 <p align="center">
   <img src='https://cdn.jsdelivr.net/gh/YunYouJun/yun/images/meme/yun-good-alpha-compressed.png' width="200"/>
