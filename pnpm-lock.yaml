@@ -12,6 +12,7 @@ importers:
       dayjs: ^1.11.1
       eslint: ^8.14.0
       esno: ^0.14.1
+      pnpm: ^7.0.0
       typescript: ^4.6.4
     dependencies:
       '@yunyoujun/logger': 0.2.3
@@ -23,6 +24,7 @@ importers:
       cross-env: 7.0.3
       eslint: 8.14.0
       esno: 0.14.1
+      pnpm: 7.0.0
       typescript: 4.6.4
 
   kit:
@@ -5751,6 +5753,12 @@ packages:
   /pluralize/8.0.0:
     resolution: {integrity: sha512-Nc3IT5yHzflTfbjgqWcCPpo7DaKy4FnpB0l/zCAW0Tc7jxAiuqSxHasntB3D7887LSrA93kDJ9IXovxJYxyLCA==}
     engines: {node: '>=4'}
+    dev: true
+
+  /pnpm/7.0.0:
+    resolution: {integrity: sha512-5njVSmE/Sz6coyikS6gjwoKWaxxsJ6BY6jL1aqwvnEpNUfFednbHqid3aZ42JszOFaSOz3Qipcfp4ei22G/JEg==}
+    engines: {node: '>=14.19'}
+    hasBin: true
     dev: true
 
   /postcss-selector-parser/6.0.10:

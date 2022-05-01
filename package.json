@@ -10,15 +10,15 @@
     "url": "https://github.com/YunYouJun/sponsors"
   },
   "scripts": {
-    "dev": "pnpm run dev -C packages/site",
-    "build": "pnpm run build -C packages/site",
-    "build:json": "pnpm run build -C packages/cli && cp packages/cli/dist/* packages/site/dist/",
-    "generate": "pnpm run generate -C kit",
-    "generate:force": "pnpm run generate:force -C kit",
-    "generate:wide": "pnpm run generate:wide -C kit",
+    "dev": "pnpm -C packages/site run dev",
+    "build": "pnpm -C packages/site run build",
+    "build:json": "pnpm -C packages/cli run build && cp packages/cli/dist/* packages/site/dist/",
+    "generate": "pnpm -C kit run generate",
+    "generate:force": "pnpm -C kit run generate:force",
+    "generate:wide": "pnpm -C kit run generate:wide",
     "lint": "eslint . --fix",
     "update": "git add -A && git commit -m 'chore: add new sponsor' && git push",
-    "sponsors": "pnpm run add -C packages/cli"
+    "sponsors": "pnpm -C packages/cli run add"
   },
   "bugs": {
     "url": "https://github.com/YunYouJun/sponsors/issues"
@@ -35,6 +35,7 @@
     "cross-env": "^7.0.3",
     "eslint": "^8.14.0",
     "esno": "^0.14.1",
+    "pnpm": "^7.0.0",
     "typescript": "^4.6.4"
   }
 }
