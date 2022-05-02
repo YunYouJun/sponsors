@@ -37,11 +37,11 @@ Thanks for your support.
 
 ## Contact
 
-如果您有什么建议或希望我帮忙的事情，可以直接在 [issues](https://github.com/YunYouJun/sponsors/issues) 中提出。
+如果您希望获取我个人联系方式（如微信等），您可以通过发送邮件至 <me@yunyoujun.cn> 告诉我来意。
 
-- Telegram: [@YunYouJun](https://t.me/YunYouJun)
-- QQ: 因为有些烦扰，所以临时会话被我关掉了。你可以在群 389401003 中找到我的 QQ，希望可以说明来意。
-- 微信号：因为微信用的比较少，并且比较私人，所以如果你希望通过微信联系我，可以在打赏备注中说明，我将回复我的微信号。
+我的其他公开社交平台内容，您可以在我的博客 - [云游君的小站](https://www.yunyoujun.cn/) 的侧边栏中找到。
+
+如果您有什么建议或希望我帮忙的事情，可以直接在 [issues](https://github.com/YunYouJun/sponsors/issues) 中提出。
 
 ## Usage
 

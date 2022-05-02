@@ -5,7 +5,10 @@ title: 关于
 
 ## 谢谢您的支持！
 
-<router-link to="/account">赞助详细列表</router-link>
+> <router-link to="/account">赞助详细列表</router-link>
+
+收到的赞助我将主要用于域名、服务器、CDN、小云周边等相关内容。
+您可以在其中找到支出内容。
 
 ## 说明
 
