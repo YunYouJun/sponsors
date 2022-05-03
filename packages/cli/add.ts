@@ -6,7 +6,7 @@ import inquirer from 'inquirer'
 import type { SponsorMethod } from '../types'
 import { MoneyMethod } from '../types'
 import { EnumKeys } from '../types/helper'
-import sponsors from '../site/public/manual-sponsors.json'
+import sponsors from '../site/src/assets/data/manual-sponsors.json'
 import { config } from './config'
 import { sortSponsor } from '~/utils'
 
@@ -15,7 +15,7 @@ const sponsorMethods: SponsorMethod[] = EnumKeys(MoneyMethod).map(
 )
 sponsorMethods.push('其他')
 
-const sponsorsJsonFile = path.resolve(config.publicFOlder, 'manual-sponsors.json')
+const sponsorsJsonFile = path.resolve(config.dataFolder, 'manual-sponsors.json')
 
 const questions = [
   {

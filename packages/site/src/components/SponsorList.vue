@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { RankSponsor } from '@sponsors/types'
-import sponsorsData from '~/../public/manual-sponsors.json'
+import sponsorsData from '~/assets/data/manual-sponsors.json'
 
 const sponsors = ref<RankSponsor[]>((sponsorsData as any as RankSponsor[]).filter(i => i.total >= 5))
 </script>

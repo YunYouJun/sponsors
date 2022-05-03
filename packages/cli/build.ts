@@ -1,6 +1,6 @@
 import path from 'path'
 import type { MoneySponsor, Sponsor } from '../types/index'
-import sponsors from '../site/public/manual-sponsors.json'
+import sponsors from '../site/src/assets/data/manual-sponsors.json'
 import { generateJSONfromYaml, generateMarkdown } from './utils'
 
 import { config } from './config'

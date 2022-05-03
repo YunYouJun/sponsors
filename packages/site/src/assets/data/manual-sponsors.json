@@ -129,6 +129,19 @@
     ]
   },
   {
+    "name": "*敏",
+    "url": "",
+    "total": 100,
+    "children": [
+      {
+        "date": "2022-05-02T17:23:11.658Z",
+        "method": "支付宝",
+        "amount": 100,
+        "memo": ""
+      }
+    ]
+  },
+  {
     "name": "xiaohuoni",
     "url": "",
     "total": 99.99,
@@ -1261,6 +1274,19 @@
     "children": [
       {
         "date": "2022-04-06T12:00:35.197Z",
+        "method": "微信赞赏",
+        "amount": 5,
+        "memo": ""
+      }
+    ]
+  },
+  {
+    "name": "amy",
+    "url": "",
+    "total": 5,
+    "children": [
+      {
+        "date": "2022-05-01T17:22:04.996Z",
         "method": "微信赞赏",
         "amount": 5,
         "memo": ""

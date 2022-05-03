@@ -7,7 +7,7 @@ import OtherSponsors from '~/components/OtherSponsors.vue'
 import ExpenseTable from '~/components/ExpenseTable.vue'
 import { sumExpense, sumIncome } from '~/utils'
 
-import sponsors from '~/../public/manual-sponsors.json'
+import sponsors from '~/assets/data/manual-sponsors.json'
 import expenses from '~/assets/data/expenses.yml'
 
 const { t } = useI18n()
@@ -18,7 +18,7 @@ interface TabItem {
   component: ComponentOptions
 }
 
-const tabs: TabItem[] = [{
+const tabs = computed<TabItem[]>(() => [{
   name: t('tab.sponsor_list'),
   component: SponsorList,
 }, {
@@ -27,9 +27,9 @@ const tabs: TabItem[] = [{
 }, {
   name: t('tab.expense'),
   component: ExpenseTable,
-}]
+}])
 
-const currentTab = shallowRef<TabItem>(tabs[0])
+const currentTab = shallowRef<TabItem>(tabs.value[0])
 
 onBeforeMount(() => {
   sumIncome(sponsors as any)
@@ -64,16 +64,18 @@ onBeforeMount(() => {
       </span>
     </div>
 
-    <button
-      v-for="tab in tabs"
-      :key="tab.name"
-      :class="['tab-button', { active: currentTab.name === tab.name }]"
-      text="sm"
-      font="serif black"
-      @click="currentTab = tab"
-    >
-      {{ tab.name }}
-    </button>
+    <div>
+      <button
+        v-for="tab in tabs"
+        :key="tab.name"
+        :class="['tab-button', { active: currentTab.name === tab.name }]"
+        text="sm"
+        font="serif black"
+        @click="currentTab = tab"
+      >
+        {{ tab.name }}
+      </button>
+    </div>
     <div class="tab">
       <component :is="currentTab.component" />
     </div>

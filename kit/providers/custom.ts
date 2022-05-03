@@ -4,7 +4,7 @@ import type { RankSponsor } from '@sponsors/types'
 import type { Provider, Sponsorship } from 'sponsorkit'
 import { defaultAvatarUrl } from '@sponsors/utils'
 
-import manualSponsors from '../../packages/site/public/manual-sponsors.json'
+import manualSponsors from '../../packages/site/src/assets/data/manual-sponsors.json'
 
 export const CustomProvider: Provider = {
   name: 'custom',
