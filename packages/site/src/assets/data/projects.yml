@@ -107,7 +107,12 @@ applets:
     emoji: 🔍
     desc: 色色搜索引擎 UI（允许用户自建搜索引擎）
     color: '#2b57d4'
-    url: http://sese.yyj.moe
+    url: https://sese.yyj.moe
+  - name: uncolor
+    emoji: 🎨
+    desc: 统一色彩空间
+    color: '#2b57d4'
+    url: https://uncolor.yunyoujun.cn
 
 tools:
   - name: mirai-ts
@@ -124,7 +129,7 @@ tools:
     docs: https://docs.bot.elpsy.cn
   - name: cocos-creator-joystick
     emoji: 🕹
-    desc: 基于 Cocos Creator 的虚拟摇杆实现，算是咱比较早期的开源作品了。
+    desc: 基于 Cocos Creator 的虚拟摇杆实现，咱较早期开源作品。
     github: YunYouJun/cocos-creator-joystick
     url: https://yunyoujun.github.io/cocos-creator-joystick/
   - name: web-resume
