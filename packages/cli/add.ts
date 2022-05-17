@@ -7,8 +7,8 @@ import type { SponsorMethod } from '../types'
 import { MoneyMethod } from '../types'
 import { EnumKeys } from '../types/helper'
 import sponsors from '../site/src/assets/data/manual-sponsors.json'
+import { sortSponsor } from '../site/src/utils'
 import { config } from './config'
-import { sortSponsor } from '~/utils'
 
 const sponsorMethods: SponsorMethod[] = EnumKeys(MoneyMethod).map(
   item => MoneyMethod[item],
