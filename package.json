@@ -2,12 +2,17 @@
   "name": "yunyoujun-sponsors",
   "version": "2.0.0",
   "private": true,
+  "packageManager": "pnpm@7.1.7",
   "description": "YunYouJun's Sponsors | 云游君的赞助者们",
-  "license": "MIT",
   "author": "YunYouJun <me@yunyoujun.cn>",
+  "license": "MIT",
+  "homepage": "https://sponsors.yunyoujun.cn",
   "repository": {
     "type": "git",
     "url": "https://github.com/YunYouJun/sponsors"
+  },
+  "bugs": {
+    "url": "https://github.com/YunYouJun/sponsors/issues"
   },
   "scripts": {
     "copy": "esno scripts/copy.ts",
@@ -21,23 +26,18 @@
     "update": "git add -A && git commit -m 'chore: add new sponsor' && git push",
     "sponsors": "pnpm -C packages/cli run add"
   },
-  "bugs": {
-    "url": "https://github.com/YunYouJun/sponsors/issues"
-  },
-  "homepage": "https://sponsors.yunyoujun.cn",
   "dependencies": {
     "@yunyoujun/logger": "^0.2.3",
-    "commander": "^9.2.0",
+    "commander": "^9.3.0",
     "dayjs": "^1.11.2"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.23.1",
+    "@antfu/eslint-config": "^0.25.1",
     "@types/js-yaml": "^4.0.5",
     "cross-env": "^7.0.3",
-    "eslint": "^8.15.0",
+    "eslint": "^8.17.0",
     "esno": "0.14",
-    "pnpm": "^7.1.1",
-    "tsx": "^3.2.1",
-    "typescript": "^4.6.4"
+    "tsx": "^3.4.2",
+    "typescript": "^4.7.3"
   }
 }

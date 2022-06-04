@@ -3,7 +3,6 @@ import type { RankSponsor } from '@sponsors/types'
 import { formatDate } from '../utils'
 
 defineProps<{ details: RankSponsor['children'] }>()
-
 </script>
 
 <template>

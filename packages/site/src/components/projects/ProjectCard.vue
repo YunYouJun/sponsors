@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { TinyColor } from '@ctrl/tinycolor'
 
+const props = defineProps<{ project: ProjectItem }>()
+
 export interface ProjectItem {
   emoji?: string
   /**
@@ -26,8 +28,6 @@ export interface ProjectItem {
    */
   docs?: string
 }
-
-const props = defineProps<{ project: ProjectItem }>()
 
 const project = toRef(props, 'project')
 

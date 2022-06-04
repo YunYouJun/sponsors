@@ -55,7 +55,7 @@ const questions = [
 export async function onAdd() {
   const answer = await inquirer.prompt(questions)
   // for debug
-  // eslint-disable-next-line no-console
+
   consola.info(answer)
 
   const item = sponsors.find(sponsor => sponsor.name === answer.name)

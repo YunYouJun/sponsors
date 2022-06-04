@@ -8,7 +8,7 @@ const sponsors = ref<OtherSponsor[]>(SponsorsData as any)
 
 <template>
   <div class="sponsor-table">
-    <div v-for="row,i in sponsors" :key="i" class="sponsor-row flex justify-between items-center" p="1">
+    <div v-for="row, i in sponsors" :key="i" class="sponsor-row flex justify-between items-center" p="1">
       <div class="inline-flex justify-start items-center">
         <SmallAvatar :avatar="row.avatar" />
         <a

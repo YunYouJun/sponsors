@@ -35,7 +35,6 @@ onBeforeMount(() => {
   sumIncome(sponsors as any)
   sumExpense(expenses)
 })
-
 </script>
 
 <template>
@@ -68,7 +67,7 @@ onBeforeMount(() => {
       <button
         v-for="tab in tabs"
         :key="tab.name"
-        :class="['tab-button', { active: currentTab.name === tab.name }]"
+        class="tab-button" :class="[{ active: currentTab.name === tab.name }]"
         text="sm"
         font="serif black"
         @click="currentTab = tab"

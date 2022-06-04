@@ -24,7 +24,7 @@ const expenses = ref<Expense[]>(ExpenseData.reverse())
           ¥ 金额
         </div>
       </div>
-      <div v-for="row,i in expenses" :key="i" class="sponsor-row flex justify-between items-center" p="1" text="xs">
+      <div v-for="row, i in expenses" :key="i" class="sponsor-row flex justify-between items-center" p="1" text="xs">
         <div w="28" class="inline-flex items-center justify-start">
           {{ formatDate(row.date) }}
         </div>

@@ -1,6 +1,6 @@
 import path from 'path'
 import { defaultAvatarUrl } from '@sponsors/utils'
-/* eslint-disable @typescript-eslint/no-unused-vars */
+
 import { defaultInlineCSS, defineConfig, presets } from 'sponsorkit'
 import { AfdianProvider } from './providers/afdian'
 import { CustomProvider } from './providers/custom'

@@ -653,6 +653,19 @@
     ]
   },
   {
+    "name": "明月清风",
+    "url": "",
+    "total": 10.2,
+    "children": [
+      {
+        "date": "2022-05-31T16:53:42.818Z",
+        "method": "QQ 钱包",
+        "amount": 10.2,
+        "memo": ""
+      }
+    ]
+  },
+  {
     "name": "小荣",
     "avatar": "https://avatars.githubusercontent.com/u/39958055",
     "url": "https://yandage.top/",
