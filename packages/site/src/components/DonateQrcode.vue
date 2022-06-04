@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { useI18n } from 'vue-i18n'
 import { donateMethod } from '~/assets/donate'
 import { methodMap, methods } from '~/config'
 const { t } = useI18n()

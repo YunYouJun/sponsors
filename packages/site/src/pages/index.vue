@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { useI18n } from 'vue-i18n'
 import SponsorSvg from '../../../../public/sponsors.svg?raw'
 
 const { t } = useI18n()
