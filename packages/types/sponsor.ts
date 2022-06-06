@@ -22,6 +22,10 @@ interface BaseSponsor {
    */
   name: string
   /**
+   * 邮箱
+   */
+  email?: string
+  /**
    * 头像
    */
   avatar?: string
@@ -72,6 +76,7 @@ export type Sponsor = MoneySponsor | OtherSponsor
 export interface RankSponsor {
   name: string
   url?: string
+  email?: string
   avatar?: string
   /**
    * 总额

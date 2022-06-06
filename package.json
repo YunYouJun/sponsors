@@ -24,7 +24,8 @@
     "generate:wide": "pnpm -C kit run generate:wide",
     "lint": "eslint . --fix",
     "update": "git add -A && git commit -m 'chore: add new sponsor' && git push",
-    "sponsors": "pnpm -C packages/cli run add"
+    "sponsors": "pnpm -C packages/cli run add",
+    "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
     "@yunyoujun/logger": "^0.2.3",
@@ -34,6 +35,7 @@
   "devDependencies": {
     "@antfu/eslint-config": "^0.25.1",
     "@types/js-yaml": "^4.0.5",
+    "@types/md5": "^2.3.2",
     "cross-env": "^7.0.3",
     "eslint": "^8.17.0",
     "esno": "0.14",

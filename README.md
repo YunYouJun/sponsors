@@ -37,7 +37,7 @@ Thanks for your support.
 
 ## Contact
 
-如果您希望获取我个人联系方式（如微信等），您可以通过发送邮件至 <me@yunyoujun.cn> 告诉我来意。
+如果您希望获取我个人联系方式（如微信等），您可以通过发送邮件至 [me@yunyoujun.cn](me@yunyoujun.cn) 告诉我来意。
 
 我的其他公开社交平台内容，您可以在我的博客 - [云游君的小站](https://www.yunyoujun.cn/) 的侧边栏中找到。
 

@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import type { RankSponsor } from '@sponsors/types'
+import SponsorAvatar from './common/SponsorAvatar.vue'
 
 defineProps<{
   i: number
@@ -38,7 +39,7 @@ function sponsorClassName(order: number) {
       <span>{{ i + 1 }}</span>
     </div>
     <div w="40" class="inline-flex justify-start items-center" font="serif black">
-      <SmallAvatar :avatar="sponsor.avatar" />
+      <SponsorAvatar :email="sponsor.email" :avatar="sponsor.avatar" />
       <a
         v-if="sponsor.url"
         :href="sponsor.url"

@@ -835,6 +835,20 @@
     ]
   },
   {
+    "name": "LiCaoZ",
+    "email": "admin@licaoz.com",
+    "url": "https://licaoz.com/",
+    "total": 10,
+    "children": [
+      {
+        "date": "2022-06-06T17:53:43.733Z",
+        "method": "微信赞赏",
+        "amount": 10,
+        "memo": "恋爱专项经费"
+      }
+    ]
+  },
+  {
     "name": "**雅",
     "url": "",
     "total": 9.99,

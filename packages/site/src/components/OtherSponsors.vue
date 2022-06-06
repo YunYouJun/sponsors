@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { OtherSponsor } from '@sponsors/types'
+import SponsorAvatar from './common/SponsorAvatar.vue'
 import { formatDate } from '~/utils'
 import SponsorsData from '~/assets/data/special-sponsors.json'
 
@@ -10,7 +11,7 @@ const sponsors = ref<OtherSponsor[]>(SponsorsData as any)
   <div class="sponsor-table">
     <div v-for="row, i in sponsors" :key="i" class="sponsor-row flex justify-between items-center" p="1">
       <div class="inline-flex justify-start items-center">
-        <SmallAvatar :avatar="row.avatar" />
+        <SponsorAvatar :email="row.email" :avatar="row.avatar" />
         <a
           v-if="row.url"
           :href="row.url"
