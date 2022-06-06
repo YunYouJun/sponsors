@@ -482,6 +482,20 @@
     ]
   },
   {
+    "name": "Moon",
+    "url": "https://wyxogo.top",
+    "avatar": "https://wyxogo.top/images/avatar.webp",
+    "total": 20.99,
+    "children": [
+      {
+        "date": "2022-06-05T14:23:44.247Z",
+        "method": "QQ 钱包",
+        "amount": 20.99,
+        "memo": ""
+      }
+    ]
+  },
+  {
     "name": "MHuiG",
     "url": "https://mhuig.top",
     "total": 20.22,
