@@ -23,7 +23,7 @@
   },
   "dependencies": {
     "@ctrl/tinycolor": "^3.4.1",
-    "@vueuse/core": "^8.6.0",
+    "@vueuse/core": "^8.7.4",
     "@vueuse/head": "^0.7.6",
     "dayjs": "^1.11.3",
     "js-yaml": "^4.1.0",
@@ -31,12 +31,12 @@
     "vue": "^3.2.37",
     "vue-about-me": "^1.2.7",
     "vue-i18n": "^9.1.10",
-    "vue-router": "^4.0.15"
+    "vue-router": "^4.0.16"
   },
   "devDependencies": {
     "@iconify-json/carbon": "^1.1.4",
-    "@iconify-json/icon-park-outline": "^1.1.2",
-    "@iconify-json/mdi": "^1.1.19",
+    "@iconify-json/icon-park-outline": "^1.1.4",
+    "@iconify-json/mdi": "^1.1.21",
     "@iconify-json/ri": "^1.1.2",
     "@intlify/vite-plugin-vue-i18n": "^3.4.0",
     "@rollup/plugin-yaml": "^3.1.0",
@@ -46,23 +46,23 @@
     "@vitejs/plugin-vue": "^2.3.3",
     "critters": "^0.0.16",
     "cross-env": "^7.0.3",
-    "eslint": "^8.17.0",
+    "eslint": "^8.18.0",
     "markdown-it-link-attributes": "^4.0.0",
     "markdown-it-prism": "^2.2.4",
     "md5": "^2.3.0",
-    "sass": "~1.52.2",
+    "sass": "~1.52.3",
     "star-markdown-css": "^0.3.3",
-    "unocss": "^0.37.4",
+    "unocss": "^0.39.3",
     "unplugin-auto-import": "~0.7",
     "unplugin-vue-components": "^0.19.5",
-    "vite": "2.9.10",
+    "vite": "2.9.12",
     "vite-plugin-inspect": "^0.5.0",
-    "vite-plugin-md": "~0.14.0",
-    "vite-plugin-pages": "0.23.0",
+    "vite-plugin-md": "~0.15.0",
+    "vite-plugin-pages": "0.24.2",
     "vite-plugin-pwa": "^0.12.0",
     "vite-plugin-vue-layouts": "^0.6.0",
     "vite-ssg": "0.20.1",
-    "vite-svg-loader": "^3.3.0",
-    "vue-tsc": "^0.37.0"
+    "vite-svg-loader": "^3.4.0",
+    "vue-tsc": "^0.38.1"
   }
 }
