@@ -227,8 +227,9 @@
   },
   {
     "name": "肥猪",
+    "avatar": "https://ae05.alicdn.com/kf/Hafb3ff95b57e4d21941095a4306797635.png",
     "url": "https://feizhuqwq.com/",
-    "total": 73.32,
+    "total": 83.32,
     "children": [
       {
         "date": "2021-05-20T18:07:57.943Z",
@@ -240,6 +241,12 @@
         "date": "2021-06-20T20:01:11.943Z",
         "method": "支付宝",
         "amount": 36.66,
+        "memo": ""
+      },
+      {
+        "date": "2022-06-26T17:23:04.447Z",
+        "method": "支付宝",
+        "amount": 10,
         "memo": ""
       }
     ]

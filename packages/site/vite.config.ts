@@ -56,12 +56,11 @@ export default defineConfig(({ mode }) => {
           'vue',
           'vue-router',
           'vue-i18n',
-          'vue/macros',
           '@vueuse/head',
           '@vueuse/core',
         ],
         dts: 'src/auto-imports.d.ts',
-        // vueTemplate: true,
+        vueTemplate: true,
       }),
 
       // https://github.com/antfu/unplugin-vue-components
