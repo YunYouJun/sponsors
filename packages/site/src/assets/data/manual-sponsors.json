@@ -603,6 +603,20 @@
     ]
   },
   {
+    "name": "琚致远",
+    "avatar": "https://juzhiyuan.me/static/images/avatar.jpeg",
+    "url": "https://juzhiyuan.me/",
+    "total": 20,
+    "children": [
+      {
+        "date": "2022-06-28T15:16:08.024Z",
+        "method": "微信赞赏",
+        "amount": 20,
+        "memo": ""
+      }
+    ]
+  },
+  {
     "name": "清酒踏月",
     "url": "",
     "total": 18.88,
