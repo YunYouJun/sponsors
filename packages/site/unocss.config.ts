@@ -4,7 +4,6 @@ import {
   presetIcons,
   presetTypography,
   presetUno,
-  presetWebFonts,
   transformerDirectives,
   transformerVariantGroup,
 } from 'unocss'
@@ -30,16 +29,6 @@ export default defineConfig({
       // warn: true,
     }),
     presetTypography(),
-    presetWebFonts({
-      fonts: {
-        serif: [
-          {
-            name: 'Noto Serif SC',
-            weights: [900],
-          },
-        ],
-      },
-    }),
   ],
   transformers: [
     transformerDirectives(),
