@@ -12,7 +12,7 @@ export function encodeHtmlEntities(str: string) {
  * @param sponsors
  * @param config
  */
-export function generateTextSponsors(composer: SvgComposer, sponsors: Sponsorship[], config: SponsorkitConfig, preset: Partial<{
+export function generateTextSponsors(composer: SvgComposer, sponsors: Sponsorship[], config: SponsorkitConfig, preset: {
   nameSize: number
   boxWidth: number
   boxHeight: number
@@ -20,7 +20,7 @@ export function generateTextSponsors(composer: SvgComposer, sponsors: Sponsorshi
   name: {
     classes: string
   }
-}> = {
+} = {
   nameSize: 40,
   boxWidth: 80,
   boxHeight: 30,
@@ -31,7 +31,9 @@ export function generateTextSponsors(composer: SvgComposer, sponsors: Sponsorshi
 }) {
   const { nameSize, boxWidth, boxHeight, fontSize } = preset
 
-  const perLine = Math.floor((config.width - (presets.base.container.sidePadding || 0) * 2) / boxWidth)
+  const width = config.width || 700
+
+  const perLine = Math.floor((width - (presets.base.container?.sidePadding || 0) * 2) / boxWidth)
 
   new Array(Math.ceil(sponsors.length / perLine))
     .fill(0)
@@ -40,7 +42,7 @@ export function generateTextSponsors(composer: SvgComposer, sponsors: Sponsorshi
       // 计算单行
 
       lineSponsors.forEach((item, i) => {
-        const offsetX = (config.width - lineSponsors.length * boxWidth) / 2 + (boxWidth - nameSize) / 2
+        const offsetX = (width - lineSponsors.length * boxWidth) / 2 + (boxWidth - nameSize) / 2
 
         const url = item.sponsor.linkUrl
         const name = item.sponsor.name
@@ -48,9 +50,10 @@ export function generateTextSponsors(composer: SvgComposer, sponsors: Sponsorshi
         const x = offsetX + boxWidth * i
         const y = composer.height
 
+        // not use '.sponsor-name' to avoid adblock
         if (item.sponsor.avatarUrl === defaultAvatarUrl) {
           composer.addRaw(`<a xlink:href="${url}" class="${presets.base.classes || 'sponsor-link'}" target="_blank" id="${name}">
-  <text x="${x + nameSize / 2}" y="${y + 18}" text-anchor="middle" class="${preset.name.classes || 'sponsor-name'}" fill="currentColor" font-size="${fontSize}">
+  <text x="${x + nameSize / 2}" y="${y + 18}" text-anchor="middle" class="${preset.name.classes || ''}" fill="currentColor" font-size="${fontSize}">
   ${encodeHtmlEntities(name)}</text>
 </a>`)
         }

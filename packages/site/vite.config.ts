@@ -11,7 +11,7 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Unocss from 'unocss/vite'
 
 import VueI18n from '@intlify/vite-plugin-vue-i18n'
-import Markdown from 'vite-plugin-md'
+import Markdown from 'vite-plugin-vue-markdown'
 import Inspect from 'vite-plugin-inspect'
 import Prism from 'markdown-it-prism'
 import { VitePWA } from 'vite-plugin-pwa'
@@ -76,7 +76,7 @@ export default defineConfig(({ mode }) => {
       // see unocss.config.ts for config
       Unocss(),
 
-      // https://github.com/antfu/vite-plugin-md
+      // vite-plugin-vue-markdown
       // Don't need this? Try vitesse-lite: https://github.com/antfu/vitesse-lite
       Markdown({
         wrapperClasses: markdownWrapperClasses,
