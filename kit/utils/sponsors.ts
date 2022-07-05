@@ -50,9 +50,9 @@ export function generateTextSponsors(composer: SvgComposer, sponsors: Sponsorshi
         const x = offsetX + boxWidth * i
         const y = composer.height
 
-        // not use '.sponsor-name' to avoid adblock
+        // not use '.sponsor-link' && '.sponsor-name' to avoid adblock
         if (item.sponsor.avatarUrl === defaultAvatarUrl) {
-          composer.addRaw(`<a xlink:href="${url}" class="${presets.base.classes || 'sponsor-link'}" target="_blank" id="${name}">
+          composer.addRaw(`<a xlink:href="${url}" class="${presets.base.classes || ''}" target="_blank" id="${name}">
   <text x="${x + nameSize / 2}" y="${y + 18}" text-anchor="middle" class="${preset.name.classes || ''}" fill="currentColor" font-size="${fontSize}">
   ${encodeHtmlEntities(name)}</text>
 </a>`)
