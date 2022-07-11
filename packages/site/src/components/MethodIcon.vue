@@ -5,7 +5,11 @@ const props = defineProps<{
   method: string
 }>()
 
-const property = computed(() => {
+const property = computed<{
+  icon?: string
+  color?: string
+  title?: string
+}>(() => {
   for (const key in methodMap) {
     if (methodMap[key as keyof typeof methodMap].title === props.method)
       return methodMap[key as keyof typeof methodMap]

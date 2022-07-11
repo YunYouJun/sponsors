@@ -54,7 +54,7 @@ export default defineConfig({
       monthlyDollars: 3,
       preset: presets.medium,
       compose(composer, sponsors, config) {
-        composer.addTitle(this.title).addSpan(5)
+        composer.addTitle(this.title || 'Sponsors').addSpan(5)
 
         const typeSponsors = getSponsorsByAvatar(sponsors)
 
@@ -73,7 +73,7 @@ export default defineConfig({
       monthlyDollars: 10,
       preset: presets.large,
       compose(composer, sponsors, config) {
-        composer.addTitle(this.title).addSpan(5)
+        composer.addTitle(this.title || 'Silver Sponsors').addSpan(5)
 
         const typeSponsors = getSponsorsByAvatar(sponsors)
 
@@ -81,6 +81,7 @@ export default defineConfig({
         generateTextSponsors(composer, typeSponsors.noAvatar, config, {
           nameSize: 60,
           boxWidth: 100,
+          boxHeight: 100,
           fontSize: '16px',
           name: {
             classes: 'silver-sponsors',

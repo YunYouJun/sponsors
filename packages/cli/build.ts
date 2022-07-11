@@ -10,13 +10,10 @@ try {
   // filter
   data = data.filter((item) => {
     // todo: other sponsors
-    if (item.method === '其他') {
-      // return true;
-      return false
-    }
-    else {
+    if ('amount' in item)
       return item.amount >= 5
-    }
+
+    return false
   })
 
   generateJSONfromYaml(path.resolve(config.dataFolder, 'expenses.yml'))

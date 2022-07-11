@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 import { program } from 'commander'
 import inquirer from 'inquirer'
+// @ts-expect-error without type
 import inquirerDatepickerPrompt from 'inquirer-datepicker-prompt'
 import pkg from './package.json'
 

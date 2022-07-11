@@ -22,10 +22,10 @@
     "generate": "pnpm -C kit run generate",
     "generate:force": "pnpm -C kit run generate:force",
     "generate:wide": "pnpm -C kit run generate:wide",
-    "lint": "eslint . --fix",
+    "lint": "eslint .",
     "update": "git add -A && git commit -m 'chore: add new sponsor' && git push",
     "sponsors": "pnpm -C packages/cli run add",
-    "typecheck": "vue-tsc --noEmit"
+    "typecheck": "pnpm -C packages/site run typecheck"
   },
   "dependencies": {
     "@yunyoujun/logger": "^0.2.3",

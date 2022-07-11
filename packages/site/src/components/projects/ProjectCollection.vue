@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { ProjectItem } from '~/components/projects/ProjectCard.vue'
+import type { ProjectItem } from '~/types'
 defineProps<{ title: string; projects: ProjectItem[] }>()
 </script>
 

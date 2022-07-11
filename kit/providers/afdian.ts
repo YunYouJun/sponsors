@@ -11,17 +11,15 @@ export const AfdianProvider: Provider = {
     const token = process.env.AFDIAN_API_TOKEN || ''
     const userId = process.env.AFDIAN_USER_ID || ''
 
-    if (token && userId) {
-      return fetchAfdianSponsors({
-        token,
-        userId,
-      })
-    }
-
     if (!token)
-      console.error('Token is null')
+      throw new Error('Token is null')
     if (!userId)
-      console.error('UserId is null')
+      throw new Error('UserId is null')
+
+    return fetchAfdianSponsors({
+      token,
+      userId,
+    })
   },
 }
 
@@ -39,10 +37,8 @@ export async function fetchAfdianSponsors(options: AfdianApiOpts): Promise<Spons
 
   // check ping
   const res = await afdian.ping()
-  if (res.ec !== 200) {
-    console.error('Can not connect afdian!')
-    return
-  }
+  if (res.ec !== 200)
+    throw new Error('Can not connect afdian!')
 
   const sponsors = await getSponsors()
   return sponsors.map((sponsor) => {

@@ -25,5 +25,5 @@
       "@sponsors/utils": ["packages/utils/index.ts"]
     }
   },
-  "exclude": ["dist", "node_modules"]
+  "exclude": ["**/dist/**", "node_modules"]
 }

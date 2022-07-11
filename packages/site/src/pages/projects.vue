@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import ProjectData from '~/assets/data/projects.yml'
-import type { ProjectItem } from '~/components/projects/ProjectCard.vue'
+import type { ProjectItem } from '~/types'
 import ProjectCollection from '~/components/projects/ProjectCollection.vue'
 
 export interface ProjectDataType {
@@ -10,6 +10,8 @@ export interface ProjectDataType {
   interesting: ProjectItem[]
   design: ProjectItem[]
   other: ProjectItem[]
+  lab: ProjectItem[]
+  open_source: ProjectItem[]
 }
 const { t } = useI18n()
 

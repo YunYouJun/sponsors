@@ -1,4 +1,3 @@
-import consola from 'consola'
 import type { RankSponsor } from '@sponsors/types'
 
 import type { Provider, Sponsorship } from 'sponsorkit'
@@ -20,10 +19,8 @@ export const CustomProvider: Provider = {
 export async function fetchCustomSponsors(): Promise<Sponsorship[]> {
   const rank: RankSponsor[] = (manualSponsors as any as RankSponsor[]).filter(sponsor => sponsor.total >= 6)
 
-  if (!rank.length) {
-    consola.error('Rank Error!')
-    return
-  }
+  if (!rank.length)
+    throw new Error('Rank Error!')
 
   // check ping
   return rank.map((sponsor) => {

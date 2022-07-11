@@ -99,7 +99,7 @@ export async function onAdd() {
   const sortSponsorsData = sortSponsor(sponsors as any)
 
   try {
-    fs.writeFileSync(sponsorsJsonFile, JSON.stringify(sortSponsorsData, null, 2))
+    fs.writeFileSync(sponsorsJsonFile, `${JSON.stringify(sortSponsorsData, null, 2)}\n`)
   }
   catch {
     consola.error(`Write ${sponsorsJsonFile} failed!`)

@@ -15,8 +15,8 @@ defineProps<{ details: RankSponsor['children'] }>()
         <MethodIcon :method="detail.method" />
       </div>
 
-      <div v-if="detail.amount!" w="20" class="inline-flex justify-end" font="mono">
-        {{ detail.amount!.toFixed(2) }}
+      <div v-if="'amount' in detail" w="20" class="inline-flex justify-end" font="mono">
+        {{ detail.amount.toFixed(2) }}
       </div>
       <div w="48" class="inline-flex justify-center">
         {{ detail.memo || '-' }}
