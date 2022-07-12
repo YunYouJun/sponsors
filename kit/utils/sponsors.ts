@@ -15,7 +15,7 @@ export function encodeHtmlEntities(str: string) {
 export function generateTextSponsors(composer: SvgComposer, sponsors: Sponsorship[], config: SponsorkitConfig, preset: {
   nameSize: number
   boxWidth: number
-  boxHeight: number
+  boxHeight?: number
   fontSize: string
   name: {
     classes: string

@@ -81,7 +81,6 @@ export default defineConfig({
         generateTextSponsors(composer, typeSponsors.noAvatar, config, {
           nameSize: 60,
           boxWidth: 100,
-          boxHeight: 100,
           fontSize: '16px',
           name: {
             classes: 'silver-sponsors',
