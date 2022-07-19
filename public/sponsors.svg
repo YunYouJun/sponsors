@@ -315,7 +315,10 @@ text {
   <text x="720" y="903" text-anchor="middle" class="sponsor-name" fill="currentColor" font-size="14px">
   w*w</text>
 </a><a xlink:href="https://sponsors.yunyoujun.cn" class="" target="_blank" id="*文">
-  <text x="400" y="933" text-anchor="middle" class="sponsor-name" fill="currentColor" font-size="14px">
+  <text x="360" y="933" text-anchor="middle" class="sponsor-name" fill="currentColor" font-size="14px">
   *文</text>
+</a><a xlink:href="https://sponsors.yunyoujun.cn" class="" target="_blank" id="Great Sky">
+  <text x="440" y="933" text-anchor="middle" class="sponsor-name" fill="currentColor" font-size="14px">
+  Great Sky</text>
 </a>
 </svg>
