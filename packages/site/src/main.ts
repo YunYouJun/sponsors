@@ -6,7 +6,8 @@ import generatedRoutes from '~pages'
 import '@unocss/reset/tailwind.css'
 // your custom styles here
 import 'star-markdown-css/src/scss/theme/yun.scss'
-import './styles/main.scss'
+import './styles/css-vars.scss'
+import './styles/index.scss'
 import 'uno.css'
 
 const routes = setupLayouts(generatedRoutes)

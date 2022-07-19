@@ -1150,6 +1150,19 @@
     ]
   },
   {
+    "name": "Great Sky",
+    "url": "",
+    "total": 6,
+    "children": [
+      {
+        "date": "2022-07-12T12:26:56.264Z",
+        "method": "微信赞赏",
+        "amount": 6,
+        "memo": ""
+      }
+    ]
+  },
+  {
     "name": "C*1",
     "url": "",
     "total": 5.21,
@@ -1457,6 +1470,19 @@
         "method": "微信赞赏",
         "amount": 5,
         "memo": "加油"
+      }
+    ]
+  },
+  {
+    "name": "Ricky",
+    "url": "",
+    "total": 5,
+    "children": [
+      {
+        "date": "2022-07-14T12:26:13.288Z",
+        "method": "微信赞赏",
+        "amount": 5,
+        "memo": "谢谢你的网站，在疫情期间很有用"
       }
     ]
   }
