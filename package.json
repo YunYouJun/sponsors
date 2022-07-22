@@ -30,7 +30,7 @@
   "dependencies": {
     "@yunyoujun/logger": "^0.2.3",
     "commander": "^9.4.0",
-    "dayjs": "^1.11.3"
+    "dayjs": "^1.11.4"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.25.2",
