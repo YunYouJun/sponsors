@@ -161,6 +161,19 @@
     ]
   },
   {
+    "name": "战忽包子",
+    "url": "darksheep.xyz",
+    "total": 100,
+    "children": [
+      {
+        "date": "2022-07-23T13:00:06.501Z",
+        "method": "微信赞赏",
+        "amount": 100,
+        "memo": ""
+      }
+    ]
+  },
+  {
     "name": "xiaohuoni",
     "url": "",
     "total": 99.99,
