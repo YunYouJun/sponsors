@@ -4,6 +4,7 @@ import Vue from '@vitejs/plugin-vue'
 
 import Pages from 'vite-plugin-pages'
 import Layouts from 'vite-plugin-vue-layouts'
+import generateSitemap from 'vite-ssg-sitemap'
 
 import Components from 'unplugin-vue-components/vite'
 // import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
@@ -131,25 +132,15 @@ export default defineConfig(({ mode }) => {
       }),
     ],
 
-    server: {
-      fs: {
-        strict: true,
-      },
-    },
-
     // https://github.com/antfu/vite-ssg
     ssgOptions: {
       script: 'async',
       formatting: 'minify',
-    },
-
-    optimizeDeps: {
-      include: ['vue', 'vue-router', '@vueuse/core', '@vueuse/head', '@ctrl/tinycolor', 'dayjs', 'vue-about-me'],
-      exclude: ['vue-demi'],
+      onFinished() { generateSitemap() },
     },
 
     ssr: {
-    // TODO: workaround until they support native ESM
+      // TODO: workaround until they support native ESM
       noExternal: ['workbox-window', /vue-i18n/],
     },
   }
