@@ -10,7 +10,7 @@ import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Unocss from 'unocss/vite'
 
-import VueI18n from '@intlify/vite-plugin-vue-i18n'
+import { vueI18n as VueI18n } from '@intlify/vite-plugin-vue-i18n'
 import Markdown from 'vite-plugin-vue-markdown'
 import Inspect from 'vite-plugin-inspect'
 import Prism from 'markdown-it-prism'
@@ -146,6 +146,11 @@ export default defineConfig(({ mode }) => {
     optimizeDeps: {
       include: ['vue', 'vue-router', '@vueuse/core', '@vueuse/head', '@ctrl/tinycolor', 'dayjs', 'vue-about-me'],
       exclude: ['vue-demi'],
+    },
+
+    ssr: {
+    // TODO: workaround until they support native ESM
+      noExternal: ['workbox-window', /vue-i18n/],
     },
   }
 })
