@@ -18,12 +18,10 @@ const { t } = useI18n()
     <!-- component missing of viewbox -->
     <div class="svg-container" v-html="SponsorSvg" />
 
-    <blockquote class="inline-flex justify-center items-center flex-col">
-      <router-link class="inline-flex justify-center items-center cursor-pointer text-purple-500" to="/account">
-        <div i-ri-money-cny-box-line inline-flex mx-1 />
-        <span>{{ t('title.account') }}</span>
-      </router-link>
-    </blockquote>
+    <div class="m-4">
+      <img class="rounded w-50" m="auto y-2" src="/images/work-weixin-sponsors-qr.png" alt="赞助者群">
+      <small>赞助者微信群</small>
+    </div>
   </div>
 
   <p class="mt-5">

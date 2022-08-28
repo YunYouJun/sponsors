@@ -43,6 +43,12 @@ Thanks for your support.
 
 如果您有什么建议或希望我帮忙的事情，可以直接在 [issues](https://github.com/YunYouJun/sponsors/issues) 中提出。
 
+<p align="center">
+  <img src='packages/site/public/images/work-weixin-sponsors-qr.png' width="250"/>
+  <br />
+  <small>赞助者微信群</small>
+</p>
+
 ## Usage
 
 添加赞助者
