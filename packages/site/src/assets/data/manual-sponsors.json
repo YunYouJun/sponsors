@@ -272,6 +272,19 @@
     ]
   },
   {
+    "name": "Yumine",
+    "url": "https://nanoka.top",
+    "total": 72,
+    "children": [
+      {
+        "date": "2022-09-19T04:41:33.904Z",
+        "method": "微信赞赏",
+        "amount": 72,
+        "memo": ""
+      }
+    ]
+  },
+  {
     "name": "jason",
     "avatar": "https://cdn.jsdelivr.net/gh/zhizunjiege/cdn/img/avatar.jpg",
     "url": "https://blog.jason.moe",
