@@ -6,7 +6,7 @@
     "build": "esno build.ts"
   },
   "dependencies": {
-    "inquirer": "^9.1.0",
+    "inquirer": "^9.1.2",
     "inquirer-datepicker-prompt": "^0.4.3"
   },
   "devDependencies": {
