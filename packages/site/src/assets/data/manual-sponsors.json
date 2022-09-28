@@ -97,6 +97,26 @@
     ]
   },
   {
+    "name": "小于同学",
+    "url": "https://yby.zone/",
+    "avatar": "https://source.yby.zone/tx.jpg",
+    "total": 176.88,
+    "children": [
+      {
+        "date": "2022-03-20T13:46:48.301Z",
+        "method": "微信赞赏",
+        "amount": 88,
+        "memo": ""
+      },
+      {
+        "date": "2022-09-27T04:30:14.666Z",
+        "method": "微信赞赏",
+        "amount": 88.88,
+        "memo": ""
+      }
+    ]
+  },
+  {
     "name": "AngEvil",
     "url": "https://angevilv.cn",
     "total": 150,
@@ -209,19 +229,6 @@
         "date": "2020-05-25T00:00:00.000Z",
         "method": "支付宝",
         "amount": 88.88
-      }
-    ]
-  },
-  {
-    "name": "小于全球救援会",
-    "url": "https://yby.zone/",
-    "total": 88,
-    "children": [
-      {
-        "date": "2022-03-20T13:46:48.301Z",
-        "method": "微信赞赏",
-        "amount": 88,
-        "memo": ""
       }
     ]
   },
