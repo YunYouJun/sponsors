@@ -105,6 +105,10 @@
 - memo: yunle.fun 域名注册
   business: 阿里云
   amount: 49
+  date: 2018-03-08
+- memo: yunle.fun 域名续费
+  business: 阿里云
+  amount: 49
   date: 2019-01-08
 - memo: yunle.fun 域名续费
   business: 阿里云
@@ -194,3 +198,7 @@
   business: 蓝
   amount: 2800.00
   date: 2022-10-01
+- memo: 续费 yyj.moe 域名 1 年（$13.99）
+  business: NameSilo
+  amount: 101.98
+  date: 2022-11-03

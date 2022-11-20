@@ -10,6 +10,6 @@
     "inquirer-datepicker-prompt": "^0.4.3"
   },
   "devDependencies": {
-    "@types/inquirer": "^9.0.2"
+    "@types/inquirer": "^9.0.3"
   }
 }
