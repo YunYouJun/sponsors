@@ -15,6 +15,7 @@ export const CustomProvider: Provider = {
 
 /**
  * https://sponsors.yunyoujun.cn/manual-sponsors.json
+ * 头像解析失败时可能会导致构建失败
  */
 export async function fetchCustomSponsors(): Promise<Sponsorship[]> {
   const rank: RankSponsor[] = (manualSponsors as any as RankSponsor[]).filter(sponsor => sponsor.total >= 6)

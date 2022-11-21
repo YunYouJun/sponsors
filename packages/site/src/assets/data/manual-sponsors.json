@@ -1,8 +1,7 @@
 [
   {
     "name": "知名的好心人",
-    "avatar": "https://upyun.yunyoujun.cn/images/wzq-avatar.jpg",
-    "url": "",
+    "avatar": "https://r2.yunyoujun.cn/images/wzq-avatar.jpg",
     "total": 712,
     "children": [
       {
@@ -457,19 +456,6 @@
     ]
   },
   {
-    "name": "*",
-    "url": "",
-    "total": 50,
-    "children": [
-      {
-        "date": "2021-12-31T18:38:41.512Z",
-        "method": "微信支付",
-        "amount": 50,
-        "memo": ""
-      }
-    ]
-  },
-  {
     "name": "大困猫",
     "url": "",
     "total": 50,
@@ -696,7 +682,7 @@
   },
   {
     "name": "琚致远",
-    "avatar": "https://juzhiyuan.me/static/images/avatar.jpeg",
+    "avatar": "https://juzhiyuan.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F4eed5238-f631-4c7a-b943-aa66488385cc%2Favatar.jpeg?table=block&id=6a8d344b-2248-441e-bdeb-5f154fd73420&spaceId=fc72415a-e7c7-482e-923f-2dbc95aea3b7&width=250&userId=&cache=v2",
     "url": "https://juzhiyuan.me/",
     "total": 20,
     "children": [
