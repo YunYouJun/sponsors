@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 import { program } from 'commander'
 import inquirer from 'inquirer'
-// @ts-expect-error without type
-import inquirerDatepickerPrompt from 'inquirer-datepicker-prompt'
+// https://github.com/haversnail/inquirer-date-prompt
+import datePrompt from 'inquirer-date-prompt'
 import pkg from './package.json'
 
 import { onAdd } from './add'
-inquirer.registerPrompt('datetime', inquirerDatepickerPrompt)
+inquirer.registerPrompt('date', datePrompt as any)
 
 program.version(pkg.version)
 

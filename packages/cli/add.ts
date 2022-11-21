@@ -29,10 +29,11 @@ const questions = [
     message: '赞助者链接：',
   },
   {
-    type: 'datetime',
+    type: 'date',
     name: 'date',
     message: '赞助日期：',
-    format: ['yyyy', '-', 'mm', '-', 'dd'],
+    locale: 'zh-CN',
+    // format: { month: 'short' },
   },
   {
     type: 'list',

@@ -2,7 +2,7 @@
   "name": "yunyoujun-sponsors",
   "version": "2.0.0",
   "private": true,
-  "packageManager": "pnpm@7.1.7",
+  "packageManager": "pnpm@7.16.1",
   "description": "YunYouJun's Sponsors | 云游君的赞助者们",
   "author": "YunYouJun <me@yunyoujun.cn>",
   "license": "MIT",
@@ -15,7 +15,7 @@
     "url": "https://github.com/YunYouJun/sponsors/issues"
   },
   "scripts": {
-    "copy": "esno scripts/copy.ts",
+    "copy": "tsx scripts/copy.ts",
     "dev": "pnpm -C packages/site run dev",
     "build": "pnpm run copy && pnpm -C packages/site run build",
     "build:json": "pnpm -C packages/cli run build && cp packages/cli/dist/* packages/site/dist/",
@@ -38,7 +38,6 @@
     "@types/md5": "^2.3.2",
     "cross-env": "^7.0.3",
     "eslint": "^8.28.0",
-    "esno": "~0.16.3",
     "tsx": "^3.12.1",
     "typescript": "~4.9.3"
   }

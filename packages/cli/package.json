@@ -2,14 +2,12 @@
   "name": "@sponsors/cli",
   "version": "1.0.0",
   "scripts": {
-    "add": "esno index.ts add",
-    "build": "esno build.ts"
-  },
-  "dependencies": {
-    "inquirer": "^9.1.4",
-    "inquirer-datepicker-prompt": "^0.4.3"
+    "add": "tsx index.ts add",
+    "build": "tsx build.ts"
   },
   "devDependencies": {
-    "@types/inquirer": "^9.0.3"
+    "@types/inquirer": "^9.0.3",
+    "inquirer": "^9.1.4",
+    "inquirer-date-prompt": "^3.0.0"
   }
 }
