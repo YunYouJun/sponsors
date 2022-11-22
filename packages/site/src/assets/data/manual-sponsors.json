@@ -734,6 +734,19 @@
     ]
   },
   {
+    "name": "Su7777",
+    "url": "",
+    "total": 17.77,
+    "children": [
+      {
+        "date": "2022-11-03T06:16:30.839Z",
+        "method": "支付宝",
+        "amount": 17.77,
+        "memo": ""
+      }
+    ]
+  },
+  {
     "name": "MIA",
     "url": "https://blog.mle.moe",
     "total": 15.41,
