@@ -33,7 +33,7 @@
     "dayjs": "^1.11.6"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.31.0",
+    "@antfu/eslint-config": "^0.33.1",
     "@types/js-yaml": "^4.0.5",
     "@types/md5": "^2.3.2",
     "cross-env": "^7.0.3",
