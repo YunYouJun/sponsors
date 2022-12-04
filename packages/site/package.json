@@ -25,7 +25,7 @@
   "dependencies": {
     "@ctrl/tinycolor": "^3.4.1",
     "@vueuse/core": "^9.6.0",
-    "@vueuse/head": "^1.0.19",
+    "@vueuse/head": "^1.0.20",
     "dayjs": "^1.11.6",
     "js-yaml": "^4.1.0",
     "nprogress": "^0.2.0",
@@ -47,7 +47,7 @@
     "@vitejs/plugin-vue": "^3.2.0",
     "critters": "^0.0.16",
     "cross-env": "^7.0.3",
-    "eslint": "^8.28.0",
+    "eslint": "^8.29.0",
     "markdown-it-link-attributes": "^4.0.1",
     "markdown-it-prism": "^2.3.0",
     "md5": "^2.3.0",
@@ -66,6 +66,6 @@
     "vite-ssg": "0.22.0",
     "vite-ssg-sitemap": "^0.4.3",
     "vite-svg-loader": "^3.6.0",
-    "vue-tsc": "^1.0.10"
+    "vue-tsc": "^1.0.11"
   }
 }
