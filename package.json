@@ -25,7 +25,7 @@
     "lint": "eslint .",
     "update": "git add -A && git commit -m 'chore: add new sponsor' && git push",
     "sponsors": "pnpm -C packages/cli run add",
-    "typecheck": "pnpm -C packages/site run typecheck"
+    "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
     "@yunyoujun/logger": "^0.2.3",
