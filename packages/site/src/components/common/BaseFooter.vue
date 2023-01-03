@@ -12,5 +12,5 @@ const copyright = ref({
 </script>
 
 <template>
-  <vue-about-me :is-dark="isDark" :copyright="copyright" />
+  <VueAboutMe :is-dark="isDark" :copyright="copyright" />
 </template>
