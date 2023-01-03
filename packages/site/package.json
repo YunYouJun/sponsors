@@ -23,17 +23,10 @@
     "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
-<<<<<<< HEAD
-    "@ctrl/tinycolor": "^3.4.1",
-    "@vueuse/core": "^9.6.0",
-    "@vueuse/head": "^1.0.20",
-    "dayjs": "^1.11.6",
-=======
     "@ctrl/tinycolor": "^3.5.0",
     "@vueuse/core": "^9.10.0",
     "@vueuse/head": "^1.0.22",
     "dayjs": "^1.11.7",
->>>>>>> b4b0b07 (chore: upgrade deps)
     "js-yaml": "^4.1.0",
     "nprogress": "^0.2.0",
     "vue": "^3.2.45",
