@@ -10,9 +10,11 @@ import { generateTextSponsors, getSponsorsByAvatar } from './utils'
 // import { defaultAvatarUrl } from '@sponsors/utils'
 
 export default defineConfig({
-  // github: {
-  //   login: 'YunYouJun',
-  // },
+  github: {
+    login: 'YunYouJun',
+    type: 'user',
+  },
+  // read afdian from env
 
   formats: ['svg'],
 
