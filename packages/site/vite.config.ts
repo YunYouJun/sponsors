@@ -61,6 +61,10 @@ export default defineConfig(({ mode }) => {
           '@vueuse/core',
         ],
         dts: 'src/auto-imports.d.ts',
+        dirs: [
+          'src/composables',
+          'src/stores',
+        ],
         vueTemplate: true,
       }),
 
