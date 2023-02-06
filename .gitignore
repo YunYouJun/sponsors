@@ -23,7 +23,3 @@ lib/
 # vite
 .vite-ssg-dist
 .vite-ssg-temp
-
-# vitesse
-components.d.ts
-auto-imports.d.ts
