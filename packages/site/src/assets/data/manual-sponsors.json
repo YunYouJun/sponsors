@@ -213,6 +213,19 @@
     ]
   },
   {
+    "name": "霜晨夜",
+    "url": "",
+    "total": 100,
+    "children": [
+      {
+        "date": "2023-02-05T02:44:19.384Z",
+        "method": "微信赞赏",
+        "amount": 100,
+        "memo": "sdl,wsl"
+      }
+    ]
+  },
+  {
     "name": "xiaohuoni",
     "url": "",
     "total": 99.99,
@@ -1334,6 +1347,19 @@
         "method": "微信赞赏",
         "amount": 6.66,
         "memo": "一定可以的"
+      }
+    ]
+  },
+  {
+    "name": "carrymyteam",
+    "url": "",
+    "total": 6.66,
+    "children": [
+      {
+        "date": "2023-01-30T08:54:52.195Z",
+        "method": "QQ 钱包",
+        "amount": 6.66,
+        "memo": ""
       }
     ]
   },
