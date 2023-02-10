@@ -43,7 +43,7 @@ const githubUrl = computed(() => {
     <div v-if="project.emoji" class="mt-4">
       {{ project.emoji }}
     </div>
-    <a :href="githubUrl">
+    <a :href="githubUrl" target="_blank">
       <h2 class="text-lg" font="black" m="2">{{ project.name || '忘记叫啥了' }}</h2>
     </a>
     <small class="block" p="2" v-html="project.desc || '说点什么好呢'" />
