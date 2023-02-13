@@ -7,8 +7,8 @@ import manualSponsors from '../../packages/site/src/assets/data/manual-sponsors.
 
 export const CustomProvider: Provider = {
   name: 'custom',
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  fetchSponsors(config) {
+
+  fetchSponsors(_config) {
     return fetchCustomSponsors()
   },
 }

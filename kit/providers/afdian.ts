@@ -6,8 +6,8 @@ import type { Provider, Sponsorship } from 'sponsorkit'
 
 export const AfdianProvider: Provider = {
   name: 'afdian',
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  fetchSponsors(config) {
+
+  fetchSponsors(_config) {
     const token = process.env.AFDIAN_API_TOKEN || ''
     const userId = process.env.AFDIAN_USER_ID || ''
 

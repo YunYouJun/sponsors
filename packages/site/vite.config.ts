@@ -26,8 +26,8 @@ import SvgLoader from 'vite-svg-loader'
 export const markdownWrapperClasses = 'post-card markdown-body m-auto text-left'
 
 // https://vitejs.dev/config/
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export default defineConfig(({ mode }) => {
+
+export default defineConfig(() => {
   return {
     resolve: {
       alias: {
