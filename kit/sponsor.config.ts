@@ -16,7 +16,7 @@ export default defineConfig({
   },
   // read afdian from env
 
-  formats: ['svg'],
+  formats: ['svg', 'png'],
 
   svgInlineCSS: `${defaultInlineCSS}
   .silver-sponsors{font-size: 16px;}
