@@ -6,6 +6,7 @@ import datePrompt from 'inquirer-date-prompt'
 import pkg from './package.json'
 
 import { onAdd } from './add'
+
 inquirer.registerPrompt('date', datePrompt as any)
 
 program.version(pkg.version)

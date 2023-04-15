@@ -1,4 +1,4 @@
-import path from 'path'
+import path from 'node:path'
 import type { MoneySponsor, Sponsor } from '../types/index'
 import sponsors from '../site/src/assets/data/manual-sponsors.json'
 import { generateJSONfromYaml, generateMarkdown } from './utils'

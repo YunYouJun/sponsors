@@ -1,11 +1,9 @@
-import fs from 'fs'
-import { basename } from 'path'
+import fs from 'node:fs'
+import { basename } from 'node:path'
 import yaml from 'js-yaml'
 
-import { Logger } from '@yunyoujun/logger'
-
+import consola from 'consola'
 import type { MoneySponsor } from '../types'
-const logger = new Logger()
 
 /**
  * 从 Yaml 文件生成 json
@@ -15,15 +13,12 @@ export function generateJSONfromYaml(path: string) {
   const filename = basename(path)
   const name = filename.slice(0, filename.lastIndexOf('.'))
   const data = yaml.load(fs.readFileSync(path, 'utf8'))
-  try {
+
+  if (!fs.existsSync('./dist'))
     fs.mkdirSync('./dist/')
-  }
-  catch ({ code }) {
-    if (code !== 'EEXIST')
-      return
-  }
+
   fs.writeFileSync(`./dist/${name}.json`, JSON.stringify(data))
-  logger.success(`Generated ${name}.json successfully!`)
+  consola.success(`Generated ${name}.json successfully!`)
   return data
 }
 
@@ -64,5 +59,5 @@ title: 赞助者名单
 
   const filename = 'list.md'
   fs.writeFileSync(`./dist/${filename}`, sponsors_md)
-  logger.success(`Generate ${filename} successfully!`)
+  consola.success(`Generate ${filename} successfully!`)
 }

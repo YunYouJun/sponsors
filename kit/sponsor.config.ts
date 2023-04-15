@@ -1,4 +1,4 @@
-import path from 'path'
+import path from 'node:path'
 import { defaultAvatarUrl } from '@sponsors/utils'
 
 import { defaultInlineCSS, defineConfig, presets } from 'sponsorkit'
