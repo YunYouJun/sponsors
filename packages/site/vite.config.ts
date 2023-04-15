@@ -1,4 +1,4 @@
-import path from 'path'
+import path from 'node:path'
 import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
 
@@ -117,7 +117,7 @@ export default defineConfig(() => {
         },
       }),
 
-      // https://github.com/intlify/bundle-tools/tree/main/packages/vite-plugin-vue-i18n
+      // https://github.com/intlify/bundle-tools/tree/main/packages/unplugin-vue-i18n
       VueI18n({
         runtimeOnly: true,
         compositionOnly: true,

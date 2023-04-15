@@ -806,6 +806,19 @@
     ]
   },
   {
+    "name": "尹洁",
+    "url": "",
+    "total": 16.66,
+    "children": [
+      {
+        "date": "2023-04-14T09:55:52.546Z",
+        "method": "微信赞赏",
+        "amount": 16.66,
+        "memo": "666"
+      }
+    ]
+  },
+  {
     "name": "MIA",
     "url": "https://blog.mle.moe",
     "total": 15.41,
