@@ -202,3 +202,7 @@
   business: NameSilo
   amount: 101.98
   date: 2022-11-03
+- memo: 小云 Live2D
+  business: linger
+  amount: 1200
+  date: 2023-01-07
