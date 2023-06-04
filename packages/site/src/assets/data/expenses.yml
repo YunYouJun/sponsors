@@ -206,3 +206,11 @@
   business: linger
   amount: 1200
   date: 2023-01-07
+- memo: 续费 yunyoujun.cn 域名 8 年（38/年）
+  business: 腾讯云
+  amount: 304
+  date: 2023-06-03
+- memo: 续费 elpsy.cn 域名 1 年（38/年）
+  business: 腾讯云
+  amount: 38
+  date: 2023-06-03
