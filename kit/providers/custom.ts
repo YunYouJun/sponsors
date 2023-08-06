@@ -1,7 +1,7 @@
 import type { RankSponsor } from '@sponsors/types'
 
 import type { Provider, Sponsorship } from 'sponsorkit'
-import { defaultAvatarUrl } from '@sponsors/utils'
+import { defaultAvatarUrl, getQQAvatarUrl } from '@sponsors/utils'
 
 import manualSponsors from '../../packages/site/src/assets/data/manual-sponsors.json'
 
@@ -25,12 +25,18 @@ export async function fetchCustomSponsors(): Promise<Sponsorship[]> {
 
   // check ping
   return rank.map((sponsor) => {
+    let avatarUrl = defaultAvatarUrl
+    if (sponsor.qq)
+      avatarUrl = getQQAvatarUrl(sponsor.qq)
+    if (sponsor.avatar)
+      avatarUrl = sponsor.avatar
+
     const sponsorShip: Sponsorship = {
       sponsor: {
         type: 'User',
-        login: sponsor.name,
+        login: sponsor.id || sponsor.name,
         name: sponsor.name,
-        avatarUrl: sponsor.avatar || defaultAvatarUrl,
+        avatarUrl,
         linkUrl: sponsor.url || 'https://sponsors.yunyoujun.cn',
       },
       // CNY

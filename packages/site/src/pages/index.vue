@@ -19,8 +19,11 @@ const { t } = useI18n()
     <div class="svg-container" v-html="SponsorSvg" />
 
     <div class="m-4">
-      <img class="rounded w-50" m="auto y-2" src="/images/work-weixin-sponsors-qr.png" alt="赞助者群">
-      <small>赞助者微信群</small>
+      <ul>
+        <li>QQ群：1050458482</li>
+      </ul>
+      <img class="rounded w-50" m="auto y-2" src="https://www.yunle.fun/images/yunlefun-user-wechat-group.jpg" alt="微信群">
+      <small>微信群</small>
     </div>
   </div>
 

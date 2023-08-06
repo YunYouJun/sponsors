@@ -39,6 +39,7 @@
     ]
   },
   {
+    "id": "Sknp1006",
     "name": "SKNP",
     "avatar": "https://cdn.jsdelivr.net/gh/Sknp1006/cdn@master/img/albums/arknights_Skadi/024.png",
     "url": "https://sknplz.xyz/",
@@ -98,6 +99,20 @@
         "method": "支付宝",
         "date": "2020-07-01T00:00:00.000Z",
         "amount": 256
+      }
+    ]
+  },
+  {
+    "name": "BLACKGOLD",
+    "url": "",
+    "qq": 3218178006,
+    "total": 233,
+    "children": [
+      {
+        "date": "2023-08-03T17:42:27.644Z",
+        "method": "QQ 钱包",
+        "amount": 233,
+        "memo": ""
       }
     ]
   },
@@ -242,6 +257,19 @@
         "method": "微信赞赏",
         "amount": 100,
         "memo": "sdl,wsl"
+      }
+    ]
+  },
+  {
+    "name": "褚洪洋",
+    "url": "",
+    "total": 100,
+    "children": [
+      {
+        "date": "2023-07-25T08:01:51.590Z",
+        "method": "微信赞赏",
+        "amount": 100,
+        "memo": ""
       }
     ]
   },

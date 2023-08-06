@@ -74,8 +74,10 @@ export type Sponsor = MoneySponsor | OtherSponsor
  * 排序赞助者
  */
 export interface RankSponsor {
+  id?: string
   name: string
   url?: string
+  qq?: number
   email?: string
   avatar?: string
   /**
