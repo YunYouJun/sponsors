@@ -35,7 +35,7 @@ export function generateTextSponsors(composer: SvgComposer, sponsors: Sponsorshi
 
   const perLine = Math.floor((width - (presets.base.container?.sidePadding || 0) * 2) / boxWidth)
 
-  new Array(Math.ceil(sponsors.length / perLine))
+  Array.from({ length: Math.ceil(sponsors.length / perLine) })
     .fill(0)
     .forEach((_, i) => {
       const lineSponsors = sponsors.slice(i * perLine, (i + 1) * perLine)

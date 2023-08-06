@@ -1,3 +1,4 @@
+import process from 'node:process'
 import dayjs from 'dayjs'
 import type { RankSponsor } from '@sponsors/types'
 

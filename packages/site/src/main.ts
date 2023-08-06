@@ -4,6 +4,7 @@ import App from './App.vue'
 import generatedRoutes from '~pages'
 
 import '@unocss/reset/tailwind.css'
+
 // your custom styles here
 import 'star-markdown-css/src/scss/theme/yun.scss'
 import './styles/css-vars.scss'

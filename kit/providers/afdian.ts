@@ -1,4 +1,5 @@
 import 'dotenv/config'
+import process from 'node:process'
 import type { AfdianApiOpts } from 'afdian-api'
 import Afdian from 'afdian-api'
 
@@ -51,7 +52,7 @@ export async function fetchAfdianSponsors(options: AfdianApiOpts): Promise<Spons
         linkUrl: `https://afdian.net/u/${sponsor.user.user_id}`,
       },
       // CNY
-      monthlyDollars: parseFloat(sponsor.all_sum_amount) / 6,
+      monthlyDollars: Number.parseFloat(sponsor.all_sum_amount) / 6,
       privacyLevel: 'PUBLIC',
       tierName: '爱发电',
       createdAt: new Date(sponsor.first_pay_time * 1000).toISOString(),

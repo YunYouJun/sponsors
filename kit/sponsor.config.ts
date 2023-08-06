@@ -5,6 +5,7 @@ import { defaultInlineCSS, defineConfig, presets } from 'sponsorkit'
 import { AfdianProvider } from './providers/afdian'
 import { CustomProvider } from './providers/custom'
 import { generateTextSponsors, getSponsorsByAvatar } from './utils'
+
 // import { AfdianProvider } from './providers/afdian'
 
 // import { defaultAvatarUrl } from '@sponsors/utils'

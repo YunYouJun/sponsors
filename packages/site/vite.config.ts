@@ -7,6 +7,7 @@ import Layouts from 'vite-plugin-vue-layouts'
 import generateSitemap from 'vite-ssg-sitemap'
 
 import Components from 'unplugin-vue-components/vite'
+
 // import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
 import AutoImport from 'unplugin-auto-import/vite'
 import Unocss from 'unocss/vite'

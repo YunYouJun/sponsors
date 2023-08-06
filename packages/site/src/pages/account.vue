@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import type { ComponentOptions } from 'vue'
 import store from '../store'
 
 import SponsorList from '~/components/SponsorList.vue'
@@ -15,7 +14,7 @@ const state = store.state
 
 interface TabItem {
   name: string
-  component: ComponentOptions
+  component: Component
 }
 
 const tabs = computed<TabItem[]>(() => [{
