@@ -6,8 +6,8 @@
     "build": "tsx build.ts"
   },
   "devDependencies": {
-    "@types/inquirer": "^9.0.3",
-    "inquirer": "^9.2.10",
+    "@types/inquirer": "^9.0.6",
+    "inquirer": "^9.2.11",
     "inquirer-date-prompt": "^3.0.0"
   }
 }

@@ -26,7 +26,6 @@ export const AfdianProvider: Provider = {
 
 /**
  * https://afdian.net/dashboard/dev
- * @param config
  */
 export async function fetchAfdianSponsors(options: AfdianApiOpts): Promise<Sponsorship[]> {
   const afdian = new Afdian(options)
