@@ -2,7 +2,8 @@
 import type { RankSponsor } from '@sponsors/types'
 import sponsorsData from '~/assets/data/manual-sponsors.json'
 
-const sponsors = ref<RankSponsor[]>((sponsorsData as any as RankSponsor[]).filter(i => i.total >= 5))
+const minAccount = 6
+const sponsors = ref<RankSponsor[]>((sponsorsData as any as RankSponsor[]).filter(i => i.total >= minAccount))
 </script>
 
 <template>
