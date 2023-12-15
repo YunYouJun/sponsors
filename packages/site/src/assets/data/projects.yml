@@ -53,7 +53,7 @@ applets:
     emoji: 📝
     color: gray
     textColor: white
-    github: YunYouJun/nnrm
+    github: YunYouJun/chat-dust
     url: https://yunyoujun.github.io/char-dust/
     docs: https://www.yunyoujun.cn/posts/why-make-char-dust/
   - name: go-far-away
@@ -193,6 +193,12 @@ interesting:
     url: https://fc.elpsy.cn
 
 plugins:
+  - name: unplugin-glsl
+    emoji: 🎨
+    desc: Unplugin 插件，加载 GLSL 语法，支持 Webpack/Vite/Rollup/Rspack
+    color: '#2b7489'
+    github: YunYouJun/unplugin-glsl
+    url: https://unplugin-glsl.pages.dev
   - name: hexo-widget-tree
     emoji: 🌲
     desc: Hexo 文章树状菜单预览插件
