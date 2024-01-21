@@ -115,6 +115,12 @@ applets:
     url: https://uncolor.yunyoujun.cn
 
 tools:
+  - name: pixi-painter
+    emoji: 🎨
+    desc: 基于 Pixi.js 的绘图工具 + AI LCM
+    color: '#667788'
+    github: YunYouJun/pixi-painter
+    url: https://pixi-painter.pages.dev
   - name: mirai-ts
     emoji: 🔧
     color: '#2b7489'
