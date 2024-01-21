@@ -2,7 +2,6 @@
 title: 关于
 ---
 
-
 ## 谢谢您的支持！
 
 > <router-link to="/account">赞助详细列表</router-link>
