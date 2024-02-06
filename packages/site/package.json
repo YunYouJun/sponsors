@@ -32,7 +32,7 @@
     "nprogress": "^0.2.0",
     "vue": "^3.4.15",
     "vue-about-me": "^1.2.7",
-    "vue-i18n": "^9.9.0",
+    "vue-i18n": "^9.9.1",
     "vue-router": "^4.2.5"
   },
   "devDependencies": {
@@ -55,10 +55,10 @@
     "sass": "~1.70.0",
     "star-markdown-css": "^0.4.2",
     "theme-yun": "^0.0.1",
-    "unocss": "^0.58.4",
+    "unocss": "^0.58.5",
     "unplugin-auto-import": "~0.17.5",
     "unplugin-vue-components": "^0.26.0",
-    "valaxy": "^0.17.3",
+    "valaxy": "^0.17.5",
     "valaxy-theme-gitlink": "^0.1.3",
     "vite": "5.0.12",
     "vite-plugin-inspect": "^0.8.3",

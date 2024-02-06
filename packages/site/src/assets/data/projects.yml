@@ -42,6 +42,13 @@ design:
     url: https://explosions.yunyoujun.cn/
 
 applets:
+  - name: ai-sfc
+    emoji: 🧧
+    desc: AI 春联
+    color: '#ff4444'
+    gradient: false
+    github: YunYouJun/ai-sfc
+    url: https://ai-sfc.yunyoujun.cn
   - name: color-dust
     emoji: 🎨
     desc: 基于 K-Means 色彩聚类提取主题色

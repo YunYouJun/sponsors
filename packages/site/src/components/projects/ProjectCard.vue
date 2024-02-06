@@ -7,7 +7,7 @@ const props = defineProps<{ project: ProjectItem }>()
 const project = toRef(props, 'project')
 
 const cardStyle = computed(() => {
-  if (project.value.color) {
+  if (project.value.color && (typeof project.value.gradient === 'undefined' || project.value.gradient)) {
     const color = new TinyColor(project.value.color)
     const textColor = project.value.textColor || (color.isDark() ? 'white' : 'black')
     return {
@@ -17,7 +17,7 @@ const cardStyle = computed(() => {
   }
   else {
     return {
-      backgroundColor: 'rgba(255,255,255,0.9)',
+      backgroundColor: project.value.color || 'rgba(255,255,255,0.9)',
       color: 'black',
     }
   }

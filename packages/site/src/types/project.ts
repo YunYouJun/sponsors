@@ -13,6 +13,10 @@ export interface ProjectItem {
    */
   color?: string
   /**
+   * 渐变色
+   */
+  gradient?: boolean
+  /**
    * 强制覆盖文本色
    */
   textColor?: string
