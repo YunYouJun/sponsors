@@ -879,6 +879,19 @@
     ]
   },
   {
+    "name": "zsbai",
+    "url": "",
+    "total": 20,
+    "children": [
+      {
+        "date": "2024-02-24T22:05:47.118Z",
+        "method": "微信赞赏",
+        "amount": 20,
+        "memo": ""
+      }
+    ]
+  },
+  {
     "name": "清酒踏月",
     "url": "",
     "total": 18.88,
