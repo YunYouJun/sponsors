@@ -20,7 +20,7 @@ design:
     textColor: white
     github: YunYouJun/augma
     url: https://augma.elpsy.cn/
-    docs: https://docs.saugma.elpsy.cn/
+    docs: https://docs.augma.elpsy.cn/
   - name: element-theme-ink
     desc: Element 极简主题（WIP）
     emoji: 🪄
