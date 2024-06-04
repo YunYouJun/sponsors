@@ -1,14 +1,13 @@
 import path from 'node:path'
 import { defaultAvatarUrl } from '@sponsors/utils'
 
-import { defaultInlineCSS, defineConfig, presets } from 'sponsorkit'
+import { defaultInlineCSS, defineConfig, tierPresets } from 'sponsorkit'
 import { AfdianProvider } from './providers/afdian'
 import { CustomProvider } from './providers/custom'
 import { generateTextSponsors, getSponsorsByAvatar } from './utils'
 
-// import { AfdianProvider } from './providers/afdian'
-
 // import { defaultAvatarUrl } from '@sponsors/utils'
+const __dirname = path.dirname(new URL(import.meta.url).pathname)
 
 export default defineConfig({
   github: {
@@ -43,7 +42,7 @@ export default defineConfig({
 
         const avatarSponsors = sponsors.filter(item => item.sponsor.avatarUrl !== defaultAvatarUrl)
 
-        composer.addSponsorGrid(avatarSponsors, presets.medium)
+        composer.addSponsorGrid(avatarSponsors, tierPresets.medium)
 
         generateTextSponsors(composer, noAvatarSponsors, config)
 
@@ -53,13 +52,13 @@ export default defineConfig({
     {
       title: 'Sponsors',
       monthlyDollars: 3,
-      preset: presets.medium,
+      preset: tierPresets.medium,
       compose(composer, sponsors, config) {
         composer.addTitle(this.title || 'Sponsors').addSpan(5)
 
         const typeSponsors = getSponsorsByAvatar(sponsors)
 
-        composer.addSponsorGrid(typeSponsors.avatar, presets.medium)
+        composer.addSponsorGrid(typeSponsors.avatar, tierPresets.medium)
         generateTextSponsors(composer, typeSponsors.noAvatar, config)
 
         composer.addSpan(20)
@@ -72,13 +71,13 @@ export default defineConfig({
     {
       title: 'Silver Sponsors',
       monthlyDollars: 10,
-      preset: presets.large,
+      preset: tierPresets.large,
       compose(composer, sponsors, config) {
         composer.addTitle(this.title || 'Silver Sponsors').addSpan(5)
 
         const typeSponsors = getSponsorsByAvatar(sponsors)
 
-        composer.addSponsorGrid(typeSponsors.avatar, presets.large)
+        composer.addSponsorGrid(typeSponsors.avatar, tierPresets.large)
         generateTextSponsors(composer, typeSponsors.noAvatar, config, {
           nameSize: 60,
           boxWidth: 100,
@@ -94,7 +93,42 @@ export default defineConfig({
     {
       title: 'Gold Sponsors',
       monthlyDollars: 50,
-      preset: presets.xl,
+      preset: tierPresets.xl,
+    },
+  ],
+
+  renders: [
+    {
+      name: 'sponsors',
+      width: 800,
+    },
+    {
+      name: 'sponsors.wide',
+      width: 1800,
+    },
+    {
+      name: 'sponsors.part1',
+      width: 800,
+      filter: sponsor => sponsor.monthlyDollars >= 9.9,
+    },
+    {
+      name: 'sponsors.part2',
+      width: 800,
+      filter: sponsor => sponsor.monthlyDollars < 9.9 && sponsor.monthlyDollars >= 0,
+    },
+    {
+      name: 'sponsors.past',
+      width: 800,
+      filter: sponsor => sponsor.monthlyDollars < 0,
+    },
+    {
+      name: 'sponsors.circles',
+      width: 1000,
+      includePastSponsors: true,
+      renderer: 'circles',
+      circles: {
+        radiusPast: 3,
+      },
     },
   ],
 })

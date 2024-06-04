@@ -1,10 +1,8 @@
 {
+  "type": "module",
   "private": true,
   "scripts": {
-    "build": "sponsorkit",
-    "generate": "sponsorkit -w 800",
-    "generate:force": "sponsorkit -w 800 -f",
-    "generate:wide": "sponsorkit -w 1300 --name sponsors.wide --dir ../public"
+    "build": "sponsorkit"
   },
   "devDependencies": {
     "@sponsors/types": "workspace:*",

@@ -17,10 +17,13 @@ jobs:
           run_install: true
 
       - name: Update sponsors
-        run: npm run generate
+        run: npm run kit:build
         env:
           SPONSORKIT_GITHUB_TOKEN: ${{ secrets.SPONSORKIT_GITHUB_TOKEN }}
           SPONSORKIT_GITHUB_LOGIN: YunYouJun
+          # TOOD
+          # SPONSORKIT_AFDIAN_USER_ID: ${{ secrets.SPONSORKIT_AFDIAN_USER_ID }}
+          # SPONSORKIT_AFDIAN_TOKEN: ${{ secrets.SPONSORKIT_AFDIAN_TOKEN }}
           AFDIAN_API_TOKEN: ${{ secrets.AFDIAN_API_TOKEN }}
           AFDIAN_USER_ID: ${{ secrets.AFDIAN_USER_ID }}
 
