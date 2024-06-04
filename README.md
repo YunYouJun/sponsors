@@ -44,10 +44,16 @@ Thanks for your support.
 如果您有什么建议或希望我帮忙的事情，可以直接在 [issues](https://github.com/YunYouJun/sponsors/issues) 中提出。
 
 <p align="center">
-  <img src='https://www.yunle.fun/images/yunlefun-user-wechat-group.jpg' width="250"/>
+  <!-- <img src='https://www.yunle.fun/images/yunlefun-user-wechat-group.jpg' width="250"/> -->
+  <img src='https://sponsors.yunyoujun.cn/images/qq-qun-1050458482.png' width="250" alt="QQ群"/>
   <br />
-  <small>微信群</small>
+  <small>QQ 群</small>
 </p>
+
+- QQ 群：[1050458482](https://qm.qq.com/cgi-bin/qm/qr?k=r-b3949w12L0wGiAmhUWibg3epW1Suik&jump_from=webapi&authKey=nhLrI7D8toe4Ph3LtcQ1l4dtYtUg7RzexTunnf9gI5vvDftcuhg4za+xBH+EiJfh)
+- BiliBili：[云游君](https://space.bilibili.com/1579790)
+- X：[YunYouJun](https://twitter.com/YunYouJun)
+- ~~小红书被封了~~
 
 ## Usage
 

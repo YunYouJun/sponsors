@@ -20,10 +20,11 @@ const { t } = useI18n()
 
     <div class="m-4">
       <ul>
-        <li>QQ群：1050458482</li>
+        <!-- @TODO -->
+        <li>QQ群：<a href="https://qm.qq.com/cgi-bin/qm/qr?k=r-b3949w12L0wGiAmhUWibg3epW1Suik&jump_from=webapi&authKey=nhLrI7D8toe4Ph3LtcQ1l4dtYtUg7RzexTunnf9gI5vvDftcuhg4za+xBH+EiJfh" target="_blank">1050458482</a></li>
       </ul>
-      <img class="w-50 rounded" m="auto y-2" src="https://www.yunle.fun/images/yunlefun-user-wechat-group.jpg" alt="微信群">
-      <small>微信群</small>
+      <!-- <img class="w-50 rounded" m="auto y-2" src="https://www.yunle.fun/images/yunlefun-user-wechat-group.jpg" alt="微信群"> -->
+      <!-- <small>微信群</small> -->
     </div>
   </div>
 
