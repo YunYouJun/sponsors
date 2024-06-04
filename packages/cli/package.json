@@ -7,7 +7,7 @@
   },
   "devDependencies": {
     "@types/inquirer": "^9.0.7",
-    "inquirer": "^9.2.22",
+    "inquirer": "^9.2.23",
     "inquirer-date-prompt": "^3.0.0"
   }
 }

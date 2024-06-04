@@ -75,7 +75,7 @@ applets:
     color: '#b8c5d7'
     textColor: '#563b62'
     github: YunYouJun/birthday
-    url: https://yunyoujun.cn/birthday/
+    url: https://birthday.yunyoujun.cn/
   - name: nasa-vis
     desc: NASA API 的一些乱七八糟数据的可视化（其实没什么用）
     emoji: 🪐

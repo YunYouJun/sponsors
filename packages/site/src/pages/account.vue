@@ -42,7 +42,7 @@ onBeforeMount(() => {
       {{ t('title.account') }}
     </h1>
 
-    <div class="flex justify-center items-center" m="2" p="b-2" text="sm">
+    <div class="flex items-center justify-center" m="2" p="b-2" text="sm">
       <span class="tag" text="green-600 dark:green-100" bg="green-50 dark:(green-700 opacity-80)">
         <div class="inline-flex" m="r-1" i-icon-park-outline-income />
         <span>收入：</span>

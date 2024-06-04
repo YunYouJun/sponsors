@@ -34,7 +34,7 @@ const githubUrl = computed(() => {
 
 <template>
   <div
-    class="rounded shadow-md transform transition w-90 m-2 duration-400"
+    class="m-2 w-90 transform rounded shadow-md transition duration-400"
     bg="opacity-80 gradient-to-br"
     p="2"
     hover="shadow-lg from-white scale-105"
@@ -48,13 +48,13 @@ const githubUrl = computed(() => {
     </a>
     <small class="block" p="2" v-html="project.desc || '说点什么好呢'" />
     <p p="2">
-      <a class="icon-btn mx-1" :href="githubUrl" target="_blank">
+      <a class="mx-1 icon-btn" :href="githubUrl" target="_blank">
         <div i-ri-github-line />
       </a>
-      <a v-if="project.url" class="icon-btn mx-1" :href="project.url" target="_blank">
+      <a v-if="project.url" class="mx-1 icon-btn" :href="project.url" target="_blank">
         <div i-ri-global-line />
       </a>
-      <a v-if="project.docs" class="icon-btn mx-1" :href="project.docs" target="_blank">
+      <a v-if="project.docs" class="mx-1 icon-btn" :href="project.docs" target="_blank">
         <div i-ri-book-line />
       </a>
     </p>

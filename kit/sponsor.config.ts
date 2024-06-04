@@ -27,9 +27,7 @@ export default defineConfig({
 
   providers: [
     'github',
-    // @ts-expect-error provider
     AfdianProvider,
-    // @ts-expect-error provider
     CustomProvider,
   ],
 

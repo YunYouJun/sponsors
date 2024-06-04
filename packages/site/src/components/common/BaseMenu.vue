@@ -11,33 +11,33 @@ function toggleLocales() {
 </script>
 
 <template>
-  <nav class="text-xl mt-6 mb-4">
-    <router-link class="icon-btn mx-1" to="/" :title="t('button.home')">
+  <nav class="mb-4 mt-6 text-xl">
+    <router-link class="mx-1 icon-btn" to="/" :title="t('button.home')">
       <div i-carbon-home />
     </router-link>
 
-    <router-link class="icon-btn mx-1" to="/account" title="账单">
+    <router-link class="mx-1 icon-btn" to="/account" title="账单">
       <div i-ri-money-cny-box-line />
     </router-link>
 
-    <a class="icon-btn mx-1" :title="t('button.toggle_dark')" @click="toggleDark()">
+    <a class="mx-1 icon-btn" :title="t('button.toggle_dark')" @click="toggleDark()">
       <div i="carbon-sun dark:carbon-moon" />
     </a>
 
-    <a class="icon-btn mx-1" :class="locale === 'en' ? 'rotate-y-180' : ''" :title="t('button.toggle_langs')" @click="toggleLocales">
+    <a class="mx-1 icon-btn" :class="locale === 'en' ? 'rotate-y-180' : ''" :title="t('button.toggle_langs')" @click="toggleLocales">
       <div i-ri-translate />
     </a>
 
-    <router-link class="icon-btn mx-1" to="/projects" :title="t('button.projects')">
+    <router-link class="mx-1 icon-btn" to="/projects" :title="t('button.projects')">
       <div i-mdi-projector-screen-outline />
     </router-link>
 
-    <router-link class="icon-btn mx-1" to="/about" :title="t('button.about')">
+    <router-link class="mx-1 icon-btn" to="/about" :title="t('button.about')">
       <div i-carbon-dicom-overlay />
     </router-link>
 
     <a
-      class="icon-btn mx-1"
+      class="mx-1 icon-btn"
       rel="noreferrer"
       :href="pkg.repository.url"
       target="_blank"

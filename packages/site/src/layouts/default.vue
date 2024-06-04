@@ -13,7 +13,7 @@ const mainStyle = computed(() => {
 
 <template>
   <main
-    class="p-4 text-center text-gray-700 dark:text-gray-200 min-h-screen"
+    class="min-h-screen p-4 text-center text-gray-700 dark:text-gray-200"
     bg="cover center no-repeat fixed"
     :style="mainStyle"
   >

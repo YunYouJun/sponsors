@@ -19,7 +19,7 @@ const projects = reactive(ProjectData as ProjectDataType)
 </script>
 
 <template>
-  <h2 class="text-2xl my-5">
+  <h2 class="my-5 text-2xl">
     {{ t('title.projects') }}
   </h2>
 

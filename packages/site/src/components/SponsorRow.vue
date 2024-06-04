@@ -33,12 +33,12 @@ function sponsorClassName(order: number) {
 
 <template>
   <div class="sponsor-row flex justify-between" p="1" :class="sponsorClassName(i)">
-    <div w="10" class="inline-flex justify-start items-center cursor-pointer" font="mono" text="gray" @click="expand = !expand">
+    <div w="10" class="inline-flex cursor-pointer items-center justify-start" font="mono" text="gray" @click="expand = !expand">
       <div v-if="!expand" m="r-1" i-ri-arrow-right-s-line />
       <div v-else m="r-1" i-ri-arrow-down-s-line />
       <span>{{ i + 1 }}</span>
     </div>
-    <div w="40" class="inline-flex justify-start items-center" font="serif black">
+    <div w="40" class="inline-flex items-center justify-start" font="serif black">
       <SponsorAvatar :email="sponsor.email" :avatar="sponsor.avatar" />
       <a
         v-if="sponsor.url"

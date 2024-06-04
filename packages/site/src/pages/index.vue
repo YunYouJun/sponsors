@@ -10,7 +10,7 @@ const { t } = useI18n()
 
   <div class="post-card">
     <h2 m="t-2" text="xl purple-500" font="bold">
-      <a class="flex justify-center items-center" href="https://github.com/sponsors/YunYouJun" target="_blank">
+      <a class="flex items-center justify-center" href="https://github.com/sponsors/YunYouJun" target="_blank">
         <div i-ri-github-line m="x-1" /> Become a Sponsor in GitHub
       </a>
     </h2>
@@ -22,7 +22,7 @@ const { t } = useI18n()
       <ul>
         <li>QQ群：1050458482</li>
       </ul>
-      <img class="rounded w-50" m="auto y-2" src="https://www.yunle.fun/images/yunlefun-user-wechat-group.jpg" alt="微信群">
+      <img class="w-50 rounded" m="auto y-2" src="https://www.yunle.fun/images/yunlefun-user-wechat-group.jpg" alt="微信群">
       <small>微信群</small>
     </div>
   </div>

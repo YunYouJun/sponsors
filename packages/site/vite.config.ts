@@ -13,9 +13,9 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Unocss from 'unocss/vite'
 
 import VueI18n from '@intlify/unplugin-vue-i18n/vite'
-import Markdown from 'vite-plugin-vue-markdown'
+import Markdown from 'unplugin-vue-markdown/vite'
+import Shiki from '@shikijs/markdown-it'
 import Inspect from 'vite-plugin-inspect'
-import Prism from 'markdown-it-prism'
 import { VitePWA } from 'vite-plugin-pwa'
 
 import Yaml from '@rollup/plugin-yaml'
@@ -87,9 +87,8 @@ export default defineConfig(() => {
       Markdown({
         wrapperClasses: markdownWrapperClasses,
         headEnabled: true,
-        markdownItSetup(md) {
+        async markdownItSetup(md) {
           // https://prismjs.com/
-          md.use(Prism)
           md.use(LinkAttributes, {
             pattern: /^https?:\/\//,
             attrs: {
@@ -97,6 +96,13 @@ export default defineConfig(() => {
               rel: 'noopener',
             },
           })
+          md.use(await Shiki({
+            defaultColor: false,
+            themes: {
+              light: 'vitesse-light',
+              dark: 'vitesse-dark',
+            },
+          }))
         },
       }),
 

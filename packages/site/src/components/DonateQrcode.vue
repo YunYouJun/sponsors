@@ -12,20 +12,20 @@ const { t } = useI18n()
       <div v-for="key in methods" :key="key" class="inline-flex flex-col" :title="methodMap[key].title" :style="`--logo-color: ${methodMap[key].color}`">
         <div class="sponsor-method-icon m-auto" :class="[methodMap[key].icon]" text="2xl" :title="methodMap[key].title" />
 
-        <a class="qrcode-img-container inline-flex mx-6 lt-sm:mx-2" :href="donateMethod[key].url" :title="donateMethod[key].title" target="_blank">
-          <img class="qrcode-img shadow-md fade-in" :style="`--qrcode-border-color: ${methodMap[key].color}`" :src="donateMethod[key].url" :alt="donateMethod[key].title">
+        <a class="qrcode-img-container mx-6 inline-flex lt-sm:mx-2" :href="donateMethod[key].url" :title="donateMethod[key].title" target="_blank">
+          <img class="qrcode-img fade-in shadow-md" :style="`--qrcode-border-color: ${methodMap[key].color}`" :src="donateMethod[key].url" :alt="donateMethod[key].title">
         </a>
       </div>
     </div>
 
     <a
-      class="flex justify-center items-center"
+      class="flex items-center justify-center"
       m="2"
       href="https://afdian.net/@yunyoujun"
       target="_blank"
     >
       或者要试试
-      <span text="purple-500" class="flex justify-center items-center" m="x-1">
+      <span text="purple-500" class="flex items-center justify-center" m="x-1">
         <div i-ri-flashlight-line />爱发电
       </span>吗？
     </a>
