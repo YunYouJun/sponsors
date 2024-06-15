@@ -110,8 +110,8 @@ importers:
         specifier: ^4.1.2
         version: 4.1.2(rollup@2.79.1)
       '@shikijs/markdown-it':
-        specifier: ^1.6.4
-        version: 1.6.4
+        specifier: ^1.6.5
+        version: 1.6.5
       '@types/js-yaml':
         specifier: ^4.0.9
         version: 4.0.9
@@ -1594,14 +1594,14 @@ packages:
   '@shikijs/core@1.6.2':
     resolution: {integrity: sha512-guW5JeDzZ7uwOjTfCOFZ2VtVXk5tmkMzBYbKGfXsmAH1qYOej49L5jQDcGmwd6/OgvpmWhzO2GNJkQIFnbwLPQ==}
 
-  '@shikijs/core@1.6.4':
-    resolution: {integrity: sha512-WTU9rzZae1p2v6LOxMf6LhtmZOkIHYYW160IuahUyJy7YXPPjyWZLR1ag+SgD22ZMxZtz1gfU6Tccc8t0Il/XA==}
+  '@shikijs/core@1.6.5':
+    resolution: {integrity: sha512-XcQYt6e4L61ruAxHiL3Xg1DL/XkWWjzDdeckB/DtN8jAxoAU+bcxsV6DetC8NafHpL4YpGhxy9iXF0ND/u6HmA==}
 
-  '@shikijs/markdown-it@1.6.4':
-    resolution: {integrity: sha512-mlAJmjbmKnuMBraMpWALcZiHWUizNSZjr6/FSspB1soViKK5LJHS7N1RckJ6x7AewkihEvZHUauc5EgihBgrTA==}
+  '@shikijs/markdown-it@1.6.5':
+    resolution: {integrity: sha512-EzGWBUNGRUaSXBWUpuxYIzxx7u4A9p3EdPjcdcqZnKVt8s58QcekJawmWqOD04iCrF+P8ucrGAVEO2H175Bvmw==}
 
-  '@shikijs/transformers@1.6.4':
-    resolution: {integrity: sha512-NqDt7gUg3ayVBnsipT/KoL1pqsVbsvT/2cB0pb5SG2q72qjAv9Lb5OP99pL//BMmI+sMTo+TeARntklyBu4mZQ==}
+  '@shikijs/transformers@1.6.5':
+    resolution: {integrity: sha512-iuKa1uQtPQEe5vgCsXIb162b/3imRiAIdoF5IqafrTWL1uqZUpipfPjWZPuAAszOzYU//yIYRbhUk8reHVXA/w==}
 
   '@stylistic/eslint-plugin-js@2.1.0':
     resolution: {integrity: sha512-gdXUjGNSsnY6nPyqxu6lmDTtVrwCOjun4x8PUn0x04d5ucLI74N3MT1Q0UhdcOR9No3bo5PGDyBgXK+KmD787A==}
@@ -4661,8 +4661,8 @@ packages:
   shiki@1.6.2:
     resolution: {integrity: sha512-X3hSm5GzzBd/BmPmGfkueOUADLyBoZo1ojYQXhd+NU2VJn458yt4duaS0rVzC+WtqftSV7mTVvDw+OB9AHi3Eg==}
 
-  shiki@1.6.4:
-    resolution: {integrity: sha512-X88chM7w8jnadoZtjPTi5ahCJx9pc9f8GfEkZAEYUTlcUZIEw2D/RY86HI/LkkE7Nj8TQWkiBfaFTJ3VJT6ESg==}
+  shiki@1.6.5:
+    resolution: {integrity: sha512-iFzypldJG0zeyRHKAhaSGCf+YWXpMMyUyOrCVFBFKGGdF5vrB6jbd66/SQljxV20aSrVZEAQwUto/hhuNi/CIg==}
 
   side-channel@1.0.6:
     resolution: {integrity: sha512-fDW/EZ6Q9RiO8eFG8Hj+7u/oW+XrPTIChwCOM2+th2A6OblDtYYIpve9m+KvI9Z4C9qSEXlaGR6bTEYHReuglA==}
@@ -6907,17 +6907,17 @@ snapshots:
 
   '@shikijs/core@1.6.2': {}
 
-  '@shikijs/core@1.6.4': {}
+  '@shikijs/core@1.6.5': {}
 
-  '@shikijs/markdown-it@1.6.4':
+  '@shikijs/markdown-it@1.6.5':
     dependencies:
-      '@shikijs/transformers': 1.6.4
+      '@shikijs/transformers': 1.6.5
       markdown-it: 14.1.0
-      shiki: 1.6.4
+      shiki: 1.6.5
 
-  '@shikijs/transformers@1.6.4':
+  '@shikijs/transformers@1.6.5':
     dependencies:
-      shiki: 1.6.4
+      shiki: 1.6.5
 
   '@stylistic/eslint-plugin-js@2.1.0(eslint@9.5.0)':
     dependencies:
@@ -10509,9 +10509,9 @@ snapshots:
     dependencies:
       '@shikijs/core': 1.6.2
 
-  shiki@1.6.4:
+  shiki@1.6.5:
     dependencies:
-      '@shikijs/core': 1.6.4
+      '@shikijs/core': 1.6.5
 
   side-channel@1.0.6:
     dependencies:

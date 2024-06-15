@@ -69,7 +69,6 @@ export function generateTextSponsors(composer: SvgComposer, sponsors: Sponsorshi
  */
 export function getSponsorsByAvatar(sponsors: Sponsorship[]) {
   const noAvatarSponsors = sponsors.filter(item => item.sponsor.avatarUrl === defaultAvatarUrl)
-
   const avatarSponsors = sponsors.filter(item => item.sponsor.avatarUrl !== defaultAvatarUrl)
 
   return {

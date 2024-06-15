@@ -1,13 +1,25 @@
 import path from 'node:path'
-import { defaultAvatarUrl } from '@sponsors/utils'
 
+import type { BadgePreset } from 'sponsorkit'
 import { defaultInlineCSS, defineConfig, tierPresets } from 'sponsorkit'
-import { AfdianProvider } from './providers/afdian'
+// migrate to use afdian in sponsorkit
+// import { AfdianProvider } from './providers/afdian'
+import { defaultAvatarUrl } from '@sponsors/utils'
 import { CustomProvider } from './providers/custom'
 import { generateTextSponsors, getSponsorsByAvatar } from './utils'
 
-// import { defaultAvatarUrl } from '@sponsors/utils'
 const __dirname = path.dirname(new URL(import.meta.url).pathname)
+
+const past: BadgePreset = {
+  avatar: {
+    size: 20,
+  },
+  boxWidth: 22,
+  boxHeight: 22,
+  container: {
+    sidePadding: 35,
+  },
+}
 
 export default defineConfig({
   github: {
@@ -15,6 +27,11 @@ export default defineConfig({
     type: 'user',
   },
   // read afdian from env
+  afdian: {
+    userId: '283c46c274ff11ea932d52540025c377',
+    includePurchases: true,
+    purchaseEffectivity: 180,
+  },
 
   formats: ['svg', 'png'],
 
@@ -26,22 +43,27 @@ export default defineConfig({
 
   providers: [
     'github',
-    AfdianProvider,
+    'afdian',
+    // AfdianProvider,
     CustomProvider,
   ],
 
   tiers: [
     {
+      title: 'Past Sponsors',
+      monthlyDollars: -1,
+      preset: past,
+    },
+    {
       title: 'Backers',
+      preset: tierPresets.small,
       // to replace the entire tier rendering
       compose: (composer, sponsors, config) => {
         composer.addSpan(20)
         composer.addTitle('Backers').addSpan(5)
 
         const noAvatarSponsors = sponsors.filter(item => item.sponsor.avatarUrl === defaultAvatarUrl)
-
         const avatarSponsors = sponsors.filter(item => item.sponsor.avatarUrl !== defaultAvatarUrl)
-
         composer.addSponsorGrid(avatarSponsors, tierPresets.medium)
 
         generateTextSponsors(composer, noAvatarSponsors, config)
@@ -131,4 +153,6 @@ export default defineConfig({
       },
     },
   ],
+
+  sponsorsAutoMerge: true,
 })

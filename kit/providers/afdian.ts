@@ -1,3 +1,4 @@
+// deprecated, ok let's use afdian in sponsorkit
 import 'dotenv/config'
 import process from 'node:process'
 import type { AfdianApiOpts } from 'afdian-api'

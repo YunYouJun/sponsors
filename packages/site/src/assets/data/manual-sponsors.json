@@ -42,7 +42,7 @@
     "id": "Sknp1006",
     "name": "SKNP",
     "avatar": "https://cdn.jsdelivr.net/gh/Sknp1006/cdn@master/img/albums/arknights_Skadi/024.png",
-    "url": "https://sknp.top/",
+    "url": "https://sknp.top",
     "total": 312,
     "children": [
       {
@@ -152,7 +152,6 @@
   {
     "name": "小于同学",
     "url": "https://yby.zone/",
-    "avatar": "https://source.yby.zone/tx.jpg",
     "total": 176.88,
     "children": [
       {

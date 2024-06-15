@@ -39,8 +39,8 @@ export async function fetchCustomSponsors(): Promise<Sponsorship[]> {
         avatarUrl,
         linkUrl: sponsor.url || 'https://sponsors.yunyoujun.cn',
       },
-      // CNY
-      monthlyDollars: sponsor.total / 6,
+      // CNY one time
+      monthlyDollars: sponsor.total / 6 / 12,
       privacyLevel: 'PUBLIC',
       tierName: '扫码赞助',
       createdAt: '',
