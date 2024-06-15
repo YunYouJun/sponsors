@@ -1,0 +1,1 @@
+import{d as e,u as o,o as s,c as a,t as c,e as r}from"./app-CFx2obmD.js";const l=e({__name:"[...all]",setup(u){const{t}=o();return(f,p)=>(s(),a("div",null,c(r(t)("not-found")),1))}}),n={};typeof n=="function"&&n(l);export{l as default};
