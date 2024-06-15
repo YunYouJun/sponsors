@@ -10,11 +10,15 @@ jobs:
   update-sponsors:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-
-      - uses: pnpm/action-setup@v2
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v3
+      - uses: actions/setup-node@v4
         with:
-          run_install: true
+          node-version: lts/*
+          cache: pnpm
+
+      - name: Install
+        run: pnpm install
 
       - name: Update sponsors
         run: npm run kit:build

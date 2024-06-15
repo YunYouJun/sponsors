@@ -53,6 +53,7 @@ Thanks for your support.
 - QQ 群：[1050458482](https://qm.qq.com/cgi-bin/qm/qr?k=r-b3949w12L0wGiAmhUWibg3epW1Suik&jump_from=webapi&authKey=nhLrI7D8toe4Ph3LtcQ1l4dtYtUg7RzexTunnf9gI5vvDftcuhg4za+xBH+EiJfh)
 - BiliBili：[云游君](https://space.bilibili.com/1579790)
 - X：[YunYouJun](https://twitter.com/YunYouJun)
+- 微信公众号：[云游君](https://cdn.yunyoujun.cn/img/about/white-qrcode-and-search.jpg)
 - ~~小红书被封了~~
 
 ## Usage
