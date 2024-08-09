@@ -21,7 +21,7 @@ const { t } = useI18n()
     <a
       class="flex items-center justify-center"
       m="2"
-      href="https://afdian.net/@yunyoujun"
+      href="https://afdian.com/@yunyoujun"
       target="_blank"
     >
       或者要试试

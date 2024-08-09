@@ -32,7 +32,7 @@ Thanks for your support.
 | ----------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
 | <img width="250" src="https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/alipay-qrcode.jpg" alt="支付宝"> | <img width="250" src="https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/wechat-reward-code.jpg" alt="微信赞赏"> | <img width="250" src="https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/qqpay-qrcode.png" alt="QQ 支付"> |
 
-- 爱发电：[@yunyoujun](https://afdian.net/@yunyoujun)
+- 爱发电：[@yunyoujun](https://afdian.com/@yunyoujun)
 - Patreon: [YunYouJun](https://www.patreon.com/yunyoujun)
 
 ## Contact

@@ -26,7 +26,7 @@ export const AfdianProvider: Provider = {
 }
 
 /**
- * https://afdian.net/dashboard/dev
+ * https://afdian.com/dashboard/dev
  */
 export async function fetchAfdianSponsors(options: AfdianApiOpts): Promise<Sponsorship[]> {
   const afdian = new Afdian(options)
@@ -49,7 +49,7 @@ export async function fetchAfdianSponsors(options: AfdianApiOpts): Promise<Spons
         login: sponsor.user.user_id,
         name: sponsor.user.name,
         avatarUrl: sponsor.user.avatar,
-        linkUrl: `https://afdian.net/u/${sponsor.user.user_id}`,
+        linkUrl: `https://afdian.com/u/${sponsor.user.user_id}`,
       },
       // CNY
       monthlyDollars: Number.parseFloat(sponsor.all_sum_amount) / 6,
