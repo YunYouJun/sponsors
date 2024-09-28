@@ -30,6 +30,17 @@ export const markdownWrapperClasses = 'post-card markdown-body m-auto text-left'
 
 export default defineConfig(() => {
   return {
+    css: {
+      preprocessorOptions: {
+        /**
+         * @see https://vitejs.dev/config/shared-options.html#css-preprocessoroptions
+         */
+        scss: {
+          api: 'modern-compiler', // or "modern", "legacy"
+        },
+      },
+    },
+
     resolve: {
       alias: {
         '~/': `${path.resolve(__dirname, 'src')}/`,
@@ -82,7 +93,7 @@ export default defineConfig(() => {
       // see unocss.config.ts for config
       Unocss(),
 
-      // vite-plugin-vue-markdown
+      // unplugin-vue-markdown
       // Don't need this? Try vitesse-lite: https://github.com/antfu/vitesse-lite
       Markdown({
         wrapperClasses: markdownWrapperClasses,

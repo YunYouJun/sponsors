@@ -204,6 +204,12 @@ interesting:
     textColor: white
     github: ElpsyCN/fc
     url: https://fc.elpsy.cn
+  - name: chat-generator
+    emoji: 💬
+    desc: 经典聊天记录橱窗，生成聊天记录，小丑模拟器。
+    color: '#f7f7f7'
+    github: YunYouJun/chat-generator
+    url: https://chat.yunyoujun.cn
 
 plugins:
   - name: unplugin-glsl
