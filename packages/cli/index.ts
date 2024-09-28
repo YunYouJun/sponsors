@@ -1,15 +1,10 @@
 #!/usr/bin/env node
 import process from 'node:process'
 import { program } from 'commander'
-import inquirer from 'inquirer'
-
-// https://github.com/haversnail/inquirer-date-prompt
-import datePrompt from 'inquirer-date-prompt'
-import pkg from './package.json'
 
 import { onAdd } from './add'
 
-inquirer.registerPrompt('date', datePrompt as any)
+import pkg from './package.json'
 
 program.version(pkg.version)
 

@@ -1,9 +1,9 @@
+import type { MoneySponsor } from '../types'
 import fs from 'node:fs'
 import { basename } from 'node:path'
-import yaml from 'js-yaml'
 
 import consola from 'consola'
-import type { MoneySponsor } from '../types'
+import yaml from 'js-yaml'
 
 /**
  * 从 Yaml 文件生成 json

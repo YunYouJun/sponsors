@@ -1,13 +1,12 @@
+import type { SponsorMethod } from '../types'
 import fs from 'node:fs'
 import path from 'node:path'
-import consola from 'consola'
 
-import inquirer from 'inquirer'
-import type { SponsorMethod } from '../types'
-import { MoneyMethod } from '../types'
-import { EnumKeys } from '../types/helper'
+import consola from 'consola'
 import sponsors from '../site/src/assets/data/manual-sponsors.json'
 import { sortSponsor } from '../site/src/utils'
+import { MoneyMethod } from '../types'
+import { EnumKeys } from '../types/helper'
 import { config } from './config'
 
 const sponsorMethods: SponsorMethod[] = EnumKeys(MoneyMethod).map(
@@ -17,64 +16,51 @@ sponsorMethods.push('其他')
 
 const sponsorsJsonFile = path.resolve(config.dataFolder, 'manual-sponsors.json')
 
-const questions = [
-  {
-    type: 'input',
-    name: 'name',
-    message: '赞助者名称：',
-  },
-  {
-    type: 'input',
-    name: 'url',
-    message: '赞助者链接：',
-  },
-  {
-    type: 'date',
-    name: 'date',
-    message: '赞助日期：',
-    locale: 'zh-CN',
-    // format: { month: 'short' },
-  },
-  {
-    type: 'list',
-    name: 'method',
-    message: '赞助方式：',
-    choices: sponsorMethods,
-  },
-  {
-    type: 'number',
-    name: 'amount',
-    message: '赞助金额：',
-  },
-  {
-    type: 'string',
-    name: 'memo',
-    message: '备注内容：',
-  },
-]
-
 export async function onAdd() {
-  const answer = await inquirer.prompt(questions)
+  const sponsorName = await consola.prompt('赞助者名称', {
+    type: 'text',
+  })
+  const sponsorUrl = await consola.prompt('赞助者链接', {
+    type: 'text',
+  })
+  const sponsorAvatar = await consola.prompt('赞助者头像', {
+    type: 'text',
+  })
+  const sponsorDate = await consola.prompt('赞助日期', {
+    type: 'text',
+    locale: 'zh-CN',
+    hint: '2021-02-11T18:42:18.869Z',
+  })
+  const sponsorMethod = await consola.prompt('赞助方式', {
+    type: 'select',
+    options: sponsorMethods,
+  })
+  const sponsorAmount = await consola.prompt('赞助金额', {
+    type: 'text',
+  })
+  const sponsorMemo = await consola.prompt('备注内容', {
+    type: 'text',
+  })
   // for debug
 
-  consola.info(answer)
+  const item = sponsors.find(sponsor => sponsor.name === sponsorName)
 
-  const item = sponsors.find(sponsor => sponsor.name === answer.name)
+  const sponsorAmountNumber = Number(sponsorAmount)
 
   if (!item) {
     consola.success('The first sponsorship from this person!')
 
     sponsors.push({
-      name: answer.name,
-      url: answer.url,
-      avatar: answer.avatar,
-      total: answer.amount,
+      name: sponsorName,
+      url: sponsorUrl,
+      avatar: sponsorAvatar,
+      total: sponsorAmount,
       children: [
         {
-          date: answer.date,
-          method: answer.method,
-          amount: answer.amount,
-          memo: answer.memo,
+          date: sponsorDate,
+          method: sponsorMethod,
+          amount: sponsorAmountNumber,
+          memo: sponsorMemo,
         },
       ],
     } as any)
@@ -86,14 +72,14 @@ export async function onAdd() {
     if (Array.isArray(item.children)) {
       item.children.push(
         {
-          date: answer.date,
-          method: answer.method,
-          amount: answer.amount,
-          memo: answer.memo,
+          date: sponsorDate,
+          method: sponsorMethod,
+          amount: sponsorAmountNumber,
+          memo: sponsorMemo,
         },
       )
 
-      item.total += answer.amount
+      item.total += sponsorAmountNumber
     }
   }
 

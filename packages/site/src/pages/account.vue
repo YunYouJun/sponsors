@@ -1,13 +1,13 @@
 <script lang="ts" setup>
-import store from '../store'
-
-import SponsorList from '~/components/SponsorList.vue'
-import OtherSponsors from '~/components/OtherSponsors.vue'
-import ExpenseTable from '~/components/ExpenseTable.vue'
-import { sumExpense, sumIncome } from '~/utils'
+import expenses from '~/assets/data/expenses.yml'
 
 import sponsors from '~/assets/data/manual-sponsors.json'
-import expenses from '~/assets/data/expenses.yml'
+import ExpenseTable from '~/components/ExpenseTable.vue'
+import OtherSponsors from '~/components/OtherSponsors.vue'
+import SponsorList from '~/components/SponsorList.vue'
+
+import { sumExpense, sumIncome } from '~/utils'
+import store from '../store'
 
 const { t } = useI18n()
 const state = store.state

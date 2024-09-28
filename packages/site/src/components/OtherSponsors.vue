@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import type { OtherSponsor } from '@sponsors/types'
-import SponsorAvatar from './common/SponsorAvatar.vue'
-import { formatDate } from '~/utils'
 import SponsorsData from '~/assets/data/special-sponsors.json'
+import { formatDate } from '~/utils'
+import SponsorAvatar from './common/SponsorAvatar.vue'
 
 const sponsors = ref<OtherSponsor[]>(SponsorsData as any)
 </script>

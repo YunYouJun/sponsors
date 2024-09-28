@@ -1,5 +1,5 @@
-import { defaultAvatarUrl } from '@sponsors/utils'
 import type { SponsorkitConfig, Sponsorship, SvgComposer } from 'sponsorkit'
+import { defaultAvatarUrl } from '@sponsors/utils'
 import { presets } from 'sponsorkit'
 
 export function encodeHtmlEntities(str: string) {

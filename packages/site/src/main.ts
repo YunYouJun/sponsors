@@ -1,17 +1,17 @@
-import { ViteSSG } from 'vite-ssg'
-import { setupLayouts } from 'virtual:generated-layouts'
-import App from './App.vue'
 import generatedRoutes from '~pages'
+import { setupLayouts } from 'virtual:generated-layouts'
+import { ViteSSG } from 'vite-ssg'
+import type { UserModule } from '~/types'
+
+import App from './App.vue'
 
 import '@unocss/reset/tailwind.css'
-
 // your custom styles here
 import 'star-markdown-css/src/scss/theme/yun.scss'
 import './styles/css-vars.scss'
 import './styles/index.scss'
-import 'uno.css'
 
-import type { UserModule } from '~/types'
+import 'uno.css'
 
 const routes = setupLayouts(generatedRoutes)
 // https://github.com/antfu/vite-ssg

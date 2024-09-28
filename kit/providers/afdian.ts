@@ -1,10 +1,10 @@
-// deprecated, ok let's use afdian in sponsorkit
-import 'dotenv/config'
-import process from 'node:process'
 import type { AfdianApiOpts } from 'afdian-api'
+import type { Provider, Sponsorship } from 'sponsorkit'
+import process from 'node:process'
 import Afdian from 'afdian-api'
 
-import type { Provider, Sponsorship } from 'sponsorkit'
+// deprecated, ok let's use afdian in sponsorkit
+import 'dotenv/config'
 
 export const AfdianProvider: Provider = {
   name: 'afdian',

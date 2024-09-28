@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import VueAboutMe from 'vue-about-me'
-import 'vue-about-me/style.css'
 import { isDark } from '~/composables'
+import 'vue-about-me/style.css'
 
 const copyright = ref({
   name: 'Sponsors',

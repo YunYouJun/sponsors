@@ -1,6 +1,6 @@
-import path from 'node:path'
-
 import type { BadgePreset } from 'sponsorkit'
+
+import path from 'node:path'
 import { defaultInlineCSS, defineConfig, tierPresets } from 'sponsorkit'
 // migrate to use afdian in sponsorkit
 // import { AfdianProvider } from './providers/afdian'

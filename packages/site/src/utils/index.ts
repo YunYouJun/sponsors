@@ -1,10 +1,10 @@
-import dayjs from 'dayjs'
 import type { RankSponsor } from '@sponsors/types'
+import dayjs from 'dayjs'
 
 export const isProd = import.meta.env?.PROD === true
 
-export * from './name'
 export * from './money'
+export * from './name'
 
 /**
  * 格式化日期

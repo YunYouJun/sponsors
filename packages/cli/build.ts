@@ -1,9 +1,9 @@
-import path from 'node:path'
 import type { MoneySponsor, Sponsor } from '../types/index'
+import path from 'node:path'
 import sponsors from '../site/src/assets/data/manual-sponsors.json'
-import { generateJSONfromYaml, generateMarkdown } from './utils'
-
 import { config } from './config'
+
+import { generateJSONfromYaml, generateMarkdown } from './utils'
 
 try {
   let data = sponsors as any as Sponsor[]

@@ -3,7 +3,7 @@
   "type": "module",
   "version": "2.0.0",
   "private": true,
-  "packageManager": "pnpm@9.7.0",
+  "packageManager": "pnpm@9.11.0",
   "description": "YunYouJun's Sponsors | 云游君的赞助者们",
   "author": "YunYouJun <me@yunyoujun.cn>",
   "license": "MIT",
@@ -28,18 +28,18 @@
   },
   "dependencies": {
     "commander": "^12.1.0",
-    "dayjs": "^1.11.12"
+    "dayjs": "^1.11.13"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^2.25.0",
+    "@antfu/eslint-config": "^3.7.3",
     "@types/js-yaml": "^4.0.9",
     "@types/markdown-it-link-attributes": "^3.0.5",
     "@types/md5": "^2.3.5",
-    "@unocss/eslint-plugin": "^0.61.9",
+    "@unocss/eslint-plugin": "^0.63.0",
     "cross-env": "^7.0.3",
-    "eslint": "^9.9.0",
-    "tsx": "^4.17.0",
-    "typescript": "~5.5.4",
-    "vue-tsc": "^2.0.29"
+    "eslint": "^9.11.1",
+    "tsx": "^4.19.1",
+    "typescript": "~5.6.2",
+    "vue-tsc": "^2.1.6"
   }
 }

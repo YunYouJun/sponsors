@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import ProjectData from '~/assets/data/projects.yml'
-import type { ProjectItem } from '~/types'
 import ProjectCollection from '~/components/projects/ProjectCollection.vue'
+import type { ProjectItem } from '~/types'
 
 export interface ProjectDataType {
   applets: ProjectItem[]

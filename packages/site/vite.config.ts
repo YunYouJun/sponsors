@@ -1,26 +1,26 @@
 import path from 'node:path'
-import { defineConfig } from 'vite'
+import VueI18n from '@intlify/unplugin-vue-i18n/vite'
+import Yaml from '@rollup/plugin-yaml'
+
+import Shiki from '@shikijs/markdown-it'
 import Vue from '@vitejs/plugin-vue'
+import LinkAttributes from 'markdown-it-link-attributes'
+
+import Unocss from 'unocss/vite'
+
+import Components from 'unplugin-vue-components/vite'
+import { defineConfig } from 'vite'
 
 import Pages from 'vite-plugin-pages'
 import Layouts from 'vite-plugin-vue-layouts'
 import generateSitemap from 'vite-ssg-sitemap'
-
-import Components from 'unplugin-vue-components/vite'
-
 // import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
 import AutoImport from 'unplugin-auto-import/vite'
-import Unocss from 'unocss/vite'
-
-import VueI18n from '@intlify/unplugin-vue-i18n/vite'
 import Markdown from 'unplugin-vue-markdown/vite'
-import Shiki from '@shikijs/markdown-it'
+
 import Inspect from 'vite-plugin-inspect'
+
 import { VitePWA } from 'vite-plugin-pwa'
-
-import Yaml from '@rollup/plugin-yaml'
-
-import LinkAttributes from 'markdown-it-link-attributes'
 
 import SvgLoader from 'vite-svg-loader'
 

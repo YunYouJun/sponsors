@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 import type { Expense } from '../utils'
-import { formatDate } from '../utils'
-
 import ExpenseData from '~/assets/data/expenses.yml'
+
+import { formatDate } from '../utils'
 
 const expenses = ref<Expense[]>(ExpenseData.reverse())
 </script>
