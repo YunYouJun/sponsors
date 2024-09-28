@@ -4,40 +4,43 @@ import type { ProjectItem } from '~/types'
 
 const props = defineProps<{ project: ProjectItem }>()
 
-const project = toRef(props, 'project')
-
 const cardStyle = computed(() => {
-  if (project.value.color && (typeof project.value.gradient === 'undefined' || project.value.gradient)) {
-    const color = new TinyColor(project.value.color)
-    const textColor = project.value.textColor || (color.isDark() ? 'white' : 'black')
-    return {
-      '--un-gradient-stops': `${color.spin(55).toHexString()}, ${project.value.color}`,
-      'color': textColor,
-    }
+  const styles = {
+    color: 'black',
+  }
+  let textColor = props.project.textColor
+  if (props.project.color && (typeof props.project.gradient === 'undefined' || props.project.gradient)) {
+    const color = new TinyColor(props.project.color)
+    styles['--un-gradient-stops'] = `${color.spin(55).toHexString()}, ${props.project.color}`
+    if (!textColor)
+      textColor = color.isDark() ? 'white' : 'black'
   }
   else {
-    return {
-      backgroundColor: project.value.color || 'rgba(255,255,255,0.9)',
-      color: 'black',
-    }
+    styles.backgroundColor = props.project.color || 'rgba(255,255,255,0.9)'
   }
+  styles.color = textColor
+  return styles
 })
 
 const githubUrl = computed(() => {
-  if (project.value.github)
-    return `https://github.com/${project.value.github}`
+  if (props.project.github)
+    return `https://github.com/${props.project.github}`
 
   else
-    return `https://github.com/YunYouJun/${project.value.name}`
+    return `https://github.com/YunYouJun/${props.project.name}`
+})
+
+const npmLink = computed(() => {
+  return `https://www.npmjs.com/package/${props.project.npm}`
 })
 </script>
 
 <template>
   <div
-    class="m-2 w-90 transform rounded shadow-md transition duration-400"
+    class="m-2 w-90 transform rounded shadow-md grayscale-10 transition duration-400"
     bg="opacity-80 gradient-to-br"
     p="2"
-    hover="shadow-lg from-white scale-105"
+    hover="shadow-lg scale-105 grayscale-0"
     :style="cardStyle"
   >
     <div v-if="project.emoji" class="mt-4">
@@ -56,6 +59,9 @@ const githubUrl = computed(() => {
       </a>
       <a v-if="project.docs" class="mx-1 icon-btn" :href="project.docs" target="_blank">
         <div i-ri-book-line />
+      </a>
+      <a v-if="project.npm" class="mx-1 icon-btn" :href="npmLink" target="_blank">
+        <div i-ri-npmjs-line />
       </a>
     </p>
   </div>

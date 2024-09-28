@@ -42,10 +42,16 @@ design:
     url: https://explosions.yunyoujun.cn/
 
 applets:
+  - name: cook
+    emoji: 🥘
+    desc: 好的，今天我们来做菜！(可以根据所选食材筛选菜谱)
+    color: '#16a34a'
+    url: https://cook.yunyoujun.cn
   - name: ai-sfc
     emoji: 🧧
     desc: AI 春联
     color: '#ff4444'
+    textColor: white
     gradient: false
     github: YunYouJun/ai-sfc
     url: https://ai-sfc.yunyoujun.cn
@@ -105,11 +111,6 @@ applets:
     desc: Static Blog Framework 新一代静态博客框架
     color: '#0078e7'
     url: https://valaxy.yyj.moe
-  - name: cook
-    emoji: 🥘
-    desc: 好的，今天我们来做菜！(可以根据所选食材筛选菜谱)
-    color: '#16a34a'
-    url: https://cook.yunyoujun.cn
   - name: sese-engine-ui
     emoji: 🔍
     desc: 色色搜索引擎 UI（允许用户自建搜索引擎）
@@ -211,6 +212,7 @@ interesting:
     github: YunYouJun/chat-generator
     url: https://chat.yunyoujun.cn
 
+# 插件
 plugins:
   - name: unplugin-glsl
     emoji: 🎨
@@ -218,6 +220,14 @@ plugins:
     color: '#2b7489'
     github: YunYouJun/unplugin-glsl
     url: https://unplugin-glsl.pages.dev
+  - name: unplugin-mockery
+    emoji: 🤡
+    desc: 可视化 Mock 数据管理，支持 TS 热更新，支持 Webpack/Vite/Vue CLI
+    color: '#f35543'
+    gradient: false
+    textColor: white
+    github: YunYouJun/unplugin-mockery
+    npm: unplugin-mockery
   - name: hexo-widget-tree
     emoji: 🌲
     desc: Hexo 文章树状菜单预览插件
