@@ -28,9 +28,18 @@ function toggleLocales() {
       <div i-ri-translate />
     </a>
 
-    <router-link class="mx-1 icon-btn" to="/projects" :title="t('button.projects')">
+    <a
+      href="https://yunyoujun.cn/" class="mx-1 icon-btn" target="_blank"
+    >
+      <div i-ri-news-line />
+    </a>
+
+    <a
+      href="https://yunyoujun.cn/projects/" class="mx-1 icon-btn" target="_blank"
+      :title="t('button.projects')"
+    >
       <div i-mdi-projector-screen-outline />
-    </router-link>
+    </a>
 
     <router-link class="mx-1 icon-btn" to="/about" :title="t('button.about')">
       <div i-carbon-dicom-overlay />

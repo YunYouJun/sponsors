@@ -5,7 +5,7 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <donate-qrcode />
+  <SponsorIntro />
   <br>
 
   <div class="post-card">

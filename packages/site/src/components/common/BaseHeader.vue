@@ -10,15 +10,15 @@ const { t } = useI18n()
       我很可爱，请给我钱！
     </p>
   </div>
-  <router-link to="/projects">
-    <a
+  <a href="https://yunyoujun.cn/projects/" target="_blank">
+    <div
       font="semibold"
       m="b-2"
       p="x-4 y-1"
       border="~ purple-300"
       class="inline-block items-center justify-center rounded-full text-sm text-purple-600 hover:(border-transparent bg-purple-600 text-white) dark:(text-purple-300) focus:(outline-none ring-2 ring-offset-2 ring-purple-600)"
-    >{{ t('message.projects') }}</a>
-  </router-link>
+    >{{ t('message.projects') }}</div>
+  </a>
 </template>
 
 <style>

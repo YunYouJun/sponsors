@@ -15,11 +15,11 @@ declare module 'vue' {
     ExpenseTable: typeof import('./components/ExpenseTable.vue')['default']
     MethodIcon: typeof import('./components/MethodIcon.vue')['default']
     OtherSponsors: typeof import('./components/OtherSponsors.vue')['default']
-    ProjectCard: typeof import('./components/projects/ProjectCard.vue')['default']
-    ProjectCollection: typeof import('./components/projects/ProjectCollection.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SponsorAvatar: typeof import('./components/common/SponsorAvatar.vue')['default']
+    SponsorBtn: typeof import('./components/common/SponsorBtn.vue')['default']
+    SponsorIntro: typeof import('./components/SponsorIntro.vue')['default']
     SponsorList: typeof import('./components/SponsorList.vue')['default']
     SponsorRow: typeof import('./components/SponsorRow.vue')['default']
   }

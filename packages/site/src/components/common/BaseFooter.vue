@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import VueAboutMe from 'vue-about-me'
+import { VueAboutMe } from 'vue-about-me'
 import { isDark } from '~/composables'
 import 'vue-about-me/style.css'
 

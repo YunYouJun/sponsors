@@ -4,11 +4,10 @@ export default defineThemeConfig({
   // colors: {
   //   primary: 'red',
   // },
-
   nav: [
     {
       text: '项目',
-      link: '/projects',
+      link: 'https://yunyoujun.cn/projects',
     },
     {
       text: '关于',

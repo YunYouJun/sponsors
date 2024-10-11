@@ -26,14 +26,14 @@ Thanks for your support.
 
 ## Donate
 
-> 如果能留下你的称呼和备注就再好不过了，大于 6 元的我将会将其添加至 [赞助者列表](https://sponsors.yunyoujun.cn/) 中。（没留的话，就默认使用可以看到的 ID 或者叫 `好心人` 了～）
-
-| 支付宝                                                                                                      | 微信赞赏                                                                                                         | QQ 支付                                                                                                     |
+<!-- | 支付宝                                                                                                      | 微信赞赏                                                                                                         | QQ 支付                                                                                                     |
 | ----------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| <img width="250" src="https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/alipay-qrcode.jpg" alt="支付宝"> | <img width="250" src="https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/wechat-reward-code.jpg" alt="微信赞赏"> | <img width="250" src="https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/qqpay-qrcode.png" alt="QQ 支付"> |
+| <img width="250" src="https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/alipay-qrcode.jpg" alt="支付宝"> | <img width="250" src="https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/wechat-reward-code.jpg" alt="微信赞赏"> | <img width="250" src="https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/donate/qqpay-qrcode.png" alt="QQ 支付"> | -->
 
-- 爱发电：[@yunyoujun](https://afdian.com/@yunyoujun)
-- Patreon: [YunYouJun](https://www.patreon.com/yunyoujun)
+- 通过爱发电赞助我：[@yunyoujun](https://afdian.com/@yunyoujun)
+- 通过 GitHub 赞助我：[YunYouJun](https://github.com/YunYouJun/sponsors)
+- 通过微信公众号文章赞赏：[关于赞助](https://mp.weixin.qq.com/s?__biz=MzU3NTI4MjQwNQ==&mid=2247484117&idx=1&sn=9fcc396ed89c709401f3438e7991ebe1&chksm=fd24cf5fca534649dc016d938db26d9a244fea9e824552e99033e531c0232acc95b96ec5698a#rd)
+<!-- - Patreon: [YunYouJun](https://www.patreon.com/yunyoujun) -->
 
 ## Contact
 
