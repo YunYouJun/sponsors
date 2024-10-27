@@ -9,7 +9,7 @@ import { methodMap, methods } from '~/config'
       <div class="sponsor-method-icon m-auto" :class="[methodMap[key].icon]" text="2xl" :title="methodMap[key].title" />
 
       <a class="qrcode-img-container mx-6 inline-flex lt-sm:mx-2" :href="donateMethod[key].url" :title="donateMethod[key].title" target="_blank">
-        <img class="qrcode-img fade-in shadow-md" :style="`--qrcode-border-color: ${methodMap[key].color}`" :src="donateMethod[key].url" :alt="donateMethod[key].title">
+        <img class="fade-in qrcode-img shadow-md" :style="`--qrcode-border-color: ${methodMap[key].color}`" :src="donateMethod[key].url" :alt="donateMethod[key].title">
       </a>
     </div>
   </div>

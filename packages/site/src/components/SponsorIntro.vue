@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import { donateMethod } from '~/assets/donate'
-import { methodMap, methods } from '~/config'
-
 const { t } = useI18n()
 </script>
 
