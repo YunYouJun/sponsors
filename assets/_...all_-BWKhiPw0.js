@@ -1,0 +1,1 @@
+import{d as e,p as o,a,c as s,t as c,u as r}from"./app-5Ph_mEed.js";const l=e({__name:"[...all]",setup(p){const{t}=o();return(u,f)=>(a(),s("div",null,c(r(t)("not-found")),1))}}),n={};typeof n=="function"&&n(l);export{l as default};
