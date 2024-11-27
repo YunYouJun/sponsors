@@ -1,6 +1,6 @@
-import generatedRoutes from '~pages'
 import { setupLayouts } from 'virtual:generated-layouts'
 import { ViteSSG } from 'vite-ssg'
+import generatedRoutes from '~pages'
 import type { UserModule } from '~/types'
 
 import App from './App.vue'

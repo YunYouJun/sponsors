@@ -8,19 +8,19 @@ import LinkAttributes from 'markdown-it-link-attributes'
 
 import Unocss from 'unocss/vite'
 
-import Components from 'unplugin-vue-components/vite'
-import { defineConfig } from 'vite'
-
-import Pages from 'vite-plugin-pages'
-import Layouts from 'vite-plugin-vue-layouts'
-import generateSitemap from 'vite-ssg-sitemap'
 // import { ElementPlusResolver } from "unplugin-vue-components/resolvers";
 import AutoImport from 'unplugin-auto-import/vite'
+import Components from 'unplugin-vue-components/vite'
+
 import Markdown from 'unplugin-vue-markdown/vite'
-
+import { defineConfig } from 'vite'
 import Inspect from 'vite-plugin-inspect'
-
+import Pages from 'vite-plugin-pages'
 import { VitePWA } from 'vite-plugin-pwa'
+
+import Layouts from 'vite-plugin-vue-layouts'
+
+import generateSitemap from 'vite-ssg-sitemap'
 
 import SvgLoader from 'vite-svg-loader'
 
