@@ -3,10 +3,8 @@ import type { BadgePreset } from 'sponsorkit'
 import path from 'node:path'
 // migrate to use afdian in sponsorkit
 // import { AfdianProvider } from './providers/afdian'
-import { defaultAvatarUrl } from '@sponsors/utils'
 import { defaultInlineCSS, defineConfig, tierPresets } from 'sponsorkit'
 import { CustomProvider } from './providers/custom'
-import { generateTextSponsors, getSponsorsByAvatar } from './utils'
 
 const __dirname = path.dirname(new URL(import.meta.url).pathname)
 
@@ -58,33 +56,33 @@ export default defineConfig({
       title: 'Backers',
       preset: tierPresets.small,
       // to replace the entire tier rendering
-      compose: (composer, sponsors, config) => {
-        composer.addSpan(20)
-        composer.addTitle('Backers').addSpan(5)
+      // compose: (composer, sponsors, config) => {
+      //   composer.addSpan(20)
+      //   composer.addTitle('Backers').addSpan(5)
 
-        const noAvatarSponsors = sponsors.filter(item => item.sponsor.avatarUrl === defaultAvatarUrl)
-        const avatarSponsors = sponsors.filter(item => item.sponsor.avatarUrl !== defaultAvatarUrl)
-        composer.addSponsorGrid(avatarSponsors, tierPresets.medium)
+      //   const noAvatarSponsors = sponsors.filter(item => item.sponsor.avatarUrl === defaultAvatarUrl)
+      //   const avatarSponsors = sponsors.filter(item => item.sponsor.avatarUrl !== defaultAvatarUrl)
+      //   composer.addSponsorGrid(avatarSponsors, tierPresets.medium)
 
-        generateTextSponsors(composer, noAvatarSponsors, config)
+      //   generateTextSponsors(composer, noAvatarSponsors, config)
 
-        composer.addSpan(10)
-      },
+      //   composer.addSpan(10)
+      // },
     },
     {
       title: 'Sponsors',
       monthlyDollars: 3,
       preset: tierPresets.medium,
-      compose(composer, sponsors, config) {
-        composer.addTitle(this.title || 'Sponsors').addSpan(5)
+      // compose(composer, sponsors, config) {
+      //   composer.addTitle(this.title || 'Sponsors').addSpan(5)
 
-        const typeSponsors = getSponsorsByAvatar(sponsors)
+      //   const typeSponsors = getSponsorsByAvatar(sponsors)
 
-        composer.addSponsorGrid(typeSponsors.avatar, tierPresets.medium)
-        generateTextSponsors(composer, typeSponsors.noAvatar, config)
+      //   composer.addSponsorGrid(typeSponsors.avatar, tierPresets.medium)
+      //   generateTextSponsors(composer, typeSponsors.noAvatar, config)
 
-        composer.addSpan(20)
-      },
+      //   composer.addSpan(20)
+      // },
       // to insert custom elements after the tier block
       // composeAfter: (composer, tierSponsors, config) => {
       //   composer.addSpan(10)
@@ -94,23 +92,23 @@ export default defineConfig({
       title: 'Silver Sponsors',
       monthlyDollars: 10,
       preset: tierPresets.large,
-      compose(composer, sponsors, config) {
-        composer.addTitle(this.title || 'Silver Sponsors').addSpan(5)
+      // compose(composer, sponsors, config) {
+      //   composer.addTitle(this.title || 'Silver Sponsors').addSpan(5)
 
-        const typeSponsors = getSponsorsByAvatar(sponsors)
+      //   const typeSponsors = getSponsorsByAvatar(sponsors)
 
-        composer.addSponsorGrid(typeSponsors.avatar, tierPresets.large)
-        generateTextSponsors(composer, typeSponsors.noAvatar, config, {
-          nameSize: 60,
-          boxWidth: 100,
-          fontSize: '16px',
-          name: {
-            classes: 'silver-sponsors',
-          },
-        })
+      //   composer.addSponsorGrid(typeSponsors.avatar, tierPresets.large)
+      //   generateTextSponsors(composer, typeSponsors.noAvatar, config, {
+      //     nameSize: 60,
+      //     boxWidth: 100,
+      //     fontSize: '16px',
+      //     name: {
+      //       classes: 'silver-sponsors',
+      //     },
+      //   })
 
-        composer.addSpan(30)
-      },
+      //   composer.addSpan(30)
+      // },
     },
     {
       title: 'Gold Sponsors',
@@ -118,6 +116,17 @@ export default defineConfig({
       preset: tierPresets.xl,
     },
   ],
+
+  // Automatically Merge sponsors from different platforms
+  sponsorsAutoMerge: true,
+
+  // Manually merge sponsors from different platforms
+  // mergeSponsors: [
+  //   [
+  //     { login: 'YunYouJun', provider: 'github' },
+  //     { login: 'yunyoujun', provider: 'afdian' },
+  //   ],
+  // ],
 
   renders: [
     {
@@ -128,16 +137,16 @@ export default defineConfig({
       name: 'sponsors.wide',
       width: 1800,
     },
-    {
-      name: 'sponsors.part1',
-      width: 800,
-      filter: sponsor => sponsor.monthlyDollars >= 9.9,
-    },
-    {
-      name: 'sponsors.part2',
-      width: 800,
-      filter: sponsor => sponsor.monthlyDollars < 9.9 && sponsor.monthlyDollars >= 0,
-    },
+    // {
+    //   name: 'sponsors.part1',
+    //   width: 800,
+    //   filter: sponsor => sponsor.monthlyDollars >= 9.9,
+    // },
+    // {
+    //   name: 'sponsors.part2',
+    //   width: 800,
+    //   filter: sponsor => sponsor.monthlyDollars < 9.9 && sponsor.monthlyDollars >= 0,
+    // },
     {
       name: 'sponsors.past',
       width: 800,
@@ -145,14 +154,12 @@ export default defineConfig({
     },
     {
       name: 'sponsors.circles',
+      renderer: 'circles',
       width: 1000,
       includePastSponsors: true,
-      renderer: 'circles',
       circles: {
         radiusPast: 3,
       },
     },
   ],
-
-  sponsorsAutoMerge: true,
 })

@@ -22,5 +22,6 @@ declare module 'vue' {
     SponsorIntro: typeof import('./components/SponsorIntro.vue')['default']
     SponsorList: typeof import('./components/SponsorList.vue')['default']
     SponsorRow: typeof import('./components/SponsorRow.vue')['default']
+    SponsorTextAvatar: typeof import('./components/SponsorTextAvatar.vue')['default']
   }
 }

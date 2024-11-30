@@ -1,9 +1,16 @@
 import type { RankSponsor } from '@sponsors/types'
 
 import type { Provider, Sponsorship } from 'sponsorkit'
+import path from 'node:path'
+
 import { defaultAvatarUrl, getQQAvatarUrl } from '@sponsors/utils'
+import fs from 'fs-extra'
+import { generateAvatars } from '../../packages/node-avatar/src/playwright'
+import { startServer } from '../../packages/node-avatar/src/utils'
+// import { generateAvatarByName } from '../utils'
 
 import manualSponsors from '../../packages/site/src/assets/data/manual-sponsors.json'
+import { avatarDistFolder, siteDistFolder } from '../config'
 
 export const CustomProvider: Provider = {
   name: 'custom',
@@ -20,16 +27,38 @@ export const CustomProvider: Provider = {
 export async function fetchCustomSponsors(): Promise<Sponsorship[]> {
   const rank: RankSponsor[] = (manualSponsors as any as RankSponsor[]).filter(sponsor => sponsor.total >= 6)
 
+  // generate avatars
+  const {
+    closeServer,
+  } = startServer(siteDistFolder)
+  await generateAvatars({
+    names: manualSponsors.map(sponsor => sponsor.name),
+    outDir: avatarDistFolder,
+  })
+  closeServer()
+
   if (!rank.length)
     throw new Error('Rank Error!')
 
   // check ping
   return rank.map((sponsor) => {
     let avatarUrl = defaultAvatarUrl
-    if (sponsor.qq)
-      avatarUrl = getQQAvatarUrl(sponsor.qq)
-    if (sponsor.avatar)
+
+    if (sponsor.avatar) {
       avatarUrl = sponsor.avatar
+    }
+    else if (sponsor.qq) {
+      avatarUrl = getQQAvatarUrl(sponsor.qq)
+    }
+    else if (sponsor.name) {
+      const avatarPath = path.resolve(avatarDistFolder, `${sponsor.name}.png`)
+      if (fs.existsSync(avatarPath)) {
+        const avatarBase64 = fs.readFileSync(avatarPath).toString('base64')
+        avatarUrl = `data:image/png;base64,${avatarBase64}`
+      }
+    }
+
+    // console.log('avatarUrl', avatarUrl)
 
     const sponsorShip: Sponsorship = {
       sponsor: {

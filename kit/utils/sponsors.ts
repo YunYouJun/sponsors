@@ -1,12 +1,14 @@
 import type { SponsorkitConfig, Sponsorship, SvgComposer } from 'sponsorkit'
 import { defaultAvatarUrl } from '@sponsors/utils'
-import { presets } from 'sponsorkit'
+import { tierPresets } from 'sponsorkit'
 
 export function encodeHtmlEntities(str: string) {
   return String(str).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
 }
 
 /**
+ * @deprecated 不在手动维护打赏（来自二维码）列表
+ *
  * generate sponsors without avatar
  * @param composer
  * @param sponsors
@@ -33,7 +35,7 @@ export function generateTextSponsors(composer: SvgComposer, sponsors: Sponsorshi
 
   const width = config.width || 700
 
-  const perLine = Math.floor((width - (presets.base.container?.sidePadding || 0) * 2) / boxWidth)
+  const perLine = Math.floor((width - (tierPresets.base.container?.sidePadding || 0) * 2) / boxWidth)
 
   Array.from({ length: Math.ceil(sponsors.length / perLine) })
     .fill(0)
@@ -52,7 +54,7 @@ export function generateTextSponsors(composer: SvgComposer, sponsors: Sponsorshi
 
         // not use '.sponsor-link' && '.sponsor-name' to avoid adblock
         if (item.sponsor.avatarUrl === defaultAvatarUrl) {
-          composer.addRaw(`<a xlink:href="${url}" class="${presets.base.classes || ''}" target="_blank" id="${name}">
+          composer.addRaw(`<a xlink:href="${url}" class="${tierPresets.base.classes || ''}" target="_blank" id="${name}">
   <text x="${x + nameSize / 2}" y="${y + 18}" text-anchor="middle" class="${preset.name.classes || ''}" fill="currentColor" font-size="${fontSize}">
   ${encodeHtmlEntities(name)}</text>
 </a>`)
@@ -64,6 +66,8 @@ export function generateTextSponsors(composer: SvgComposer, sponsors: Sponsorshi
 }
 
 /**
+ * @deprecated 不在手动维护打赏（来自二维码）列表
+ *
  * get sponsors by judge avatar
  * @param sponsors
  */

@@ -338,7 +338,6 @@
   },
   {
     "name": "落小梅",
-    "avatar": "https://yuexiaoya.cn/images/photo.jpg",
     "url": "https://yuexiaoya.cn",
     "total": 85,
     "children": [
@@ -358,7 +357,6 @@
   },
   {
     "name": "肥猪",
-    "avatar": "https://ae05.alicdn.com/kf/Hafb3ff95b57e4d21941095a4306797635.png",
     "url": "https://feizhuqwq.com/",
     "total": 83.32,
     "children": [
@@ -738,7 +736,7 @@
     ]
   },
   {
-    "name": "边缘星落灾星",
+    "name": "边缘星",
     "total": 20.2,
     "children": [
       {
@@ -813,7 +811,6 @@
   },
   {
     "name": "琚致远",
-    "avatar": "https://juzhiyuan.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F4eed5238-f631-4c7a-b943-aa66488385cc%2Favatar.jpeg?table=block&id=6a8d344b-2248-441e-bdeb-5f154fd73420&spaceId=fc72415a-e7c7-482e-923f-2dbc95aea3b7&width=250&userId=&cache=v2",
     "url": "https://juzhiyuan.me/",
     "total": 20,
     "children": [
