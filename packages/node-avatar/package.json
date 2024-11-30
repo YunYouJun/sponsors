@@ -2,6 +2,10 @@
   "scripts": {
     "generate": "tsx example/index.ts"
   },
+  "dependencies": {
+    "consola": "^3.2.3",
+    "serve-static": "^2.1.0"
+  },
   "devDependencies": {
     "@types/finalhandler": "^1.2.3",
     "@types/fs-extra": "^11.0.4",
@@ -10,9 +14,5 @@
     "fs-extra": "^11.2.0",
     "playwright-chromium": "^1.49.0",
     "tsx": "^4.19.2"
-  },
-  "dependencies": {
-    "consola": "^3.2.3",
-    "serve-static": "^2.1.0"
   }
 }

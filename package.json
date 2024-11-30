@@ -39,7 +39,7 @@
     "cross-env": "^7.0.3",
     "eslint": "^9.16.0",
     "tsx": "^4.19.2",
-    "typescript": "~5.7.2",
-    "vue-tsc": "^2.1.10"
+    "typescript": "catalog:",
+    "vue-tsc": "catalog:"
   }
 }

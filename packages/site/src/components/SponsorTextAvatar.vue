@@ -7,18 +7,18 @@ const props = defineProps<{
 const fontSize = computed(() => {
   const len = props.name.length
   if (len <= 3)
-    return 28
+    return 56
   if (len <= 6)
-    return 23
+    return 46
   if (len <= 8)
-    return 18
-  return 15
+    return 36
+  return 30
 })
 </script>
 
 <template>
   <div
-    class="sponsor-text-avatar size-32 inline-flex items-center justify-center bg-#e2e8f0 p-4 text-center"
+    class="sponsor-text-avatar size-64 inline-flex items-center justify-center bg-#e2e8f0 p-8 text-center"
     :class="{
       'rounded-full': props.rounded,
     }"
