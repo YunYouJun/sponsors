@@ -1,0 +1,1 @@
+import{I as o,c as r,b as t,r as n,o as c}from"./app-BMZ37V4H.js";const s={};function a(_,m){const e=n("router-view");return c(),r("main",null,[t(e)])}const p=o(s,[["render",a]]);export{p as default};
