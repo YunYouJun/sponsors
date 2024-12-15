@@ -1,17 +1,18 @@
 import type { RankSponsor } from 'packages/sponsors/types'
-
-import type { Provider, Sponsorship } from 'sponsorkit'
-
-import { defaultAvatarUrl, getQQAvatarUrl } from '@sponsors/utils'
-import { generateTextAvatarUrl } from '../../packages/node-avatar/src/svg'
+import type { Sponsorship } from 'sponsorkit'
+import { getQQAvatarUrl } from '@sponsors/utils'
 // import { generateAvatarByName } from '../utils'
 
 import manualSponsors from '../../packages/site/src/assets/data/manual-sponsors.json'
+import { encodeHtmlEntities } from '../utils'
 
-export const CustomProvider: Provider = {
+/**
+ * old manual sponsors
+ */
+export const CustomProvider = {
   name: 'custom',
 
-  fetchSponsors(_config) {
+  fetchSponsors() {
     return fetchCustomSponsors()
   },
 }
@@ -23,28 +24,18 @@ export const CustomProvider: Provider = {
 export async function fetchCustomSponsors(): Promise<Sponsorship[]> {
   const rank: RankSponsor[] = (manualSponsors as any as RankSponsor[]).filter(sponsor => sponsor.total >= 6)
 
-  // generate avatars
-  // const {
-  //   closeServer,
-  // } = startServer(siteDistFolder)
-  // await generateAvatars({
-  //   names: manualSponsors.map(sponsor => sponsor.name),
-  //   outDir: avatarDistFolder,
-  // })
-  // closeServer()
-
   if (!rank.length)
     throw new Error('Rank Error!')
 
   // check ping
-  return rank.map((sponsor) => {
-    let avatarUrl = defaultAvatarUrl
+  const sponsors = rank.map((sponsor) => {
+    let avatarUrl = ''
 
     if (sponsor.avatar) {
       avatarUrl = sponsor.avatar
     }
     else if (sponsor.qq) {
-      avatarUrl = getQQAvatarUrl(sponsor.qq)
+      avatarUrl = encodeHtmlEntities(getQQAvatarUrl(sponsor.qq))
     }
     else if (sponsor.name) {
       // const avatarPath = path.resolve(avatarDistFolder, `${sponsor.name}.png`)
@@ -52,10 +43,8 @@ export async function fetchCustomSponsors(): Promise<Sponsorship[]> {
       //   const avatarBase64 = fs.readFileSync(avatarPath).toString('base64')
       //   avatarUrl = `data:image/png;base64,${avatarBase64}`
       // }
-      avatarUrl = generateTextAvatarUrl(sponsor.name)
+      // avatarUrl = generateTextAvatarUrl(sponsor.name)
     }
-
-    // console.log('avatarUrl', avatarUrl)
 
     const sponsorShip: Sponsorship = {
       sponsor: {
@@ -69,9 +58,11 @@ export async function fetchCustomSponsors(): Promise<Sponsorship[]> {
       monthlyDollars: sponsor.total / 6 / 12,
       privacyLevel: 'PUBLIC',
       tierName: '扫码赞助',
-      createdAt: '',
+      createdAt: '2024-01-01',
+      expireAt: '2024-12-14',
       isOneTime: true,
     }
     return sponsorShip
   })
+  return sponsors
 }

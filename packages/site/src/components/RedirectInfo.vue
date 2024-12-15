@@ -6,7 +6,7 @@ const sponsorsUrl = 'https://www.yunyoujun.cn/sponsors/'
 onMounted(() => {
   setTimeout(() => {
     window.location.href = sponsorsUrl
-  }, 100000)
+  }, 1000)
 })
 </script>
 

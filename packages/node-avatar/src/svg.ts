@@ -15,7 +15,7 @@ export function generateTextAvatar(name: string) {
 
   return `
 <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
-  <circle cx="100" cy="100" r="100" fill="#FF6347"/>
+  <circle cx="100" cy="100" r="100" fill="#e4e8ef"/>
   <text x="50%" y="50%" dy=".3em" text-anchor="middle" fill="white" font-size="${getFontSize(name)}px" font-family="Arial, sans-serif">${name}</text>
 </svg>  
 `

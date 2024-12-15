@@ -3,8 +3,9 @@ import type { BadgePreset } from 'sponsorkit'
 import path from 'node:path'
 // migrate to use afdian in sponsorkit
 // import { AfdianProvider } from './providers/afdian'
-import { defaultInlineCSS, defineConfig, tierPresets } from 'sponsorkit'
+import { defineConfig, tierPresets } from 'sponsorkit'
 import { CustomProvider } from './providers/custom'
+import { generateTextSponsors } from './utils'
 
 const __dirname = path.dirname(new URL(import.meta.url).pathname)
 
@@ -33,7 +34,21 @@ export default defineConfig({
 
   formats: ['svg', 'png'],
 
-  svgInlineCSS: `${defaultInlineCSS}
+  svgInlineCSS: `
+  text {
+    font-weight: 300;
+    fill: #777777;
+    /* font-size: 14px; */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  .sponsorkit-link {
+    cursor: pointer;
+  }
+  .sponsorkit-tier-title {
+    font-weight: 500;
+    font-size: 20px;
+  }
+
   .silver-sponsors{font-size: 16px;}
   `,
 
@@ -42,8 +57,7 @@ export default defineConfig({
   providers: [
     'github',
     'afdian',
-    // AfdianProvider,
-    CustomProvider,
+    // CustomProvider,
   ],
 
   tiers: [
@@ -51,24 +65,17 @@ export default defineConfig({
       title: 'Past Sponsors',
       monthlyDollars: -1,
       preset: past,
+      // @TODO revert
+      // to replace the entire tier rendering
+      composeAfter: async (composer, sponsors, config) => {
+        // composer.addSpan(20)
+        const manualSponsors = await CustomProvider.fetchSponsors()
+        generateTextSponsors(composer, manualSponsors, config)
+      },
     },
     {
       title: 'Backers',
       preset: tierPresets.small,
-      // @TODO revert
-      // to replace the entire tier rendering
-      // compose: (composer, sponsors, config) => {
-      //   composer.addSpan(20)
-      //   composer.addTitle('Backers').addSpan(5)
-
-      //   const noAvatarSponsors = sponsors.filter(item => item.sponsor.avatarUrl === defaultAvatarUrl)
-      //   const avatarSponsors = sponsors.filter(item => item.sponsor.avatarUrl !== defaultAvatarUrl)
-      //   composer.addSponsorGrid(avatarSponsors, tierPresets.medium)
-
-      //   generateTextSponsors(composer, noAvatarSponsors, config)
-
-      //   composer.addSpan(10)
-      // },
     },
     {
       title: 'Sponsors',

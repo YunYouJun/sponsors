@@ -2,6 +2,7 @@
   "type": "module",
   "private": true,
   "scripts": {
+    "prebuild": "",
     "build": "sponsorkit"
   },
   "devDependencies": {
