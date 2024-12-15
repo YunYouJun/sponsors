@@ -23,8 +23,8 @@ jobs:
         with:
           run_install: true
 
-      - run: npm run build
-      - run: npm run build:json
+      - name: Build Dist
+        run: npm run build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3

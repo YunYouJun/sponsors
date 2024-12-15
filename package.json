@@ -18,6 +18,7 @@
   "scripts": {
     "copy": "tsx scripts/copy.ts",
     "dev": "pnpm -C packages/site run dev",
+    "prebuild": "npm run build:json",
     "build": "pnpm run copy && pnpm -C packages/site run build",
     "build:json": "pnpm -C packages/cli run build",
     "kit:build": "pnpm -C kit run build",
