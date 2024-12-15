@@ -1,5 +1,6 @@
 <script lang="ts" setup>
-import { methodMap } from '~/config'
+import { methodMap } from '@yunyoujun/sponsors'
+import { computed } from 'vue'
 
 const props = defineProps<{
   method: string

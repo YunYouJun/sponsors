@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { donateMethod } from '~/assets/donate'
-import { methodMap, methods } from '~/config'
+import { methodMap, methods } from '@yunyoujun/sponsors'
+import { donateMethod } from '../assets/donate'
 </script>
 
 <template>

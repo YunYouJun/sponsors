@@ -55,6 +55,7 @@ export default defineConfig({
     {
       title: 'Backers',
       preset: tierPresets.small,
+      // @TODO revert
       // to replace the entire tier rendering
       // compose: (composer, sponsors, config) => {
       //   composer.addSpan(20)

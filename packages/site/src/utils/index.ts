@@ -1,9 +1,8 @@
-import type { RankSponsor } from '@sponsors/types'
+import type { RankSponsor } from '@yunyoujun/sponsors'
 import dayjs from 'dayjs'
 
 export const isProd = import.meta.env?.PROD === true
 
-export * from './money'
 export * from './name'
 
 /**

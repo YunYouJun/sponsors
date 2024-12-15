@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+
 const { t } = useI18n()
 </script>
 
@@ -27,7 +29,7 @@ const { t } = useI18n()
         href="https://mp.weixin.qq.com/s?__biz=MzU3NTI4MjQwNQ==&mid=2247484117&idx=1&sn=9fcc396ed89c709401f3438e7991ebe1&chksm=fd24cf5fca534649dc016d938db26d9a244fea9e824552e99033e531c0232acc95b96ec5698a#rd"
         target="_blank"
       >
-        <SponsorBtn>
+        <SponsorBtn color="green">
           <span>通过</span>
           <span class="flex items-center justify-center" m="x-1">
             <div i-ri-wechat-line />微信公众号
@@ -41,7 +43,7 @@ const { t } = useI18n()
         href="https://github.com/sponsors/YunYouJun"
         target="_blank"
       >
-        <SponsorBtn>
+        <SponsorBtn color="dark">
           <span>通过</span>
           <span class="flex items-center justify-center" m="x-1">
             <div i-ri-github-line />GitHub

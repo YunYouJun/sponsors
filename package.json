@@ -3,11 +3,11 @@
   "type": "module",
   "version": "2.0.0",
   "private": true,
-  "packageManager": "pnpm@9.14.4",
+  "packageManager": "pnpm@9.15.0",
   "description": "YunYouJun's Sponsors | 云游君的赞助者们",
   "author": "YunYouJun <me@yunyoujun.cn>",
   "license": "MIT",
-  "homepage": "https://sponsors.yunyoujun.cn",
+  "homepage": "https://www.yunyoujun.cn/sponsors/",
   "repository": {
     "type": "git",
     "url": "https://github.com/YunYouJun/sponsors"
@@ -19,7 +19,7 @@
     "copy": "tsx scripts/copy.ts",
     "dev": "pnpm -C packages/site run dev",
     "build": "pnpm run copy && pnpm -C packages/site run build",
-    "build:json": "pnpm -C packages/cli run build && cp packages/cli/dist/* packages/site/dist/",
+    "build:json": "pnpm -C packages/cli run build",
     "kit:build": "pnpm -C kit run build",
     "lint": "eslint .",
     "update": "git add -A && git commit -m 'chore: add new sponsor' && git push",
@@ -31,13 +31,13 @@
     "dayjs": "^1.11.13"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^3.11.2",
+    "@antfu/eslint-config": "^3.12.0",
     "@types/js-yaml": "^4.0.9",
     "@types/markdown-it-link-attributes": "^3.0.5",
     "@types/md5": "^2.3.5",
-    "@unocss/eslint-plugin": "^0.64.1",
+    "@unocss/eslint-plugin": "^0.65.1",
     "cross-env": "^7.0.3",
-    "eslint": "^9.16.0",
+    "eslint": "^9.17.0",
     "tsx": "^4.19.2",
     "typescript": "catalog:",
     "vue-tsc": "catalog:"

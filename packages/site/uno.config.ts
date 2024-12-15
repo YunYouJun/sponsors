@@ -10,6 +10,22 @@ import {
 
 import { markdownWrapperClasses } from './vite.config'
 
+const safelist = markdownWrapperClasses.split(' ').concat([
+  'i-ri-qq-line',
+  'i-ri-wechat-pay-line',
+  'i-ri-alipay-line',
+])
+
+const colors = ['purple', 'green', 'dark']
+colors.forEach((c) => {
+  safelist.push(...[
+    `text-${c}-600`,
+    `hover:bg-${c}-600`,
+    `dark:text-${c}-300`,
+    `focus:ring-${c}-300`,
+  ])
+})
+
 export default defineConfig({
   shortcuts: [
     ['tag', 'inline-flex justify-center items-center shadow rounded m-1 px-2 py-1 lt-sm:(flex-col items-start m-2)'],
@@ -34,11 +50,7 @@ export default defineConfig({
     transformerDirectives(),
     transformerVariantGroup(),
   ],
-  safelist: markdownWrapperClasses.split(' ').concat([
-    'i-ri-qq-line',
-    'i-ri-wechat-pay-line',
-    'i-ri-alipay-line',
-  ]),
+  safelist,
   theme: {
     animation: {
       keyframes: {

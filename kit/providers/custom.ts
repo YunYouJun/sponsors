@@ -1,16 +1,12 @@
-import type { RankSponsor } from '@sponsors/types'
+import type { RankSponsor } from 'packages/sponsors/types'
 
 import type { Provider, Sponsorship } from 'sponsorkit'
-import path from 'node:path'
 
 import { defaultAvatarUrl, getQQAvatarUrl } from '@sponsors/utils'
-import fs from 'fs-extra'
-import { generateAvatars } from '../../packages/node-avatar/src/playwright'
-import { startServer } from '../../packages/node-avatar/src/utils'
+import { generateTextAvatarUrl } from '../../packages/node-avatar/src/svg'
 // import { generateAvatarByName } from '../utils'
 
 import manualSponsors from '../../packages/site/src/assets/data/manual-sponsors.json'
-import { avatarDistFolder, siteDistFolder } from '../config'
 
 export const CustomProvider: Provider = {
   name: 'custom',
@@ -21,21 +17,21 @@ export const CustomProvider: Provider = {
 }
 
 /**
- * https://sponsors.yunyoujun.cn/manual-sponsors.json
+ * https://sponsors.yunyoujun.cn/data/manual-sponsors.json
  * 头像解析失败时可能会导致构建失败
  */
 export async function fetchCustomSponsors(): Promise<Sponsorship[]> {
   const rank: RankSponsor[] = (manualSponsors as any as RankSponsor[]).filter(sponsor => sponsor.total >= 6)
 
   // generate avatars
-  const {
-    closeServer,
-  } = startServer(siteDistFolder)
-  await generateAvatars({
-    names: manualSponsors.map(sponsor => sponsor.name),
-    outDir: avatarDistFolder,
-  })
-  closeServer()
+  // const {
+  //   closeServer,
+  // } = startServer(siteDistFolder)
+  // await generateAvatars({
+  //   names: manualSponsors.map(sponsor => sponsor.name),
+  //   outDir: avatarDistFolder,
+  // })
+  // closeServer()
 
   if (!rank.length)
     throw new Error('Rank Error!')
@@ -51,11 +47,12 @@ export async function fetchCustomSponsors(): Promise<Sponsorship[]> {
       avatarUrl = getQQAvatarUrl(sponsor.qq)
     }
     else if (sponsor.name) {
-      const avatarPath = path.resolve(avatarDistFolder, `${sponsor.name}.png`)
-      if (fs.existsSync(avatarPath)) {
-        const avatarBase64 = fs.readFileSync(avatarPath).toString('base64')
-        avatarUrl = `data:image/png;base64,${avatarBase64}`
-      }
+      // const avatarPath = path.resolve(avatarDistFolder, `${sponsor.name}.png`)
+      // if (fs.existsSync(avatarPath)) {
+      //   const avatarBase64 = fs.readFileSync(avatarPath).toString('base64')
+      //   avatarUrl = `data:image/png;base64,${avatarBase64}`
+      // }
+      avatarUrl = generateTextAvatarUrl(sponsor.name)
     }
 
     // console.log('avatarUrl', avatarUrl)
@@ -66,7 +63,7 @@ export async function fetchCustomSponsors(): Promise<Sponsorship[]> {
         login: sponsor.id || sponsor.name,
         name: sponsor.name,
         avatarUrl,
-        linkUrl: sponsor.url || 'https://sponsors.yunyoujun.cn',
+        linkUrl: sponsor.url || avatarUrl || 'https://www.yunyoujun.cn/sponsors/',
       },
       // CNY one time
       monthlyDollars: sponsor.total / 6 / 12,

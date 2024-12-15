@@ -1,4 +1,6 @@
 # TODO
 
 - 国际化
-- Migrate to [valaxy-theme-gitlink](https://github.com/valaxyjs/valaxy-theme-gitlink)
+- [ ] svg avatar url for sponsor
+
+- [x] Migrate to <https://www.yunyoujun.cn/sponsors/>

@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { onMounted } from 'vue'
+
 onMounted(() => {
   setTimeout(() => {
     window.location.href = 'https://www.yunyoujun.cn/projects/'

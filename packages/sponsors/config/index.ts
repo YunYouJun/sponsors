@@ -1,4 +1,4 @@
-import type { MoneyMethod } from '@sponsors/types'
+import type { MoneyMethod } from 'packages/sponsors/types'
 
 export const anonymousImage = 'https://cdn.jsdelivr.net/gh/YunYouJun/cdn/img/avatar/none.jpg'
 

@@ -1,5 +1,6 @@
 <script lang="ts" setup>
-import type { RankSponsor } from '@sponsors/types'
+import type { RankSponsor } from 'packages/sponsors/types'
+import { ref } from 'vue'
 import SponsorAvatar from './common/SponsorAvatar.vue'
 
 defineProps<{

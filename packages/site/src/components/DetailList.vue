@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { RankSponsor } from '@sponsors/types'
+import type { RankSponsor } from 'packages/sponsors/types'
 import { formatDate } from '../utils'
 
 defineProps<{ details: RankSponsor['children'] }>()

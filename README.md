@@ -1,12 +1,12 @@
-# [Sponsors 支持者们](https://sponsors.yunyoujun.cn/)
+# [Sponsors 支持者们](https://www.yunyoujun.cn/sponsors/)
 
-[![YunYouJun's Sponsors](https://github.com/YunYouJun/sponsors/workflows/Sponsors/badge.svg)](https://sponsors.yunyoujun.cn)
+[![YunYouJun's Sponsors](https://github.com/YunYouJun/sponsors/workflows/Sponsors/badge.svg)](https://www.yunyoujun.cn/sponsors/)
 
 English Doc (Todo) | [中文文档]
 
 English Please see [YunYouJun | GitHub Sponsors](https://github.com/sponsors/YunYouJun).
 
-> 赞助站点：[sponsors.yunyoujun.cn](https://sponsors.yunyoujun.cn)
+> 赞助站点：[https://www.yunyoujun.cn/sponsors/](https://www.yunyoujun.cn/sponsors/)
 
 <p align="center">
   <img src='https://cdn.jsdelivr.net/gh/YunYouJun/yun/images/meme/yun-good-alpha-compressed.png' width="200"/>
@@ -74,7 +74,7 @@ SPONSORKIT_GITHUB_TOKEN=
 SPONSORKIT_GITHUB_LOGIN=YunYouJun
 ```
 
-## [Sponsors](https://sponsors.yunyoujun.cn)
+## [Sponsors](https://www.yunyoujun.cn/sponsors/)
 
 <p align="center">
   <a href="https://cdn.jsdelivr.net/gh/YunYouJun/sponsors/public/sponsors.svg">

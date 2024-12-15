@@ -1,23 +1,25 @@
-import type { MoneySponsor } from '../types'
-import fs from 'node:fs'
-import { basename } from 'node:path'
+import type { MoneySponsor } from '../sponsors/types'
+import path from 'node:path'
 
 import consola from 'consola'
+import fs from 'fs-extra'
 import yaml from 'js-yaml'
 
 /**
  * 从 Yaml 文件生成 json
- * @param path Yaml 路径
+ * @param filePath Yaml 路径
  */
-export function generateJSONfromYaml(path: string) {
-  const filename = basename(path)
+export async function generateJSONfromYaml(filePath: string) {
+  const filename = path.basename(filePath)
   const name = filename.slice(0, filename.lastIndexOf('.'))
-  const data = yaml.load(fs.readFileSync(path, 'utf8'))
+  const data = yaml.load(fs.readFileSync(filePath, 'utf8'))
 
-  if (!fs.existsSync('./dist'))
-    fs.mkdirSync('./dist/')
+  const distDataDir = path.resolve('dist', 'data')
+  await fs.ensureDir(distDataDir)
 
-  fs.writeFileSync(`./dist/${name}.json`, JSON.stringify(data))
+  const targetPath = path.resolve('dist', 'data', `${name}.json`)
+  await fs.writeJson(targetPath, data)
+
   consola.success(`Generated ${name}.json successfully!`)
   return data
 }

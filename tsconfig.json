@@ -8,7 +8,7 @@
     "moduleResolution": "node",
     "paths": {
       "~/*": ["packages/site/src/*"],
-      "@sponsors/types": ["packages/types/index.ts"],
+      "@yunyoujun/sponsors": ["packages/sponsors/index.ts"],
       "@sponsors/utils": ["packages/utils/index.ts"]
     },
     "resolveJsonModule": true,

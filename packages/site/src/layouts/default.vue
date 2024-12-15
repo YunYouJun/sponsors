@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { isDark } from '~/composables'
+import { computed } from 'vue'
+import { isDark } from '../composables'
 
 const lightBgImageUrl = 'https://cos.yunyoujun.cn/img/bg/stars-timing-0-blur-30px.jpg'
 const darkBgImageUrl = ''

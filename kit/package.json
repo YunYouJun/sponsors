@@ -5,9 +5,9 @@
     "build": "sponsorkit"
   },
   "devDependencies": {
-    "@sponsors/types": "workspace:*",
     "@sponsors/utils": "workspace:*",
     "@types/fs-extra": "^11.0.4",
+    "@yunyoujun/sponsors": "workspace:*",
     "afdian-api": "^1.0.5",
     "fs-extra": "^11.2.0",
     "sponsorkit": "^0.16.2"

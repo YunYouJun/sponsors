@@ -1,12 +1,12 @@
-import type { SponsorMethod } from '../types'
+import type { SponsorMethod } from '../sponsors/types'
 import fs from 'node:fs'
 import path from 'node:path'
 
 import consola from 'consola'
 import sponsors from '../site/src/assets/data/manual-sponsors.json'
 import { sortSponsor } from '../site/src/utils'
-import { MoneyMethod } from '../types'
-import { EnumKeys } from '../types/helper'
+import { MoneyMethod } from '../sponsors/types'
+import { EnumKeys } from '../sponsors/types/helper'
 import { config } from './config'
 
 const sponsorMethods: SponsorMethod[] = EnumKeys(MoneyMethod).map(
@@ -14,7 +14,7 @@ const sponsorMethods: SponsorMethod[] = EnumKeys(MoneyMethod).map(
 )
 sponsorMethods.push('其他')
 
-const sponsorsJsonFile = path.resolve(config.dataFolder, 'manual-sponsors.json')
+const sponsorsJsonFile = path.resolve(config.siteDataFolder, 'manual-sponsors.json')
 
 export async function onAdd() {
   const sponsorName = await consola.prompt('赞助者名称', {

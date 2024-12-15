@@ -1,6 +1,7 @@
 <script lang="ts" setup>
+import { anonymousImage } from '@yunyoujun/sponsors'
 import md5 from 'md5'
-import { anonymousImage } from '~/config'
+import { computed } from 'vue'
 
 const props = defineProps<{
   email?: string
