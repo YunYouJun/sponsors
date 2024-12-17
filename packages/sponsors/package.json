@@ -1,7 +1,7 @@
 {
   "name": "@yunyoujun/sponsors",
   "type": "module",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "keywords": [
     "sponsors"
   ],
@@ -13,6 +13,6 @@
   "main": "index.ts",
   "module": "index.ts",
   "scripts": {
-    "release:local": "bumpp --no-tags --no-commit && pnpm publish"
+    "release:local": "bumpp --no-push && pnpm publish --no-git-checks"
   }
 }
