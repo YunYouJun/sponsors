@@ -4,12 +4,12 @@
     "generate": "tsx example/index.ts"
   },
   "dependencies": {
-    "consola": "^3.2.3"
+    "consola": "^3.4.2"
   },
   "devDependencies": {
-    "@types/finalhandler": "^1.2.3",
+    "@types/finalhandler": "^1.2.4",
     "@types/fs-extra": "^11.0.4",
-    "fs-extra": "^11.2.0",
-    "tsx": "^4.19.2"
+    "fs-extra": "^11.3.1",
+    "tsx": "catalog:"
   }
 }

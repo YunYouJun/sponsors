@@ -1,3 +1,5 @@
 public/sponsors.svg
 public/avatars
 public/data
+
+src/auto-imports.d.ts
