@@ -11,7 +11,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="my-20 h-40 items-center justify-center text-xl post-card" flex="~ wrap" gap="4">
+  <div class="post-card my-20 h-40 items-center justify-center text-xl" flex="~ wrap" gap="4">
     <span font="bold">
       正在重定向至
     </span>

@@ -1,7 +1,7 @@
 import type { MoneySponsor } from '../sponsors/types'
 import path from 'node:path'
 
-import consola from 'consola'
+import { consola } from 'consola'
 import fs from 'fs-extra'
 import yaml from 'js-yaml'
 

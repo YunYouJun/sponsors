@@ -2,7 +2,7 @@ import type { SponsorMethod } from '../sponsors/types'
 import fs from 'node:fs'
 import path from 'node:path'
 
-import consola from 'consola'
+import { consola } from 'consola'
 import sponsors from '../site/src/assets/data/manual-sponsors.json'
 import { sortSponsor } from '../site/src/utils'
 import { MoneyMethod } from '../sponsors/types'
