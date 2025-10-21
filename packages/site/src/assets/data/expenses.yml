@@ -234,3 +234,7 @@
   business: 蓝
   amount: 666
   date: 2025-01-10
+- memo: yunle.fun 域名转入 DNSPOD（续费一年）
+  amount: 160
+  business: 腾讯云
+  date: 2025-10-21
