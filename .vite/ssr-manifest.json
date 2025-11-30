@@ -1,0 +1,112 @@
+{
+  "\u0000plugin-vue:export-helper": [],
+  "\u0000virtual:generated-layouts": [],
+  "\u0000vite/modulepreload-polyfill.js": [],
+  "\u0000vite/preload-helper.js": [],
+  "../../../../../../../@vite-plugin-pages/generated-pages?id=~pages": [],
+  "../../../../../../../@vite-plugin-pages/route-block": [
+    "/assets/avatar-B8Kqu5nT.js"
+  ],
+  "../../node_modules/.pnpm/@intlify+core-base@11.2.1/node_modules/@intlify/core-base/dist/core-base.mjs": [],
+  "../../node_modules/.pnpm/@intlify+message-compiler@11.2.1/node_modules/@intlify/message-compiler/dist/message-compiler.mjs": [],
+  "../../node_modules/.pnpm/@intlify+shared@11.2.1/node_modules/@intlify/shared/dist/shared.mjs": [],
+  "../../node_modules/.pnpm/@unhead+vue@1.11.20_vue@3.5.18_typescript@5.6.2_/node_modules/@unhead/vue/dist/shared/vue.-sixQ7xP.mjs": [],
+  "../../node_modules/.pnpm/@unhead+vue@1.11.20_vue@3.5.18_typescript@5.6.2_/node_modules/@unhead/vue/dist/shared/vue.ziyDaVMR.mjs": [],
+  "../../node_modules/.pnpm/@unhead+vue@2.0.19_vue@3.5.18_typescript@5.6.2_/node_modules/@unhead/vue/dist/client.mjs": [],
+  "../../node_modules/.pnpm/@unhead+vue@2.0.19_vue@3.5.18_typescript@5.6.2_/node_modules/@unhead/vue/dist/shared/vue.Bm-NbY4b.mjs": [],
+  "../../node_modules/.pnpm/@unocss+reset@66.5.9/node_modules/@unocss/reset/tailwind.css": [],
+  "../../node_modules/.pnpm/@vue+reactivity@3.5.18/node_modules/@vue/reactivity/dist/reactivity.esm-bundler.js": [],
+  "../../node_modules/.pnpm/@vue+runtime-core@3.5.18/node_modules/@vue/runtime-core/dist/runtime-core.esm-bundler.js": [],
+  "../../node_modules/.pnpm/@vue+runtime-dom@3.5.18/node_modules/@vue/runtime-dom/dist/runtime-dom.esm-bundler.js": [],
+  "../../node_modules/.pnpm/@vue+shared@3.5.18/node_modules/@vue/shared/dist/shared.esm-bundler.js": [],
+  "../../node_modules/.pnpm/@vueuse+core@14.0.0_vue@3.5.18_typescript@5.6.2_/node_modules/@vueuse/core/dist/index.js": [
+    "/assets/default-BGM0AMWb.js",
+    "/assets/default-D7SgcGdu.css"
+  ],
+  "../../node_modules/.pnpm/@vueuse+shared@14.0.0_vue@3.5.18_typescript@5.6.2_/node_modules/@vueuse/shared/dist/index.js": [
+    "/assets/default-BGM0AMWb.js",
+    "/assets/default-D7SgcGdu.css"
+  ],
+  "../../node_modules/.pnpm/hookable@5.5.3/node_modules/hookable/dist/index.mjs": [],
+  "../../node_modules/.pnpm/star-markdown-css@0.5.3/node_modules/star-markdown-css/src/scss/theme/yun.scss": [],
+  "../../node_modules/.pnpm/unhead@1.11.20/node_modules/unhead/dist/index.mjs": [],
+  "../../node_modules/.pnpm/unhead@2.0.19/node_modules/unhead/dist/client.mjs": [],
+  "../../node_modules/.pnpm/unhead@2.0.19/node_modules/unhead/dist/shared/unhead.BpRRHAhY.mjs": [],
+  "../../node_modules/.pnpm/unhead@2.0.19/node_modules/unhead/dist/shared/unhead.DH45uomy.mjs": [],
+  "../../node_modules/.pnpm/unhead@2.0.19/node_modules/unhead/dist/shared/unhead.DZbvapt-.mjs": [],
+  "../../node_modules/.pnpm/unhead@2.0.19/node_modules/unhead/dist/shared/unhead.yem5I2v_.mjs": [],
+  "../../node_modules/.pnpm/vite-ssg@28.2.2_postcss@8.5.6_unhead@2.0.19_vite@7.2.4_@types+node@24.2.1_jiti@2.6.1_sa_94568f9c14b9da06201183f6e461ed46/node_modules/vite-ssg/dist/index.mjs": [],
+  "../../node_modules/.pnpm/vite-ssg@28.2.2_postcss@8.5.6_unhead@2.0.19_vite@7.2.4_@types+node@24.2.1_jiti@2.6.1_sa_94568f9c14b9da06201183f6e461ed46/node_modules/vite-ssg/dist/shared/vite-ssg.C6pK7rvr.mjs": [],
+  "../../node_modules/.pnpm/vite-ssg@28.2.2_postcss@8.5.6_unhead@2.0.19_vite@7.2.4_@types+node@24.2.1_jiti@2.6.1_sa_94568f9c14b9da06201183f6e461ed46/node_modules/vite-ssg/dist/shared/vite-ssg.ETIvV-80.mjs": [],
+  "../../node_modules/.pnpm/vue-about-me@1.4.0_typescript@5.6.2/node_modules/vue-about-me/dist/vue-about-me.css": [
+    "/assets/default-BGM0AMWb.js",
+    "/assets/default-D7SgcGdu.css"
+  ],
+  "../../node_modules/.pnpm/vue-about-me@1.4.0_typescript@5.6.2/node_modules/vue-about-me/dist/vue-about-me.mjs": [
+    "/assets/default-BGM0AMWb.js",
+    "/assets/default-D7SgcGdu.css"
+  ],
+  "../../node_modules/.pnpm/vue-i18n@11.2.1_vue@3.5.18_typescript@5.6.2_/node_modules/vue-i18n/dist/vue-i18n.runtime.mjs": [],
+  "../../node_modules/.pnpm/vue-router@4.5.1_vue@3.5.18_typescript@5.6.2_/node_modules/vue-router/dist/vue-router.mjs": [],
+  "index.html": [],
+  "locales/en.yml": [
+    "/assets/en-DMkLxGlO.js"
+  ],
+  "locales/zh-CN.yml": [
+    "/assets/zh-CN-BJQSv-QX.js"
+  ],
+  "package.json": [],
+  "src/App.vue?vue&type=script&setup=true&lang.ts": [],
+  "src/__uno.css": [],
+  "src/components/RedirectInfo.vue?vue&type=script&setup=true&lang.ts": [],
+  "src/components/common/BaseFooter.vue?vue&type=script&setup=true&lang.ts": [
+    "/assets/default-BGM0AMWb.js",
+    "/assets/default-D7SgcGdu.css"
+  ],
+  "src/components/common/BaseMenu.vue?vue&type=script&setup=true&lang.ts": [
+    "/assets/default-BGM0AMWb.js",
+    "/assets/default-D7SgcGdu.css"
+  ],
+  "src/components/common/BaseMenu.vue?vue&type=style&index=0&lang.scss": [
+    "/assets/default-BGM0AMWb.js",
+    "/assets/default-D7SgcGdu.css"
+  ],
+  "src/composables/dark.ts": [
+    "/assets/default-BGM0AMWb.js",
+    "/assets/default-D7SgcGdu.css"
+  ],
+  "src/layouts/404.vue": [
+    "/assets/404-D4hjiZIZ.js"
+  ],
+  "src/layouts/default.vue": [
+    "/assets/default-BGM0AMWb.js",
+    "/assets/default-D7SgcGdu.css"
+  ],
+  "src/layouts/default.vue?vue&type=script&setup=true&lang.ts": [
+    "/assets/default-BGM0AMWb.js",
+    "/assets/default-D7SgcGdu.css"
+  ],
+  "src/layouts/empty.vue": [
+    "/assets/empty-yTeYpvBR.js"
+  ],
+  "src/layouts/home.vue": [
+    "/assets/home-X6xIJwNi.js"
+  ],
+  "src/main.ts": [],
+  "src/modules/i18n.ts": [],
+  "src/pages/avatar.vue": [
+    "/assets/avatar-B8Kqu5nT.js"
+  ],
+  "src/pages/avatar.vue?vue&type=script&setup=true&lang.ts": [
+    "/assets/avatar-B8Kqu5nT.js"
+  ],
+  "src/pages/index.vue": [],
+  "src/pages/projects.vue": [
+    "/assets/projects-COEffyiQ.js"
+  ],
+  "src/pages/projects.vue?vue&type=script&setup=true&lang.ts": [
+    "/assets/projects-COEffyiQ.js"
+  ],
+  "src/styles/css-vars.scss": [],
+  "src/styles/index.scss": []
+}

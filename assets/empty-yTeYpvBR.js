@@ -1,0 +1,1 @@
+import{_ as o,b as t,h as n,G as r,o as c}from"./app-CKUkpPRt.js";const s={};function a(_,m){const e=r("router-view");return c(),t("main",null,[n(e)])}const p=o(s,[["render",a]]);export{p as default};
