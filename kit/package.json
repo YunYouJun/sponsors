@@ -11,6 +11,6 @@
     "@yunyoujun/sponsors": "workspace:*",
     "afdian-api": "^1.0.5",
     "fs-extra": "^11.3.2",
-    "sponsorkit": "^16.5.0"
+    "sponsorkit": "^17.0.0"
   }
 }

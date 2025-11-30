@@ -32,6 +32,7 @@ export default defineConfig({
     purchaseEffectivity: 180,
   },
 
+  renderer: 'tiers',
   formats: ['svg', 'png'],
 
   svgInlineCSS: `

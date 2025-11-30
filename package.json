@@ -3,7 +3,7 @@
   "type": "module",
   "version": "2.0.0",
   "private": true,
-  "packageManager": "pnpm@10.18.3",
+  "packageManager": "pnpm@10.23.0",
   "description": "YunYouJun's Sponsors | 云游君的赞助者们",
   "author": "YunYouJun <me@yunyoujun.cn>",
   "license": "MIT",
@@ -28,18 +28,18 @@
     "typecheck": "vue-tsc --noEmit"
   },
   "dependencies": {
-    "commander": "^14.0.1",
-    "dayjs": "^1.11.18"
+    "commander": "^14.0.2",
+    "dayjs": "^1.11.19"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^5.4.1",
+    "@antfu/eslint-config": "^6.2.0",
     "@types/js-yaml": "^4.0.9",
     "@types/markdown-it-link-attributes": "^3.0.5",
     "@types/md5": "^2.3.6",
-    "@unocss/eslint-plugin": "^66.5.4",
+    "@unocss/eslint-plugin": "^66.5.9",
     "bumpp": "^10.3.1",
     "cross-env": "^10.1.0",
-    "eslint": "^9.38.0",
+    "eslint": "^9.39.1",
     "tsx": "catalog:",
     "typescript": "catalog:",
     "vue-tsc": "catalog:"
